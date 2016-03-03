@@ -1,0 +1,12 @@
+.ul-none {
+    display: inline;
+    list-style-type: none;
+}
+
+.color-white {
+  color: #666;
+}
+
+body {
+  background-color: #666;
+}

@@ -1,0 +1,51 @@
+ul.gray-item li a {
+  color: $gray;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+.hover-red {
+  li {
+    padding-bottom: 10px;
+    border-bottom: 4px $white solid;
+    &:hover {
+      a {
+        color: $gray-light;
+      }
+      border-bottom: 4px $brand-primary solid;
+    }
+  }
+}
+
+.ul-type-none {
+    list-style-type: none;
+}
+
+.inline-block li{
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+
+.color-white {
+  color: $white;
+}
+.color-primary {
+  color: $brand-primary;
+}
+
+.btn-gray {
+  background-color: $gray-light;
+  &:hover {
+    background-color: $gray-lighter;
+  }
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+}

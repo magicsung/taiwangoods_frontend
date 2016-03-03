@@ -1,0 +1,21 @@
+ul {
+  margin-bottom: 0;
+}
+
+@for $i from 1 to 11 {
+  .mt-#{$i*5} {
+    margin-top: #{$i*5}px;
+  }
+}
+
+@for $i from 2 to 10 {
+  .height-#{$i*5} {
+    height: #{$i*5}px;
+  }
+}
+
+@for $i from 3 to 10 {
+  .width-#{$i*5} {
+    width: #{$i*5}px;
+  }
+}

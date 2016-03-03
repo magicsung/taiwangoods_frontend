@@ -1,0 +1,19 @@
+header {
+  ul > li {
+    
+  }
+
+  .search {
+    .glyphicon {
+      font-size: 2em;
+    }
+    .input-group {
+      input {
+        border-radius: 0;
+      }
+      button {
+        border-radius: 0;
+      }
+    }
+  }
+}

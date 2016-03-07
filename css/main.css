@@ -113,6 +113,12 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .fz-4em { font-size: 4em; }
 
+.vertical-bottom { vertical-align: bottom; }
+
+.vertical-center { vertical-align: middle; }
+
+.w100 { width: 100%; }
+
 .row-m7 { margin-left: -7px; margin-right: -7px; }
 
 .row-m10 { margin-left: -10px; margin-right: -10px; }
@@ -131,18 +137,20 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .color-gray-light { color: #a8a8a8; }
 
-.banner { width: 100%; position: relative; }
-
 .under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 15px; }
 
-.square { margin: 7px; display: inline-block; overflow: hidden; position: relative; }
+.banner { width: 100%; position: relative; background-image: url("../image/index-banner.png"); background-repeat: no-repeat; background-size: cover; min-height: 215px; min-width: 943px; }
+
+@media screen and (max-width: 991px) { .banner { min-width: 100%; width: 100%; } }
+.square { margin: 7px; display: inline-block; overflow: hidden; position: relative; text-align: center; }
 .square-large { width: 218px; height: 218px; }
 .square-large img { width: 218px; height: 218px; }
 .square-middle { width: 159px; height: 159px; }
 .square-middle img { width: 159px; height: 159px; }
 .square-small { width: 85px; height: 85px; }
 .square-small img { width: 85px; height: 85px; }
-.square.ad-vertical { width: 249px; height: 405px; }
+.square.ad-vertical { width: 235px; height: 391px; }
+.square.ad-vertical img { width: 235px; height: 391px; }
 .square:hover .hover { height: auto; padding: 4px; bottom: 0; }
 .square:hover .like-button { opacity: 1; }
 .square .hover { position: absolute; left: 0; bottom: -46px; max-height: 46px; width: 100%; padding: 0 4px 0 4px; background-color: rgba(0, 0, 0, 0.5); text-align: center; transition: all .5s ease; overflow: hidden; }
@@ -155,6 +163,10 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 .square .like-button a:hover i.glyphicon-heart-empty:before { content: "\e005"; }
 .square .like-button a:active, .square .like-button a:focus { transform: scale(2.5); }
 
+@media screen and (min-width: 1200px) { .square-large { width: 204px; height: 204px; }
+  .square-large img { width: 204px; height: 204px; }
+  .square.ad-vertical { height: 377px; } }
+@media screen and (max-width: 768px) { .square { width: 45%; } }
 ul.gray-item li a { color: #757575; text-decoration: none; padding: 5px 10px 5px 10px; }
 ul.gray-item li a:hover { color: #a8a8a8; }
 

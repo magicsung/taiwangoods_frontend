@@ -3,6 +3,7 @@
   display: inline-block;
   overflow: hidden;
   position: relative;
+  text-align: center;
   img {
     // @include hover-fadeout();
   }
@@ -31,8 +32,12 @@
     }
   }
   &.ad-vertical {
-    width: 235+$square-padding*2;
-    height: 391+$square-padding*2;
+    width: $ad-banner-width;
+    height: $ad-banner-height;
+    img {
+      width: $ad-banner-width;
+      height: $ad-banner-height;
+    }
   }
   &:hover {
     .hover {
@@ -98,4 +103,31 @@
     }
   }
 
+}
+
+
+@media screen and (min-width: 1200px) {
+  .square {
+    &-large {
+      width: $square-large-size - 14px;
+      height: $square-large-size - 14px;
+      img {
+        width: $square-large-size - 14px;
+        height: $square-large-size - 14px;
+      }
+    }
+    &.ad-vertical {
+      height: $ad-banner-height - 14px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .square {
+    width: 45%;
+    img {
+
+    }
+  }
 }

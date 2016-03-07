@@ -1,5 +1,14 @@
 @import "scss/variables";
-@import "scss/type";
+@import "scss/mixins";
 
+@import "scss/type";
 @import "scss/general";
+
+// component
+@import "scss/square";
+@import "scss/button";
+@import "scss/favorite-panel";
+
+// layout
 @import "scss/header";
+@import "scss/footer";

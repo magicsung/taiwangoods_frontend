@@ -1,10 +1,29 @@
-ul {
-  margin-bottom: 0;
+a {
+  margin: 0;
+  padding: 0;
 }
 
-@for $i from 1 to 11 {
+ul {
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@for $i from 0 to 11 {
   .mt-#{$i*5} {
     margin-top: #{$i*5}px;
+  }
+}
+
+@for $i from 0 to 11 {
+  .ml-#{$i*5} {
+    margin-left: #{$i*5}px;
+  }
+}
+
+@for $i from 0 to 11 {
+  .mb-#{$i*5} {
+    margin-bottom: #{$i*5}px;
   }
 }
 
@@ -18,4 +37,42 @@ ul {
   .width-#{$i*5} {
     width: #{$i*5}px;
   }
+}
+
+@for $i from 1 to 5 {
+  .fz-#{$i}em {
+    font-size: #{$i}em;
+  }
+}
+
+.row-m7 {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+.row-m10 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.relative {
+  position: relative;
+}
+.inline-block li{
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+
+.color-white {
+  color: $white;
+}
+.color-primary {
+  color: $brand-primary;
+}
+.color-gray {
+  color: $gray;
+}
+.color-gray-light {
+  color: $gray-light;
 }

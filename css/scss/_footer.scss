@@ -1,0 +1,26 @@
+footer {
+  background-color: $gray-lighter;
+  width: 100%;
+  min-height: 225px;
+  margin-top: 50px;
+
+  ul.gray-item li a {
+    color: $gray-light;
+    &:hover {
+      color: $gray;
+    }
+  }
+
+  .contact {
+    font-size: 0.85em;
+  }
+
+  .footer-bottom {
+    position: relative;
+    .copyright {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

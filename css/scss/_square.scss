@@ -1,0 +1,101 @@
+.square {
+  margin: $square-padding;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  img {
+    // @include hover-fadeout();
+  }
+  &-large {
+    width: $square-large-size;
+    height: $square-large-size;
+    img {
+      width: $square-large-size;
+      height: $square-large-size;
+    }
+  }
+  &-middle {
+    width: $square-middle-size;
+    height: $square-middle-size;
+    img {
+      width: $square-middle-size;
+      height: $square-middle-size;
+    }
+  }
+  &-small {
+    width: $square-small-size;
+    height: $square-small-size;
+    img {
+      width: $square-small-size;
+      height: $square-small-size;
+    }
+  }
+  &.ad-vertical {
+    width: 235+$square-padding*2;
+    height: 391+$square-padding*2;
+  }
+  &:hover {
+    .hover {
+      height: auto;
+      padding: 4px;
+      bottom: 0;
+    }
+    .like-button {
+      opacity: 1;
+    }
+  }
+
+  // Hover effect
+  .hover {
+    position: absolute;
+    left: 0;
+    bottom: -46px;
+    max-height: 46px;
+    width: 100%;
+    padding: 0 4px 0 4px;
+    background-color: $black-mask;
+    text-align: center;
+    transition: all .5s ease;
+    overflow: hidden;
+    a {
+      text-align: center;
+      color: $gray-lighter;
+      overflow: hidden;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        color: $white;
+      }
+      span {
+        overflow: hidden;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .like-button {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity .3s ease;
+    a {
+      display: block;
+      color: $gray-light;
+      font-size: 1.2em;
+      transition: all .3s ease;
+      &:hover {
+        color: $brand-primary;
+        animation: heart-beat 2s infinite;
+        i.glyphicon-heart-empty:before {
+          content: "\e005";
+        }
+      }
+      &:active,
+      &:focus {
+        transform: scale(2.5);
+      }
+    }
+  }
+
+}

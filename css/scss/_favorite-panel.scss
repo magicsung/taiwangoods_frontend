@@ -1,0 +1,22 @@
+.favorite-panel {
+  position: relative;
+  height: 332px;
+  width: 235px;
+  border: 2px solid $gray-lighter;
+  margin-top: 7px;
+
+  .favorite-panel-title {
+    margin-top: 10px;
+    text-align: center;
+    color: $gray;
+    p {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+  .favorite-panel-content {
+    height: 285px;
+    overflow: scroll;
+    text-align: center;
+  }
+}

@@ -1,8 +1,10 @@
 $white:                  #ffffff;
+$black-mask:             rgba(0,0,0,.5);
+$opactiy:                rgba(0,0,0,0);
 
 $gray:                   #757575 !default;
-$gray-light:             lighten($gray, 20%) !default;
-$gray-lighter:           lighten($gray, 40%) !default;
+$gray-light:             lighten($gray, 20%) !default;  //#C2C2C2
+$gray-lighter:           lighten($gray, 50%) !default;  //#F5F5F5
 
 $brand-primary:         #e42000 !default;
 
@@ -10,3 +12,9 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+
+
+$square-large-size:     218px;
+$square-middle-size:    159px;
+$square-small-size:     85px;
+$square-padding:        7px;

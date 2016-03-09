@@ -137,6 +137,8 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .color-gray-light { color: #a8a8a8; }
 
+a:hover { text-decoration: none; }
+
 .under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 10px; }
 
 .banner { width: 100%; position: relative; background-image: url("../image/index-banner.png"); background-repeat: no-repeat; background-size: cover; min-height: 215px; min-width: 943px; }
@@ -203,6 +205,9 @@ header .nav-icon span.icon-bar { display: block; width: 30px; height: 3px; backg
 footer { background-color: whitesmoke; width: 100%; min-height: 225px; margin-top: 50px; }
 footer ul.gray-item li a { color: #a8a8a8; }
 footer ul.gray-item li a:hover { color: #757575; }
+footer .go-top { position: relative; display: block; text-align: right; }
+footer .go-top a { color: #a8a8a8; }
+footer .go-top a:hover { color: #757575; }
 footer .footer-top { position: relative; }
 footer .footer-top .social { position: absolute; top: 0; right: 0; }
 footer .footer-top .social a { margin-left: 15px; }
@@ -212,6 +217,7 @@ footer .footer-bottom .contact strong { font-size: 1.1em; }
 footer .footer-bottom .copyright { position: absolute; bottom: 0; right: 0; }
 
 @media screen and (max-width: 767px) { footer { font-size: 1.1em; text-align: center; }
+  footer .go-top { text-align: center; }
   footer .footer-top { display: block; }
   footer .footer-top .footer-nav li { display: block; margin-top: 5px; }
   footer .footer-top .social { display: block; position: relative; margin-bottom: 15px; }

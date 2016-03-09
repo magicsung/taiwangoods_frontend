@@ -12,7 +12,7 @@
     <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
-    <header>
+    <header id="top">
       <div class="container">
         <div class="row">
           <div class="xs-icon xs-icon-nav visible-xs col-xs-3">
@@ -330,7 +330,12 @@
 
     <footer>
       <div class="container">
-        <div class="footer-top mt-40 clearfix">
+        <div class="go-top mt-25">
+          <a href="#top">
+              Go Top <span class="glyphicon glyphicon-chevron-up"></span>
+          </a>
+        </div>
+        <div class="footer-top mt-20">
           <div class="social link-gray-light">
             <a href="#">
               <i class="fa fa-facebook-square fz-2em"></i>
@@ -360,7 +365,7 @@
           </div>
         </div>
 
-        <div class="mt-15 clearfix footer-bottom">
+        <div class="mt-15 footer-bottom">
           <div class="contact">
             <p class="color-gray-light link-gray-light mb-0">
               <strong>台灣禮品館旗艦店-南海學園</strong><br>
@@ -377,6 +382,22 @@
           </div>
         </div>
       </div>
+
+      <script>
+      // scroll smooth
+      $('a[href="#top"]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 400);
+            return false;
+          }
+        }
+      });
+      </script>
     </footer>
   </body>
 </html>

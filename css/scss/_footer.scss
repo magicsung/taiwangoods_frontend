@@ -11,6 +11,18 @@ footer {
     }
   }
 
+  .go-top {
+    position: relative;
+    display: block;
+    text-align: right;
+    a {
+      color: $gray-light;
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+
   .footer-top {
     position: relative;
     .social {
@@ -43,6 +55,11 @@ footer {
   footer {
     font-size: 1.1em;
     text-align: center;
+
+    .go-top {
+      text-align: center;
+    }
+
     .footer-top {
       display: block;
       .footer-nav li{

@@ -15,12 +15,24 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="brand col-md-2 col-xs-4">
-            <a href="#">
-              <img src="image/taiwangoods_logo.svg" alt="" />
-            </a>
+          <div class="xs-icon xs-icon-nav visible-xs col-xs-3">
+            <button type="button" name="button" class="nav-icon">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
-          <div class="navigation col-md-5 hidden-xs mt-45 text-center">
+          <div class="brand col-md-2 col-sm-4 col-xs-6">
+            <a href="#" class="brand-logo"></a>
+          </div>
+          <div class="xs-icon xs-icon-search visible-xs col-xs-3">
+            <button type="button" name="button" class="nav-icon">
+              <span class="sr-only">Toggle search</span>
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+          <div class="navigation col-md-5 col-sm-8 hidden-xs mt-45 text-center">
             <ul class="inline-block gray-item">
               <li>
                 <a href="#">
@@ -42,7 +54,7 @@
               </li>
             </ul>
           </div>
-          <div class="search col-md-5 col-sm-12 hidden-xs mt-40">
+          <div class="search col-md-5 col-sm-12 mt-40">
             <div class="input-group">
               <input class="form-control height-45" type="search-product" name="search-product"  placeholder="請輸入商品名稱或關鍵字">
               <span class="input-group-btn">
@@ -58,7 +70,7 @@
 
     <div class="content container mt-25">
       <div class="category-bar clearfix">
-        <div class="sub-title pull-left">
+        <div class="sub-title pull-left mb-10">
           <h4 class="color-primary inline">
             台灣嚴選
             <small class="inline">好物購物商城</small>
@@ -89,7 +101,7 @@
             <a href="#" class="square square-large">
               <img src="http://dummyimage.com/218x218/eeeeee/">
             </a>
-            <a href="#" class="square square-large visible-lg-inline-block">
+            <a href="#" class="square square-large visible-lg-inline-block visible-xs-inline-block">
               <img src="http://dummyimage.com/204x204/eeeeee/">
             </a>
           </div>
@@ -318,8 +330,19 @@
 
     <footer>
       <div class="container">
-        <div class="mt-40 clearfix">
-          <div class="footer-nav pull-left row-m10">
+        <div class="footer-top mt-40 clearfix">
+          <div class="social link-gray-light">
+            <a href="#">
+              <i class="fa fa-facebook-square fz-2em"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-weibo fz-2em"></i>
+            </a>
+            <a href="#">
+              <i class="fa fa-twitter fz-2em"></i>
+            </a>
+          </div>
+          <div class="footer-nav row-m10">
             <ul class="inline-block gray-item">
               <li>
                 <a href="#">認識台灣禮品館</a>
@@ -335,21 +358,10 @@
               </li>
             </ul>
           </div>
-          <div class="social pull-right link-gray-light">
-            <a href="#" class="ml-15">
-              <i class="fa fa-facebook-square fz-2em"></i>
-            </a>
-            <a href="#" class="ml-15">
-              <i class="fa fa-weibo fz-2em"></i>
-            </a>
-            <a href="#" class="ml-15">
-              <i class="fa fa-twitter fz-2em"></i>
-            </a>
-          </div>
         </div>
 
         <div class="mt-15 clearfix footer-bottom">
-          <div class="contact pull-left">
+          <div class="contact">
             <p class="color-gray-light link-gray-light mb-0">
               <strong>台灣禮品館旗艦店-南海學園</strong><br>
               <i class="fa fa-map-marker mt-5"></i>  <a href="https://goo.gl/maps/bhfsdzJnSsJ2" target="_blank">台北市中正區南海路41號2樓</a><br>
@@ -358,7 +370,7 @@
               <i class="fa fa-calendar"></i>  每日09:30至18:30
             </p>
           </div>
-          <div class="copyright pull-right">
+          <div class="copyright">
             <p class="color-gray-light mb-0">
               &copy;2016 taiwangoods All Rights Reserved.
             </p>

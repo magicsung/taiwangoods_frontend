@@ -106,7 +106,7 @@
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $lg-width) {
   .square {
     &-large {
       width: $square-large-size - 14px;
@@ -123,11 +123,19 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $xs-width) {
+  .hover, .like-button {
+    display: none;
+  }
+  .row-m7 {
+    text-align: center;
+  }
   .square {
-    width: 45%;
+    width: calc(50% - 16px);
+    height: auto;
     img {
-
+      width: 100%;
+      height: auto;
     }
   }
 }

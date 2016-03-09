@@ -137,11 +137,11 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .color-gray-light { color: #a8a8a8; }
 
-.under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 15px; }
+.under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 10px; }
 
 .banner { width: 100%; position: relative; background-image: url("../image/index-banner.png"); background-repeat: no-repeat; background-size: cover; min-height: 215px; min-width: 943px; }
 
-@media screen and (max-width: 991px) { .banner { min-width: 100%; width: 100%; } }
+@media screen and (max-width: 992px) { .banner { min-width: 100%; width: 100%; } }
 .square { margin: 7px; display: inline-block; overflow: hidden; position: relative; text-align: center; }
 .square-large { width: 218px; height: 218px; }
 .square-large img { width: 218px; height: 218px; }
@@ -166,7 +166,10 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 @media screen and (min-width: 1200px) { .square-large { width: 204px; height: 204px; }
   .square-large img { width: 204px; height: 204px; }
   .square.ad-vertical { height: 377px; } }
-@media screen and (max-width: 768px) { .square { width: 45%; } }
+@media screen and (max-width: 767px) { .hover, .like-button { display: none; }
+  .row-m7 { text-align: center; }
+  .square { width: calc(50% - 16px); height: auto; }
+  .square img { width: 100%; height: auto; } }
 ul.gray-item li a { color: #757575; text-decoration: none; padding: 5px 10px 5px 10px; }
 ul.gray-item li a:hover { color: #a8a8a8; }
 
@@ -185,15 +188,35 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .favorite-panel .favorite-panel-title p { margin-bottom: 5px; font-weight: bold; }
 .favorite-panel .favorite-panel-content { height: 285px; overflow: scroll; text-align: center; }
 
+header .brand .brand-logo { display: inline-block; width: 180px; height: 100px; background-color: #e42000; background-image: url("../image/taiwangoods_logo.svg"); background-repeat: no-repeat; background-size: 95%; background-position: center center; }
 header .search .glyphicon { font-size: 2em; }
 header .search .input-group input { border-radius: 0; }
 header .search .input-group button { border-radius: 0; }
+header .nav-icon { position: relative; width: 42px; height: 35px; background: transparent; border: 0px #a8a8a8 solid; border-radius: 5px; }
+header .nav-icon span.icon-bar { display: block; width: 30px; height: 3px; background-color: #ffffff; border-radius: 2px; margin: 5px 0 5px 0; }
 
+@media screen and (max-width: 767px) { header { height: 60px; position: relative; background-color: #e42000; text-align: center; }
+  header .brand .brand-logo { background-image: url("../image/taiwangoods_logo_eng.svg"); background-repeat: no-repeat; background-size: 100%; background-position: center; width: 100%; height: 60px; }
+  header .xs-icon { vertical-align: middle; margin-top: 13px; }
+  header .xs-icon-search button i { color: #ffffff; font-size: 1.8em; line-height: 1.2em; }
+  header .search { display: none; } }
 footer { background-color: whitesmoke; width: 100%; min-height: 225px; margin-top: 50px; }
 footer ul.gray-item li a { color: #a8a8a8; }
 footer ul.gray-item li a:hover { color: #757575; }
-footer .contact { font-size: 0.85em; }
+footer .footer-top { position: relative; }
+footer .footer-top .social { position: absolute; top: 0; right: 0; }
+footer .footer-top .social a { margin-left: 15px; }
 footer .footer-bottom { position: relative; }
+footer .footer-bottom .contact { font-size: 0.85em; }
+footer .footer-bottom .contact strong { font-size: 1.1em; }
 footer .footer-bottom .copyright { position: absolute; bottom: 0; right: 0; }
+
+@media screen and (max-width: 767px) { footer { font-size: 1.1em; text-align: center; }
+  footer .footer-top { display: block; }
+  footer .footer-top .footer-nav li { display: block; margin-top: 5px; }
+  footer .footer-top .social { display: block; position: relative; margin-bottom: 15px; }
+  footer .footer-top .social a { margin-left: 5; margin-right: 5px; }
+  footer .footer-bottom .contact { display: block; }
+  footer .footer-bottom .copyright { position: relative; display: block; margin-top: 15px; margin-bottom: 30px; } }
 
 /*# sourceMappingURL=main.css.map */

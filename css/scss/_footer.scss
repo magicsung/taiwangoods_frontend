@@ -11,16 +11,65 @@ footer {
     }
   }
 
-  .contact {
-    font-size: 0.85em;
+  .footer-top {
+    position: relative;
+    .social {
+      position: absolute;
+      top: 0;
+      right: 0;
+      a {
+        margin-left: 15px;
+      }
+    }
   }
 
   .footer-bottom {
     position: relative;
+    .contact {
+      font-size: 0.85em;
+      strong {
+        font-size: 1.1em;
+      }
+    }
     .copyright {
       position: absolute;
       bottom: 0;
       right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $xs-width) {
+  footer {
+    font-size: 1.1em;
+    text-align: center;
+    .footer-top {
+      display: block;
+      .footer-nav li{
+        display: block;
+        margin-top: 5px;
+      }
+      .social {
+        display: block;
+        position: relative;
+        margin-bottom: 15px;
+        a {
+          margin-left: 5;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      .contact {
+        display: block;
+      }
+      .copyright {
+        position: relative;
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 30px;
+      }
     }
   }
 }

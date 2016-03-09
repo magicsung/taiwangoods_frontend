@@ -1,6 +1,6 @@
 .under-line {
   border-bottom: 2px solid $gray-lighter;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .banner {
@@ -13,13 +13,9 @@
   min-width: 943px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: $md-width) {
   .banner {
     min-width: 100%;
     width: 100%;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  
 }

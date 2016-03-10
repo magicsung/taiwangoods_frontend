@@ -190,17 +190,30 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .favorite-panel .favorite-panel-title p { margin-bottom: 5px; font-weight: bold; }
 .favorite-panel .favorite-panel-content { height: 285px; overflow: scroll; text-align: center; }
 
+.menu-left { position: fixed; top: 0; right: 0; z-index: 100; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; }
+.menu-left #close-menu { position: fixed; top: 0; right: 0; z-index: 100; width: 25%; height: 100%; background-color: transparent; }
+.menu-left .content { position: fixed; left: -75%; z-index: 200; background-color: whitesmoke; width: 75%; height: 100%; overflow-y: scroll; }
+.menu-left .content .menu-items { text-align: left; }
+.menu-left .content .menu-item { display: block; }
+.menu-left .content .menu-link { display: block; min-height: 46px; border-top: 1px #a8a8a8 solid; padding: 10px 20px 10px 20px; color: #757575; font-size: 1.3em; clear: both; }
+.menu-left .content .menu-link.active { color: #e42000; }
+.menu-left .content .arrow { float: right; margin-top: 3px; }
+.menu-left .content .menu-sub-items { display: none; }
+.menu-left .content .menu-sub-item > .menu-link { display: block; background-color: #ffffff; padding-left: 40px; }
+.menu-left .content .menu-sub-item > .menu-link.load { background-image: url("../image/loading.gif"); background-repeat: no-repeat; background-position: 90% center; background-size: auto; }
+.menu-left .content .menu-separate { color: #424242; font-weight: bold; margin: 0; }
+
 header .brand .brand-logo { display: inline-block; width: 180px; height: 100px; background-color: #e42000; background-image: url("../image/taiwangoods_logo.svg"); background-repeat: no-repeat; background-size: 95%; background-position: center center; }
 header .search .glyphicon { font-size: 2em; }
 header .search .input-group input { border-radius: 0; }
 header .search .input-group button { border-radius: 0; }
 header .nav-icon { position: relative; width: 42px; height: 35px; background: transparent; border: 0px #a8a8a8 solid; border-radius: 5px; }
-header .nav-icon span.icon-bar { display: block; width: 30px; height: 3px; background-color: #ffffff; border-radius: 2px; margin: 5px 0 5px 0; }
+header .nav-icon span.icon-bar { display: block; width: 30px; height: 2px; background-color: #ffffff; border-radius: 2px; margin: 5px 0 5px 0; }
 
-@media screen and (max-width: 767px) { header { height: 60px; position: relative; background-color: #e42000; text-align: center; }
-  header .brand .brand-logo { background-image: url("../image/taiwangoods_logo_eng.svg"); background-repeat: no-repeat; background-size: 100%; background-position: center; width: 100%; height: 60px; }
-  header .xs-icon { vertical-align: middle; margin-top: 13px; }
-  header .xs-icon-search button i { color: #ffffff; font-size: 1.8em; line-height: 1.2em; }
+@media screen and (max-width: 767px) { header { height: 50px; position: relative; background-color: #e42000; text-align: center; }
+  header .brand .brand-logo { background-image: url("../image/taiwangoods_logo_eng.svg"); background-repeat: no-repeat; background-size: 100%; background-position: center; width: 100%; height: 50px; }
+  header .xs-icon { vertical-align: middle; margin-top: 8px; }
+  header .xs-icon-search button i { color: #ffffff; font-size: 1.6em; line-height: 1.2em; }
   header .search { display: none; } }
 footer { background-color: whitesmoke; width: 100%; min-height: 225px; margin-top: 50px; }
 footer ul.gray-item li a { color: #a8a8a8; }

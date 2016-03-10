@@ -15,7 +15,7 @@ $( document ).ready(function() {
     }, 300, function() {
         $('#menu-toggle').css("display", "none");
     });
-  }
+  };
 
   var openMenu = document.getElementById('open-menu');
   openMenu.addEventListener('touchstart', openMenuAction);
@@ -36,13 +36,24 @@ $( document ).ready(function() {
           .children('span').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
       });
     });
-  }
+  };
 
   $('.menu-link').click(menuItemClickAction);
   var menuLink = document.getElementsByClassName('menu-link');
   for (var i = 0; i < menuLink.length; i++) {
     menuLink[i].addEventListener('touchstart', menuItemClickAction);
   }
+
+  // search collapse
+  var openSearchAction = function(event) {
+    event.preventDefault();
+    $('.search').slideToggle(200);
+    $('#main-content').toggleClass('slide-down');
+  };
+
+  var openSearch = document.getElementById('open-search');
+  openSearch.addEventListener('touchstart', openSearchAction);
+  openSearch.addEventListener('click', openSearchAction);
 
 
   // touch link loading

@@ -74,6 +74,11 @@ header {
     }
     .search {
       display: none;
+      margin-top: 15px;
+      position: relative;
     }
+  }
+  #main-content.slide-down {
+    top: 60px;
   }
 }

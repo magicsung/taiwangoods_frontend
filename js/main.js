@@ -38,10 +38,10 @@ $( document ).ready(function() {
     });
   };
 
-  $('.menu-link').click(menuItemClickAction);
-  var menuLink = document.getElementsByClassName('menu-link');
-  for (var i = 0; i < menuLink.length; i++) {
-    menuLink[i].addEventListener('touchstart', menuItemClickAction);
+  $('.menu-collapse').click(menuItemClickAction);
+  var menuCollapse = document.getElementsByClassName('menu-collapse');
+  for (var i = 0; i < menuCollapse.length; i++) {
+    menuCollapse[i].addEventListener('touchstart', menuItemClickAction);
   }
 
   // search collapse

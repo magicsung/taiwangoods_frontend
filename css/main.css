@@ -137,6 +137,10 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .color-gray-light { color: #a8a8a8; }
 
+html, body { height: 100%; }
+
+#main-content { min-height: 100%; margin-bottom: -275px; }
+
 a:hover { text-decoration: none; }
 
 .under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 10px; }

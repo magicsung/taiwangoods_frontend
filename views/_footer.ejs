@@ -1,0 +1,72 @@
+<footer>
+  <div class="container">
+    <div class="go-top mt-25">
+      <a href="#top">
+          Go Top <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+    </div>
+    <div class="footer-top mt-20">
+      <div class="social link-gray-light">
+        <a href="#">
+          <i class="fa fa-facebook-square fz-2em"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-weibo fz-2em"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-twitter fz-2em"></i>
+        </a>
+      </div>
+      <div class="footer-nav row-m10">
+        <ul class="inline-block gray-item">
+          <li>
+            <a href="#">認識台灣禮品館</a>
+          </li>
+          <li>
+            <a href="#">聯絡客服</a>
+          </li>
+          <li>
+            <a href="#">購物須知</a>
+          </li>
+          <li>
+            <a href="#">合作招商</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-15 footer-bottom">
+      <div class="contact">
+        <p class="color-gray-light link-gray-light mb-0">
+          <strong>台灣禮品館旗艦店-南海學園</strong><br>
+          <i class="fa fa-map-marker mt-5"></i>  <a href="https://goo.gl/maps/bhfsdzJnSsJ2" target="_blank">台北市中正區南海路41號2樓</a><br>
+          <i class="fa fa-phone"></i>  <a href="tel:+886-02-2375-3999">02-2375-3999</a><br>
+          <i class="fa fa-fax"></i>  <a href="tel:+886-02-2375-3969">02-2375-3969</a><br>
+          <i class="fa fa-calendar"></i>  每日09:30至18:30
+        </p>
+      </div>
+      <div class="copyright">
+        <p class="color-gray-light mb-0">
+          &copy;2016 taiwangoods All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+// scroll smooth
+$('a[href="#top"]').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 400);
+      return false;
+    }
+  }
+});
+</script>

@@ -5,6 +5,11 @@ html, body {
   min-height: 100%;
   margin-bottom: -275px;
 }
+#main-content:after {
+  content: "";
+  display: block;
+  height: 275px;
+}
 
 a:hover {
   text-decoration: none;

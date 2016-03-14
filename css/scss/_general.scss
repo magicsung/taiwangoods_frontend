@@ -40,6 +40,27 @@ a:hover {
   background-color: $gray-lighter;
 }
 
+.view-history {
+  border-top: 3px solid $gray-lighter;
+  padding: 10px 30px 0 30px;
+  height: 130px;
+  overflow: hidden;
+  p {
+    color: $gray;
+    margin-bottom: 0;
+  }
+}
+.history-product {
+  overflow-x: scroll;
+  height: 110px;
+  white-space: nowrap;
+  > ul {
+    > li {
+      display: inline-block;
+    }
+  }
+}
+
 
 
 @media screen and (max-width: $md-width) {

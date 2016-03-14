@@ -8,7 +8,7 @@
 </ol>
 
 <div class="row mt-20">
-  <div class="side-bar-category col-md-2">
+  <div class="side-bar-category col-md-2 hidden-xs mb-25">
     <ul class="main-category">
       <li class="main-category-item">
         <a href="#" class="category-title">新品登場</a>
@@ -70,54 +70,51 @@
       </h4>
     </div>
 
-    <div class="row-m7 text-center">
+    <div class="row-m7">
+      <% for (var i = 0; i < 12; i++) { %>
       <div class="square square-large overflow-show">
         <a href="/pddetail">
-          <img src="http://dummyimage.com/159x159/eeeeee/">
+          <img src="http://dummyimage.com/218x218/eeeeee/">
         </a>
         <div class="like-button">
           <a href="#like"><i class="glyphicon glyphicon-heart-empty"></i></a>
         </div>
         <span class="follow">
           <a href="#">
-            <span class="name">濃妝豔抹總相宜釘書機</span>
-            <span class="price">$1,000</span>
+            <span class="name">商品的名稱最多可以有兩行字數限制為28字</span>
+            <span class="price">999,999</span>
           </a>
         </span>
       </div>
-
-      <div class="square square-large overflow-show">
-        <a href="#">
-          <img src="http://dummyimage.com/159x159/eeeeee/">
-        </a>
-        <div class="like-button">
-          <a href="#like"><i class="glyphicon glyphicon-heart-empty"></i></a>
-        </div>
-        <span class="follow">
-          <a href="#">
-            <span class="name">鶯歌燒阿里山罐裝紅茶</span>
-            <span class="price">$1,000</span>
-          </a>
-        </span>
-      </div>
-
-      <div class="square square-large overflow-show">
-        <a href="#">
-          <img src="http://dummyimage.com/159x159/eeeeee/">
-        </a>
-        <div class="like-button">
-          <a href="#like"><i class="glyphicon glyphicon-heart-empty"></i></a>
-        </div>
-        <span class="follow">
-          <a href="#">
-            <span class="name">
-              燦金天目茶碗<br>
-              燦金天目茶碗
-            </span>
-            <span class="price">$1,000</span>
-          </a>
-        </span>
-      </div>
+      <% } %>
     </div>
+
+    <div class="pagination">
+      <ul>
+        <li class="previous"><a href="#">上一頁</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="view-history mt-50">
+  <p>瀏覽過的商品</p>
+  <div class="history-product row-m7">
+    <ul>
+      <% for( var i = 0; i < 12; i++) { %>
+      <li>
+        <a href="#" class="square square-small">
+          <img src="http://dummyimage.com/85x85/eeeeee/">
+        </a>
+      </li>
+      <% } %>
+    </ul>
   </div>
 </div>

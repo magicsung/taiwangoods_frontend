@@ -157,8 +157,15 @@ a:hover { text-decoration: none; }
 
 .ad-banner { width: 100%; height: 170px; background-color: whitesmoke; }
 
+.view-history { border-top: 3px solid whitesmoke; padding: 10px 30px 0 30px; height: 130px; overflow: hidden; }
+.view-history p { color: #757575; margin-bottom: 0; }
+
+.history-product { overflow-x: scroll; height: 110px; white-space: nowrap; }
+.history-product > ul > li { display: inline-block; }
+
 @media screen and (max-width: 992px) { .banner { min-width: 100%; width: 100%; } }
 .square { margin: 7px; display: inline-block; overflow: hidden; position: relative; text-align: center; }
+.square > a { display: block; }
 .square-large { width: 218px; height: 218px; }
 .square-large img { width: 218px; height: 218px; }
 .square-middle { width: 159px; height: 159px; }
@@ -173,25 +180,25 @@ a:hover { text-decoration: none; }
 .square .hover a { text-align: center; color: whitesmoke; overflow: hidden; text-decoration: none; width: 100%; }
 .square .hover a:hover { color: #ffffff; }
 .square .hover a span { overflow: hidden; vertical-align: top; }
-.square .follow { position: absolute; top: 105%; display: block; width: 100%; }
+.square .follow { display: block; position: relative; top: 10px; width: 100%; height: 74px; }
 .square .follow > a { display: block; position: relative; color: #757575; }
-.square .follow > a .name { display: block; text-align: left; }
+.square .follow > a .name { display: block; height: 40px; text-align: left; overflow: hidden; font-size: 1.1em; }
 .square .follow > a .price { display: block; text-align: right; color: #e42000; font-size: 1.2em; }
+.square .follow > a .price:before { position: relative; top: 1px; margin-right: 5px; font-family: 'Glyphicons Halflings'; content: "\e148"; font-size: 0.8em; }
 .square .like-button { position: absolute; top: 5px; right: 8px; opacity: 0; transition: opacity .3s ease; }
 .square .like-button a { display: block; color: #a8a8a8; font-size: 1.2em; transition: all .3s ease; }
 .square .like-button a:hover { color: #e42000; animation: heart-beat 2s infinite; }
 .square .like-button a:hover i.glyphicon-heart-empty:before { content: "\e005"; }
 .square .like-button a:active, .square .like-button a:focus { transform: scale(2.5); }
 
-.overflow-show { overflow: visible; }
+.overflow-show { overflow: visible; height: auto; }
 
-@media screen and (min-width: 1200px) { .square-large { width: 204px; height: 204px; }
-  .square-large img { width: 204px; height: 204px; }
-  .square.ad-vertical { height: 377px; } }
+@media screen and (min-width: 1200px) { .main-product-show .square-large { width: 204px; height: auto; }
+  .main-product-show .square-large img { width: 204px; height: auto; } }
 @media screen and (max-width: 767px) { .hover, .like-button { display: none; }
   .row-m7 { text-align: center; }
-  .square { width: calc(50% - 16px); height: auto; }
-  .square img { width: 100%; height: auto; } }
+  .square-large, .square-middle { width: calc(50% - 16px); height: auto; }
+  .square-large img, .square-middle img { width: 100%; height: auto; } }
 ul.gray-item li a { color: #757575; text-decoration: none; padding: 5px 10px 5px 10px; }
 ul.gray-item li a:hover { color: #a8a8a8; }
 
@@ -208,7 +215,7 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .favorite-panel { position: relative; height: 332px; width: 235px; border: 2px solid whitesmoke; margin-top: 7px; }
 .favorite-panel .favorite-panel-title { margin-top: 10px; text-align: center; color: #757575; }
 .favorite-panel .favorite-panel-title p { margin-bottom: 5px; font-weight: bold; }
-.favorite-panel .favorite-panel-content { height: 285px; overflow: scroll; text-align: center; }
+.favorite-panel .favorite-panel-content { height: 285px; overflow: scroll; padding-left: 15px; text-align: left; }
 
 .menu-left { position: fixed; top: 0; right: 0; z-index: 100; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; }
 .menu-left #close-menu { position: fixed; top: 0; right: 0; z-index: 100; width: 25%; height: 100%; background-color: transparent; }
@@ -231,7 +238,7 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 
 .side-bar-category { position: relative; }
 .side-bar-category a { color: #757575; }
-.side-bar-category .main-category-item { display: block; padding-bottom: 5px; }
+.side-bar-category .main-category-item { display: block; padding-bottom: 5px; font-weight: 500; }
 .side-bar-category .sub-category { display: none; padding: 5px 0 0 20px; border-bottom: 2px solid whitesmoke; }
 .side-bar-category .main-category-item:first-child .sub-category { display: block; }
 .side-bar-category .sub-category-item { display: block; padding: 5px 0 5px 0; }
@@ -240,12 +247,20 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .side-bar-category .category-title:hover:before { position: absolute; left: 18px; font-family: 'Glyphicons Halflings'; -webkit-font-smoothing: antialiased; content: "\e102"; }
 .side-bar-category .category-title:after { font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; -webkit-font-smoothing: antialiased; position: absolute; right: 30px; content: "\e259"; font-size: 0.8em; line-height: 1.6em; }
 
+.pagination { display: block; text-align: center; border-top: 2px solid whitesmoke; padding-top: 10px; }
+.pagination a { color: #a8a8a8; }
+.pagination a:hover { color: #b11900; }
+.pagination .next > a, .pagination .previous > a { font-weight: 500; }
+.pagination .active > a { color: #e42000; }
+.pagination > ul > li { display: inline-block; padding: 0 3px 0 3px; min-width: 25px; }
+
 header .brand .brand-logo { display: inline-block; width: 180px; height: 100px; background-color: #e42000; background-image: url("../image/taiwangoods_logo.svg"); background-repeat: no-repeat; background-size: 95%; background-position: center center; }
 header .search .glyphicon { font-size: 2em; }
 header .search .input-group input { border-radius: 0; }
 header .search .input-group button { border-radius: 0; }
 header .nav-icon { position: relative; width: 42px; height: 35px; background: transparent; border: 0px #a8a8a8 solid; border-radius: 5px; }
 header .nav-icon span.icon-bar { display: block; width: 30px; height: 2px; background-color: #ffffff; border-radius: 2px; margin: 5px 0 5px 0; }
+header .category-bar { border-bottom: 2px solid whitesmoke; }
 
 @media screen and (max-width: 767px) { header { height: 50px; position: relative; background-color: #e42000; text-align: center; }
   header .brand .brand-logo { background-image: url("../image/taiwangoods_logo_eng.svg"); background-repeat: no-repeat; background-size: 100%; background-position: center; width: 100%; height: 50px; }

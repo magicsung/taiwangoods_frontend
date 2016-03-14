@@ -4,8 +4,8 @@
   overflow: hidden;
   position: relative;
   text-align: center;
-  img {
-    // @include hover-fadeout();
+  > a {
+    display: block;
   }
   &-large {
     width: $square-large-size;
@@ -80,23 +80,35 @@
 
   // follow description
   .follow {
-    position: absolute;
-    top: 105%;
     display: block;
+    position: relative;
+    top: 10px;
     width: 100%;
+    height: 74px;
     > a {
       display: block;
       position: relative;
       color: $gray;
       .name {
         display: block;
+        height: 40px;
         text-align: left;
+        overflow: hidden;
+        font-size: 1.1em;
       }
       .price {
         display: block;
         text-align: right;
         color: $brand-primary;
         font-size: 1.2em;
+        &:before {
+          position: relative;
+          top: 1px;
+          margin-right: 5px;
+          font-family: 'Glyphicons Halflings';
+          content: "\e148";
+          font-size: 0.8em;
+        }
       }
     }
   }
@@ -129,21 +141,21 @@
 }
 .overflow-show {
   overflow: visible;
+  height: auto;
 }
 
 
 @media screen and (min-width: $lg-width) {
-  .square {
-    &-large {
-      width: $square-large-size - 14px;
-      height: $square-large-size - 14px;
-      img {
+  .main-product-show {
+    .square {
+      &-large {
         width: $square-large-size - 14px;
-        height: $square-large-size - 14px;
+        height: auto;
+        img {
+          width: $square-large-size - 14px;
+          height: auto;
+        }
       }
-    }
-    &.ad-vertical {
-      height: $ad-banner-height - 14px;
     }
   }
 }
@@ -156,7 +168,7 @@
   .row-m7 {
     text-align: center;
   }
-  .square {
+  .square-large, .square-middle {
     width: calc(50% - 16px);
     height: auto;
     img {

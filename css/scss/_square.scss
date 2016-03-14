@@ -78,6 +78,29 @@
     }
   }
 
+  // follow description
+  .follow {
+    position: absolute;
+    top: 105%;
+    display: block;
+    width: 100%;
+    > a {
+      display: block;
+      position: relative;
+      color: $gray;
+      .name {
+        display: block;
+        text-align: left;
+      }
+      .price {
+        display: block;
+        text-align: right;
+        color: $brand-primary;
+        font-size: 1.2em;
+      }
+    }
+  }
+
   .like-button {
     position: absolute;
     top: 5px;
@@ -103,6 +126,9 @@
     }
   }
 
+}
+.overflow-show {
+  overflow: visible;
 }
 
 

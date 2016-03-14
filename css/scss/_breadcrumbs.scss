@@ -1,0 +1,19 @@
+.breadcrumbs {
+  padding-left: 0;
+  margin-top: 20px;
+  > li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">";
+  }
+  > li {
+    display: inline-block;
+    color: $gray;
+    > a {
+      color: $gray;
+      &:hover {
+        color: $gray-light;
+      }
+    }
+  }
+}

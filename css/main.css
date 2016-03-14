@@ -113,6 +113,8 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 
 .fz-4em { font-size: 4em; }
 
+.fw-400 { font-weight: 400; }
+
 .vertical-bottom { vertical-align: bottom; }
 
 .vertical-center { vertical-align: middle; }
@@ -128,6 +130,8 @@ ul { margin-bottom: 0; list-style-type: none; padding-left: 0; }
 .inline-block li { display: inline-block; }
 
 .inline { display: inline; }
+
+.block { display: block; }
 
 .color-white { color: #ffffff; }
 
@@ -145,11 +149,13 @@ html, body { height: 100%; }
 
 a:hover { text-decoration: none; }
 
-.under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 10px; }
+.under-line { border-bottom: 2px solid whitesmoke; padding-bottom: 6px; font-weight: normal; }
 
 .content { position: relative; }
 
 .banner { width: 100%; position: relative; background-image: url("../image/index-banner.png"); background-repeat: no-repeat; background-size: cover; min-height: 215px; min-width: 943px; }
+
+.ad-banner { width: 100%; height: 170px; background-color: whitesmoke; }
 
 @media screen and (max-width: 992px) { .banner { min-width: 100%; width: 100%; } }
 .square { margin: 7px; display: inline-block; overflow: hidden; position: relative; text-align: center; }
@@ -167,11 +173,17 @@ a:hover { text-decoration: none; }
 .square .hover a { text-align: center; color: whitesmoke; overflow: hidden; text-decoration: none; width: 100%; }
 .square .hover a:hover { color: #ffffff; }
 .square .hover a span { overflow: hidden; vertical-align: top; }
+.square .follow { position: absolute; top: 105%; display: block; width: 100%; }
+.square .follow > a { display: block; position: relative; color: #757575; }
+.square .follow > a .name { display: block; text-align: left; }
+.square .follow > a .price { display: block; text-align: right; color: #e42000; font-size: 1.2em; }
 .square .like-button { position: absolute; top: 5px; right: 8px; opacity: 0; transition: opacity .3s ease; }
 .square .like-button a { display: block; color: #a8a8a8; font-size: 1.2em; transition: all .3s ease; }
 .square .like-button a:hover { color: #e42000; animation: heart-beat 2s infinite; }
 .square .like-button a:hover i.glyphicon-heart-empty:before { content: "\e005"; }
 .square .like-button a:active, .square .like-button a:focus { transform: scale(2.5); }
+
+.overflow-show { overflow: visible; }
 
 @media screen and (min-width: 1200px) { .square-large { width: 204px; height: 204px; }
   .square-large img { width: 204px; height: 204px; }
@@ -210,6 +222,23 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .menu-left .content .menu-sub-item > .menu-link { display: block; background-color: #ffffff; padding-left: 40px; }
 .menu-left .content .menu-sub-item > .menu-link.load { background-image: url("../image/loading.gif"); background-repeat: no-repeat; background-position: 90% center; background-size: auto; }
 .menu-left .content .menu-separate { color: #424242; font-weight: bold; margin: 0; }
+
+.breadcrumbs { padding-left: 0; margin-top: 20px; }
+.breadcrumbs > li + li:before { padding: 0 5px; color: #ccc; content: ">"; }
+.breadcrumbs > li { display: inline-block; color: #757575; }
+.breadcrumbs > li > a { color: #757575; }
+.breadcrumbs > li > a:hover { color: #a8a8a8; }
+
+.side-bar-category { position: relative; }
+.side-bar-category a { color: #757575; }
+.side-bar-category .main-category-item { display: block; padding-bottom: 5px; }
+.side-bar-category .sub-category { display: none; padding: 5px 0 0 20px; border-bottom: 2px solid whitesmoke; }
+.side-bar-category .main-category-item:first-child .sub-category { display: block; }
+.side-bar-category .sub-category-item { display: block; padding: 5px 0 5px 0; }
+.side-bar-category .sub-category-item > a { color: #a8a8a8; }
+.side-bar-category .category-title { display: block; border-bottom: 2px solid whitesmoke; padding: 3px 0 3px 20px; font-size: 1.1em; clear: both; }
+.side-bar-category .category-title:hover:before { position: absolute; left: 18px; font-family: 'Glyphicons Halflings'; -webkit-font-smoothing: antialiased; content: "\e102"; }
+.side-bar-category .category-title:after { font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; -webkit-font-smoothing: antialiased; position: absolute; right: 30px; content: "\e259"; font-size: 0.8em; line-height: 1.6em; }
 
 header .brand .brand-logo { display: inline-block; width: 180px; height: 100px; background-color: #e42000; background-image: url("../image/taiwangoods_logo.svg"); background-repeat: no-repeat; background-size: 95%; background-position: center center; }
 header .search .glyphicon { font-size: 2em; }

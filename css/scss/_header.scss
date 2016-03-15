@@ -46,6 +46,15 @@ header {
   }
 }
 
+@media screen and (min-width: $sm-width) and (max-width: $md-width) {
+  .category {
+    margin-top: 25px;
+    float: left !important;
+    ul > li:first-child > a {
+      padding-left: 0;
+    }
+  }
+}
 
 @media screen and (max-width: $xs-width) {
   header {

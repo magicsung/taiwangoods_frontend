@@ -109,13 +109,13 @@
         text-align: right;
         color: $brand-primary;
         font-size: 1.2em;
+        font-weight: 300;
         &:before {
           position: relative;
-          top: 1px;
+          top: 0;
           margin-right: 5px;
-          font-family: 'Glyphicons Halflings';
-          content: "\e148";
-          font-size: 0.8em;
+          content: "$";
+          font-size: 1em;
         }
       }
     }

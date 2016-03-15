@@ -187,8 +187,8 @@ a:hover { text-decoration: none; }
 .square .follow { display: block; position: relative; top: 10px; width: 100%; height: 74px; }
 .square .follow > a { display: block; position: relative; color: #757575; }
 .square .follow > a .name { display: block; height: 40px; text-align: left; overflow: hidden; font-size: 1.1em; }
-.square .follow > a .price { display: block; text-align: right; color: #e42000; font-size: 1.2em; }
-.square .follow > a .price:before { position: relative; top: 1px; margin-right: 5px; font-family: 'Glyphicons Halflings'; content: "\e148"; font-size: 0.8em; }
+.square .follow > a .price { display: block; text-align: right; color: #e42000; font-size: 1.2em; font-weight: 300; }
+.square .follow > a .price:before { position: relative; top: 0; margin-right: 5px; content: "$"; font-size: 1em; }
 .square .like-button { position: absolute; top: 5px; right: 8px; opacity: 0; transition: opacity .3s ease; }
 .square .like-button a { display: block; color: #a8a8a8; font-size: 1.2em; transition: all .3s ease; }
 .square .like-button a:hover { color: #e42000; animation: heart-beat 2s infinite; }

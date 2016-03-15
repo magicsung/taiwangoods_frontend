@@ -255,6 +255,7 @@ ul.gray-item li a:hover { color: #a8a8a8; }
 .side-bar-category .category-title { display: block; border-bottom: 2px solid whitesmoke; padding: 3px 0 3px 20px; font-size: 1.1em; clear: both; }
 .side-bar-category .category-title:hover:before { position: absolute; left: 18px; font-family: 'Glyphicons Halflings'; -webkit-font-smoothing: antialiased; content: "\e102"; }
 .side-bar-category .category-title:after { font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; -webkit-font-smoothing: antialiased; position: absolute; right: 30px; content: "\e259"; font-size: 0.8em; line-height: 1.6em; }
+.side-bar-category .category-title.active:after { content: "\e260"; }
 
 .pagination { display: block; text-align: center; border-top: 2px solid whitesmoke; padding-top: 10px; }
 .pagination a { color: #a8a8a8; }

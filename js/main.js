@@ -64,5 +64,14 @@ $( document ).ready(function() {
     });
   }
 
+  $('.category-title').click(function() {
+    if ( $(this).hasClass("active") ) {
+      $(this).siblings('.sub-category').css('display', 'none');
+    } else {
+      $(this).siblings('.sub-category').css('display', 'block');
+    }
+    $(this).toggleClass('active');
+  });
+
 
 });

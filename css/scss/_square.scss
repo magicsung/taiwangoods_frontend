@@ -7,6 +7,14 @@
   > a {
     display: block;
   }
+  &-extra-large {
+    width: $square-extra-large-size;
+    height: $square-extra-large-size;
+    img {
+      width: $square-extra-large-size;
+      height: $square-extra-large-size;
+    }
+  }
   &-large {
     width: $square-large-size;
     height: $square-large-size;
@@ -170,6 +178,14 @@
   }
   .square-large, .square-middle {
     width: calc(50% - 16px);
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .square-extra-large {
+    width: calc(100% - 16px);
     height: auto;
     img {
       width: 100%;

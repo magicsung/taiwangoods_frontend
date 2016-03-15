@@ -36,3 +36,11 @@ ul.gray-item li a {
     color: $gray;
   }
 }
+.btn-red {
+  background-color: $brand-primary;
+  color: $white;
+  &:hover {
+    background-color: $brand-primary-dark;
+    color: $white;
+  }
+}

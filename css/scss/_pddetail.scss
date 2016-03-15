@@ -1,0 +1,105 @@
+.product-name {
+  font-weight: 400;
+  margin-top: 7px;
+}
+.description {
+  margin-top: 30px;
+}
+.product-detail {
+  border-bottom: 5px solid $gray-lighter;
+  padding-bottom: 25px;
+  table {
+    color: $gray;
+    th {
+      width: 25%;
+    }
+    th, td {
+      border: 0 !important;
+    }
+  }
+}
+.share-button {
+  border-top: 2px solid $gray-lighter;
+  border-bottom: 2px solid $gray-lighter;
+  padding-top: 5px;
+  .table {
+    margin-bottom: 5px;
+  }
+  a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.2em;
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}
+
+.add-to-cart {
+  padding-top: 15px;
+  .table {
+    margin-bottom: 0;
+    tr {
+      line-height: 3em;
+      vertical-align: bottom;
+    }
+    th, td {
+      border: 0 !important;
+    }
+  }
+  .title {
+    width: 25%;
+    line-height: 3em;
+    color: $gray;
+  }
+  .quantity {
+    width: 25%;
+  }
+  .price {
+    display: block;
+    text-align: right;;
+    color: $brand-primary;
+    font-size: 2em;
+    font-weight: 300;
+    &:before {
+      position: relative;
+      top: -1px;
+      margin-right: 5px;
+      content: "$";
+      font-size: .7em;
+    }
+  }
+  .btn-red {
+    width: 100%;
+    font-size: 1.6em;
+    font-weight: 300;
+    height: 2em;
+  }
+}
+
+.title-with-baseline {
+  color: $gray-light;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid $gray-lighter;
+}
+.remark {
+  border-bottom: 2px solid $gray-lighter;
+}
+
+#product-detail-content,
+#product-detail-remark {
+  min-height: 100px;
+  color: $gray;
+}
+
+@media screen and (max-width: $xs-width) {
+  .product-thumbnail .square-small {
+    width: calc(25% - 18px);
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

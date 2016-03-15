@@ -9,6 +9,10 @@ ul {
   padding-left: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, a{
+  color: $gray;
+}
+
 @for $i from 0 to 11 {
   .mt-#{$i*5} {
     margin-top: #{$i*5}px;

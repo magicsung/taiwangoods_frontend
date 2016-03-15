@@ -9,17 +9,17 @@
     <div class="row">
       <div class="col-md-3 col-sm-3 product-thumbnail">
         <div class="row-m7">
-          <% for( var i = 0; i < 4; i++) { %>
-          <a href="#" class="square square-small">
-            <img src="http://dummyimage.com/85x85/eeeeee/">
+          <% for( var i = 1; i < 5; i++) { %>
+          <a href="#" class="square square-small thumbnail-image">
+            <img src="http://dummyimage.com/85x85/eeeeee/&text=image<%= i %>" data-lg="http://dummyimage.com/400x400/eeeeee/&text=image<%= i %>" data-xl="http://dummyimage.com/1000x1000/eeeeee/&text=image<%= i %>">
           </a>
           <% } %>
         </div>
       </div>
       <div class="col-md-9 col-sm-9 product-image-view">
         <div class="row-m7">
-          <a href="#" class="square square-extra-large">
-            <img src="http://dummyimage.com/382x382/eeeeee/">
+          <a href="#pop-out" class="square square-extra-large" id="image-view">
+            <img src="http://dummyimage.com/382x382/eeeeee/" data-url="http://dummyimage.com/1000x1000/eeeeee/">
           </a>
         </div>
       </div>
@@ -124,3 +124,7 @@
 </div>
 
 <% include ./views/_view-history.ejs %>
+
+<div id="light-box">
+  <img src="" alt="" />
+</div>

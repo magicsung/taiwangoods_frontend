@@ -17,6 +17,17 @@
       border: 0 !important;
     }
   }
+  .square-extra-large:hover:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $light-mask;
+    font-family: 'Glyphicons Halflings';
+    content: "\e015";
+    color: $white;
+    font-size: 7em;
+    line-height: 382px;
+  }
 }
 .share-button {
   border-top: 2px solid $gray-lighter;
@@ -101,5 +112,26 @@
       width: 100%;
       height: auto;
     }
+  }
+}
+
+#light-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-mask;
+  text-align: center;
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
 }

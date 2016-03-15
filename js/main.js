@@ -64,6 +64,7 @@ $( document ).ready(function() {
     });
   }
 
+  // category collapse
   $('.category-title').click(function() {
     if ( $(this).hasClass("active") ) {
       $(this).siblings('.sub-category').css('display', 'none');
@@ -73,5 +74,21 @@ $( document ).ready(function() {
     $(this).toggleClass('active');
   });
 
+  // product detail image switch
+  $('.thumbnail-image').click(function() {
+    var lg = $(this).children('img').data('lg');
+    var xl = $(this).children('img').data('xl');
+    $('#image-view').children('img').attr('src', lg).data('url', xl);
+  });
+
+  // image light box
+  $('#image-view').click(function() {
+    var url = $(this).children('img').data('url');
+    $('#light-box').children('img').attr('src', url);
+    $('#light-box').show();
+  });
+  $('#light-box').click(function() {
+    $(this).hide();
+  });
 
 });

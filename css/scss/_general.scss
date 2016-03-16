@@ -62,3 +62,10 @@ a:hover {
     width: 100%;
   }
 }
+
+
+@media screen and (max-width: $xs-width) {
+  #filling {
+    margin-top: 15px;
+  }
+}

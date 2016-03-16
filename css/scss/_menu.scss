@@ -16,6 +16,12 @@
     height: 100%;
     background-color: $opactiy;
   }
+  .menu-collapse:after {
+    font-family: 'Glyphicons Halflings';
+    content: '\e114';
+    position: absolute;
+    right: 20px;
+  }
   .content {
     position: fixed;
     left: -75%;
@@ -40,6 +46,9 @@
       clear: both;
       &.active {
         color: $brand-primary;
+        &:after {
+          content: '\e113';
+        }
       }
     }
     .arrow {

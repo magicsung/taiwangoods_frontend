@@ -29,11 +29,9 @@ $( document ).ready(function() {
   var menuItemClickAction = function(event){
     event.preventDefault();
     $(this).siblings().slideToggle(200, function(){
-      $(this).siblings().toggleClass('active')
-        .children('span').toggleClass('glyphicon-chevron-down').toggleClass('glyphicon-chevron-up');
+      $(this).siblings().toggleClass('active');
       $(this).parent().siblings().children('.menu-sub-items').slideUp(200, function(){
-        $(this).siblings().removeClass('active')
-          .children('span').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        $(this).siblings().removeClass('active');
       });
     });
   };
@@ -43,19 +41,6 @@ $( document ).ready(function() {
   for (var i = 0; i < menuCollapse.length; i++) {
     menuCollapse[i].addEventListener('touchstart', menuItemClickAction);
   }
-
-  // search collapse
-  var openSearchAction = function(event) {
-    event.preventDefault();
-    $('.search').slideToggle(200);
-    $('#filling').animate({
-      top: ($('#filling').hasClass('slide-down') ? "0" : "75px")
-    }, 200).toggleClass('slide-down');
-  };
-
-  var openSearch = document.getElementById('open-search');
-  openSearch.addEventListener('touchstart', openSearchAction);
-  openSearch.addEventListener('click', openSearchAction);
 
   // touch link loading
   var linkLoading = document.getElementsByClassName('menu-link');

@@ -26,11 +26,11 @@ header {
   }
   .nav-icon {
     position: relative;
-    width: 42px;
-    height: 35px;
+    width: calc(50% - 3px);
+    height: 30px;
     background: $opactiy;
-    border: 0px $gray-light solid;
-    border-radius: 5px;
+    border: 0 $gray-light solid;
+    padding: 3px;
     span.icon-bar {
       display: block;
       width: 30px;
@@ -38,6 +38,17 @@ header {
       background-color: $white;
       border-radius: 2px;
       margin: 5px 0 5px 0;
+    }
+    i {
+      color: $white;
+      top: -1px;
+      font-size: 2em;
+      line-height: 1.2em;
+    }
+    i.cart:after {
+      font-family: 'Material Icons';
+      content: "shopping_cart";
+      -webkit-font-feature-settings: 'liga';
     }
   }
 
@@ -76,22 +87,13 @@ header {
       vertical-align: middle;
       margin-top: 8px;
     }
-    .xs-icon-search {
-      button {
-        i {
-          color: $white;
-          font-size: 1.6em;
-          line-height: 1.2em;
-        }
-      }
-    }
     .search {
-      display: none;
       margin-top: 10px;
       position: relative;
     }
   }
   #filling {
     position: relative;
+    margin-top: 70px;
   }
 }

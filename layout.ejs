@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="css/vender/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css" charset="utf-8">
-    <script src="js/vender/jquery-2.2.1.min.js" type="text/javascript"></script>
-    <script src="js/vender/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
     <div id="main-content">
       <% include ./views/_header.ejs %>
-      <div class="container">
+      <div class="container" id="filling">
         <%- body %>
       </div>
     </div>
 
     <% include ./views/_footer.ejs %>
+    <% include ./views/_js.ejs %>
   </body>
 </html>

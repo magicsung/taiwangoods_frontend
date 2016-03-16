@@ -29,6 +29,12 @@ app.get('/pddetail', function(req, res){
     layout: true
   } );
 });
+app.get('/empty', function(req, res){
+  res.render( __dirname + '/empty-page', {
+    title: "無內容測試",
+    layout: true
+  } );
+});
 
 http.listen(8080, function(){
   console.log('listening on *:8080');

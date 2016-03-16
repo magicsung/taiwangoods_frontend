@@ -16,8 +16,8 @@
   }
   .favorite-panel-content {
     height: 285px;
-    overflow: scroll;
-    padding-left: 15px;
+    overflow-y: scroll;
+    padding-left: 10px;
     text-align: left;
   }
 }

@@ -12,8 +12,10 @@ header {
     }
   }
   .search {
-    .glyphicon {
-      font-size: 2em;
+    i {
+      position: relative;
+      font-size: 2.2em;
+      vertical-align: middle;
     }
     .input-group {
       input {
@@ -23,6 +25,12 @@ header {
         border-radius: 0;
       }
     }
+  }
+  .navigation i {
+    font-size: 1.5em;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
   }
   .nav-icon {
     position: relative;

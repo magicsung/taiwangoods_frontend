@@ -11,12 +11,12 @@
   &:after {
     position: absolute;
     z-index: 350;
-    font-size: 3em;
+    font-size: 5em;
     color: $gray-lighter;
-    right: 5%;
-    top: 5%;
-    font-family: 'Glyphicons Halflings';
-    content: "\e016";
+    right: 3%;
+    top: 3%;
+    font-family: 'Material Icons';
+    content: 'zoom_out';
   }
   > img {
     max-width: 100%;

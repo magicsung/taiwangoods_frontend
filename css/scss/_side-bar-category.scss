@@ -34,25 +34,25 @@
     &:hover {
       &:before {
         position: absolute;
-        left: 18px;
-        font-family: 'Glyphicons Halflings';
+        left: 16px;
         -webkit-font-smoothing: antialiased;
-        content: "\e102";
+        font-family: 'Material Icons';
+        content: "card_giftcard";
       }
     }
     &:after {
-      font-family: 'Glyphicons Halflings';
       font-style: normal;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       position: absolute;
       right: 30px;
-      content: "\e259";
-      font-size: 0.8em;
+      font-family: 'Material Icons';
+      content: "keyboard_arrow_up";
+      font-size: 1em;
       line-height: 1.6em;
     }
     &.active:after {
-      content: "\e260";
+      content: "keyboard_arrow_down";
     }
   }
 }

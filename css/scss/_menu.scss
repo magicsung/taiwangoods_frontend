@@ -16,9 +16,16 @@
     height: 100%;
     background-color: $opactiy;
   }
+  .menu-collapse {
+    display: block;
+    position: relative;
+  }
   .menu-collapse:after {
-    font-family: 'Glyphicons Halflings';
-    content: '\e114';
+    position: relative;
+    top: 2px;
+    font-size: 1.5em;
+    font-family: 'Material Icons';
+    content: "keyboard_arrow_down";
     position: absolute;
     right: 20px;
   }
@@ -47,7 +54,7 @@
       &.active {
         color: $brand-primary;
         &:after {
-          content: '\e113';
+          content: "keyboard_arrow_up";
         }
       }
     }

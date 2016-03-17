@@ -130,13 +130,17 @@
     a {
       display: block;
       color: $gray-light;
-      font-size: 1.2em;
+      font-size: 1.6em;
       transition: all .3s ease;
+      &:after {
+        font-family: 'Material Icons';
+        content: "favorite_border";
+      }
       &:hover {
         color: $brand-primary;
         animation: heart-beat 2s infinite;
-        i.glyphicon-heart-empty:before {
-          content: "\e005";
+        &:after {
+          content: "favorite";
         }
       }
       &:active,

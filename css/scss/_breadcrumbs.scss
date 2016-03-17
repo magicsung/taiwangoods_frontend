@@ -2,9 +2,11 @@
   padding-left: 0;
   margin-top: 20px;
   > li+li:before {
-    padding: 0 5px;
-    color: #ccc;
-    content: ">";
+    padding: 5px 5px;
+    color: $gray-light;
+    font-family: 'Material Icons';
+    content: 'chevron_right';
+    vertical-align: middle;
   }
   > li {
     display: inline-block;

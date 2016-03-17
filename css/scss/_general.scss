@@ -56,6 +56,26 @@ a:hover {
 }
 
 
+.social {
+  a {
+    margin-left: 15px;
+    display: inline-block;
+    width: 30px;
+    color: $gray-light;
+    vertical-align: middle;
+    svg {
+      width: 100%;
+      path {
+        fill: $gray-light;
+      }
+      &:hover path {
+        fill: $gray;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: $md-width) {
   .banner {
     min-width: 100%;

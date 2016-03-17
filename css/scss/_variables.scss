@@ -6,12 +6,18 @@ $mask:                   rgba(0,0,0,.5);
 $dark-mask:              rgba(0,0,0,.8);
 
 $white:                  #ffffff;
-$gray:                   #757575 !default;
-$gray-light:             lighten($gray, 20%) !default;     //#C2C2C2
-$gray-lighter:           lighten($gray, 50%) !default;     //#F5F5F5
-$gray-dark:              darken($gray, 20%) !default;      //#5c5c5c
+$green:                  #7ed321;
 
-$brand-primary:          #e42000 !default;
+$gray:                   #757575 !default;
+$gray-light:             #9b9da0 !default;
+$gray-lighter:           #e0e0e0 !default;
+$gray-dark:              #555555 !default;
+
+$bg-light:               rgba(117, 117, 117, .1) !default;
+$bg-light-solid:         #f1f1f1 !default;
+$bg-dark:                rgba(117, 117, 117, .7) !default;
+
+$brand-primary:          #e22300 !default;
 $brand-primary-dark:     darken($brand-primary, 10%) !default; //#b11900
 
 $square-extra-large-size:382px;

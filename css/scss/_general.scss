@@ -71,3 +71,18 @@ a:hover {
     margin-top: 15px;
   }
 }
+
+@media screen and (max-width: $md-width) {
+  #ad-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    .item img{
+      position: relative;
+      max-width: 150%;
+      width: 150%;
+      left: -25%;
+    }
+  }
+}

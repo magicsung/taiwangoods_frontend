@@ -15,3 +15,17 @@
     display: none !important;
   }
 }
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  > img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $md-width) {
+  .banner img {
+    width: calc(100% + 285px);
+  }
+}

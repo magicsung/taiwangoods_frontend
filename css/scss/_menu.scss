@@ -26,6 +26,8 @@
     font-size: 1.5em;
     font-family: 'Material Icons';
     content: "keyboard_arrow_down";
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
     position: absolute;
     right: 20px;
   }

@@ -76,6 +76,8 @@
         padding-right: 10px;
         font-size: 1.7em;
         font-family: 'Material Icons';
+        -webkit-font-feature-settings: 'liga';
+        font-feature-settings: 'liga';
       }
       .email-icon:after {
         content: 'email';

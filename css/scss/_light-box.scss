@@ -17,6 +17,8 @@
     top: 3%;
     font-family: 'Material Icons';
     content: 'zoom_out';
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
   }
   > img {
     max-width: 100%;

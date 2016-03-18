@@ -18,7 +18,9 @@ html.noscroll {
   display: block;
   height: 275px;
 }
-a:hover {
+a:hover,
+a:active,
+a:focus {
   text-decoration: none;
 }
 

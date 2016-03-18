@@ -129,12 +129,15 @@
     transition: opacity .3s ease;
     a {
       display: block;
+      width: 30px;
       color: $gray-light;
       font-size: 1.6em;
       transition: all .3s ease;
       &:after {
         font-family: 'Material Icons';
         content: "favorite_border";
+        -webkit-font-feature-settings: 'liga';
+        font-feature-settings: 'liga';
       }
       &:hover {
         color: $brand-primary;
@@ -142,10 +145,6 @@
         &:after {
           content: "favorite";
         }
-      }
-      &:active,
-      &:focus {
-        transform: scale(2.5);
       }
     }
   }

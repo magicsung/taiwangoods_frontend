@@ -29,6 +29,12 @@ app.get('/pddetail', function(req, res){
     layout: true
   } );
 });
+app.get('/membercenter', function(req, res){
+  res.render( __dirname + '/membercenter', {
+    title: "會員中心",
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",

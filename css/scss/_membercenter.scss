@@ -1,0 +1,20 @@
+.membercenter-sidemenu {
+  color: $gray;
+  font-size: 1.1em;
+  li {
+    padding: 10px 10px 10px 30px;
+  }
+  .menu > li {
+    background-color: $bg-light;
+  }
+  .sub-item {
+    padding: 10px 10px 10px 15px;
+    > li {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+  .active {
+    font-weight: bold;
+  }
+}

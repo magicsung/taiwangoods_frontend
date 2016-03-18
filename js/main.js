@@ -7,6 +7,7 @@ $( document ).ready(function() {
     $('#menu-content').animate({
       left: "0"
     }, 300);
+    $('html').addClass('noscroll');
   };
   var closeMenuAction = function(event){
     event.preventDefault();
@@ -15,6 +16,7 @@ $( document ).ready(function() {
     }, 300, function() {
         $('#menu-toggle').css("display", "none");
     });
+    $('html').removeClass('noscroll');
   };
 
   var openMenu = document.getElementById('open-menu');
@@ -72,13 +74,17 @@ $( document ).ready(function() {
     var url = $(this).children('img').data('url');
     $('#light-box').children('img').attr('src', url);
     $('#light-box').fadeIn(300);
+    $('html').addClass('noscroll');
   });
   $('#light-box').click(function() {
     $(this).fadeOut(300);
+    $('html').removeClass('noscroll');
   });
+
   $('body').keypress(function(e){
     if(e.which == 27){
       $('#light-box').fadeOut(300);
+      closePopout();
     }
   });
 
@@ -89,5 +95,23 @@ $( document ).ready(function() {
   $("#ad-carousel").swipeleft(function() {
     $(this).carousel('next');
   });
+
+  // popout toggle
+  var closePopout = function() {
+    $('.popout').children('.content').slideUp();
+    $('.popout').fadeOut('slow');
+    $('html').removeClass('noscroll');
+  }
+  var openPopout = function() {
+    $('.popout').fadeIn('slow');
+    $('.popout .content').slideDown();
+    $('html').addClass('noscroll');
+  }
+
+  $('.login').click(openPopout);
+  var closePopoutLogin = document.getElementById('close-popout-login')
+  closePopoutLogin.addEventListener('click', closePopout);
+  closePopoutLogin.addEventListener('touchstart', closePopout);
+  $('#close-popout-area').click(closePopout);
 
 });

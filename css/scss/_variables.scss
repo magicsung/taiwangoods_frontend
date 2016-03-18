@@ -7,6 +7,8 @@ $dark-mask:              rgba(0,0,0,.8);
 
 $white:                  #ffffff;
 $green:                  #7ed321;
+$fb-blue:                #3c5896;
+$fb-blue-light:          lighten($fb-blue, 10%);
 
 $gray:                   #757575 !default;
 $gray-light:             #9b9da0 !default;
@@ -18,6 +20,7 @@ $bg-light-solid:         #f1f1f1 !default;
 $bg-dark:                rgba(117, 117, 117, .7) !default;
 
 $brand-primary:          #e22300 !default;
+$brand-primary-light:    lighten($brand-primary, 10%);
 $brand-primary-dark:     darken($brand-primary, 10%) !default; //#b11900
 
 $square-extra-large-size:382px;

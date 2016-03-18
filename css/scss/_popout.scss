@@ -1,0 +1,164 @@
+.popout {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-mask;
+  z-index: 500;
+  text-align: center;
+  #close-popout-area {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $opactiy;
+  }
+  .content {
+    display: none;
+    overflow-y: scroll;
+    width: 80%;
+    max-width: 800px;
+    max-height: 100%;
+    background-color: $white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 3em;
+    }
+  }
+  button {
+    font-weight: bold;
+  }
+  .head {
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  .body {
+    min-height: 300px;
+    position: relative;
+    clear: both;
+    .left, .right {
+      padding: 15px 50px 15px 50px;
+      text-align: left;
+    }
+    .right {
+      color: $gray;
+      .form-group {
+        position: relative;
+      }
+      .form-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 10px;
+        font-size: 1.7em;
+        font-family: 'Material Icons';
+      }
+      .email-icon:after {
+        content: 'email';
+      }
+      .password-icon:after {
+        content: 'lock';
+      }
+    }
+  }
+  .foot {
+    position: relative;
+    background-color: $bg-light-solid;
+    color: $gray;
+    padding: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    a {
+      font-size: 1.1em;
+      display: inline-block;
+      padding: 1px 10px 1px 6px;
+      margin: 0;
+      &:hover {
+        color: $brand-primary;
+      }
+      &:first-child {
+        border-right: 1px solid $gray-light;
+      }
+    }
+  }
+}
+
+.btn-login {
+  border-radius: 0;
+  border: 1px;
+  padding: 5px;
+  color: $white;
+  width: 100%;
+  height: 3em;
+  span {
+    line-height: 2em;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+  }
+  svg {
+    width: 26px;
+    float: left;
+    margin-left: 15px;
+    path {
+      fill: $white;
+    }
+  }
+}
+.btn-fb-login {
+  background-color: $fb-blue;
+  &:hover {
+    background-color: $fb-blue-light;
+  }
+}
+.btn-weibo-login {
+  background-color: $brand-primary;
+  &:hover {
+    background-color: $brand-primary-light;
+  }
+}
+.btn-google-login {
+  background-color: $white;
+  color: $brand-primary;
+  border: 1px solid $brand-primary;
+  &:hover {
+    background-color: $bg-light;
+    border: 1px solid $white;
+    color: $brand-primary-light;
+  }
+  svg path {
+      fill: $brand-primary;
+    }
+}
+
+
+
+@media screen and (min-width: $sm-width) {
+  .popout .right {
+    border-left: 1px solid $gray-lighter;
+  }
+}
+
+@media screen and (max-width: $xs-width) {
+  .popout {
+    .content {
+      width: 95%;
+    }
+    .body {
+      .left, .right {
+        padding: 15px;
+      }
+    }
+  }
+}

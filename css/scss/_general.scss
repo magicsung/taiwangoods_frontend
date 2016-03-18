@@ -4,6 +4,11 @@ html, body {
   "source-han-sans-traditional", 'Microsoft JhengHei',
   'Noto Sans TC', Verdana ,serif;
 }
+html.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
 #main-content {
   min-height: 100%;
   margin-bottom: -275px;

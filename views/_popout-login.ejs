@@ -30,10 +30,15 @@
             <input type="password" name="login-password" value="" class="form-control" placeholder="密碼" id="login-password">
             <label for="login-password" class="form-icon password-icon"></label>
           </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> 記住帳號
-            </label>
+          <div class="form-group rember-me">
+            <label for="rember-me-switch" class="rember-me-label">記住帳號</label>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="rember-me-switch">
+              <label class="onoffswitch-label" for="rember-me-switch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
           </div>
           <div class="form-group">
             <input type="password" name="name" value="" class="form-control" placeholder="我不是機器人" disabled="dsiabled">

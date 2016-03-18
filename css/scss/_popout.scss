@@ -35,6 +35,19 @@
       right: 5px;
       font-size: 3em;
     }
+    .rember-me {
+      vertical-align: middle;
+      .rember-me-label {
+        margin-right: 15px;
+        padding-top: 3px;
+        vertical-align: middle;
+      }
+      .onoffswitch{
+        vertical-align: middle;
+        display: inline-block;
+        height: 32px;
+      }
+    }
   }
   button {
     font-weight: bold;

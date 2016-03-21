@@ -6,6 +6,8 @@
     color: $gray-light;
     font-family: 'Material Icons';
     content: 'chevron_right';
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
     vertical-align: middle;
   }
   > li {

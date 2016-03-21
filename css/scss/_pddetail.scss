@@ -24,6 +24,8 @@
     background-color: $light-mask;
     font-family: 'Material Icons';
     content: 'zoom_in';
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
     color: $white;
     font-size: 10em;
     line-height: 382px;

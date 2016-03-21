@@ -15,9 +15,6 @@
     padding: 5px 0 0 20px;
     border-bottom: 2px solid $gray-lighter;
   }
-  .main-category-item:first-child .sub-category {
-      display: block;
-  }
   .sub-category-item {
     display: block;
     padding: 5px 0 5px 0;
@@ -38,6 +35,8 @@
         -webkit-font-smoothing: antialiased;
         font-family: 'Material Icons';
         content: "card_giftcard";
+        -webkit-font-feature-settings: 'liga';
+        font-feature-settings: 'liga';
       }
     }
     &:after {
@@ -48,6 +47,8 @@
       right: 30px;
       font-family: 'Material Icons';
       content: "keyboard_arrow_up";
+      -webkit-font-feature-settings: 'liga';
+      font-feature-settings: 'liga';
       font-size: 1em;
       line-height: 1.6em;
     }

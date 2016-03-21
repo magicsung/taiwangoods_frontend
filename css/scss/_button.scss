@@ -20,6 +20,12 @@ ul.gray-item li a {
   }
 }
 
+.red-link {
+  color: $brand-primary;
+  &:hover {
+    color: $brand-primary-dark;
+  }
+}
 
 
 .btn-gray {

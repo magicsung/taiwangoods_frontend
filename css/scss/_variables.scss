@@ -7,6 +7,7 @@ $dark-mask:              rgba(0,0,0,.8);
 
 $white:                  #ffffff;
 $green:                  #7ed321;
+$green-light:            lighten($green, 10%);
 $fb-blue:                #3c5896;
 $fb-blue-light:          lighten($fb-blue, 10%);
 

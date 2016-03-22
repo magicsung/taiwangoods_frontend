@@ -14,30 +14,42 @@ app.use(partials());
 app.get('/', function(req, res){
   res.render( __dirname + '/index', {
     title: 'Taiwan Goods 台灣禮品館',
+    category_bar: true,
     layout: true
   } );
 });
 app.get('/pdlist', function(req, res){
   res.render( __dirname + '/pdlist', {
     title: "Taiwan Goods 台灣禮品館 | 商品列表",
+    category_bar: true,
     layout: true
   } );
 });
 app.get('/pddetail', function(req, res){
   res.render( __dirname + '/pddetail', {
     title: "Taiwan Goods 台灣禮品館 | XXX商品",
+    category_bar: true,
     layout: true
   } );
 });
 app.get('/membercenter', function(req, res){
   res.render( __dirname + '/membercenter', {
     title: "會員中心",
+    category_bar: false,
+    layout: true
+  } );
+});
+app.get('/register', function(req, res){
+  res.render( __dirname + '/register', {
+    title: "會員註冊",
+    category_bar: false,
     layout: true
   } );
 });
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",
+    category_bar: true,
     layout: true
   } );
 });

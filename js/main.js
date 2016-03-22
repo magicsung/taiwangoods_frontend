@@ -114,4 +114,9 @@ $( document ).ready(function() {
   closePopoutLogin.addEventListener('touchstart', closePopout);
   $('#close-popout-area').click(closePopout);
 
+  // Datepicker
+  $('#datepicker').datepicker({
+    format: 'yyyy-mm-dd'
+  });
+
 });

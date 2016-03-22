@@ -46,6 +46,13 @@ app.get('/register', function(req, res){
     layout: true
   } );
 });
+app.get('/profile', function(req, res){
+  res.render( __dirname + '/profile', {
+    title: "會員中心 | 修改會員資料",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",

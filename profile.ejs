@@ -1,0 +1,155 @@
+<ol class="breadcrumbs">
+  <li><a href="/">首頁</a></li>
+  <li><a href="/">會員中心</a></li>
+  <li class="active">修改會員資料</li>
+</ol>
+
+<div class="row">
+
+  <% include ./views/_membercenter-sidemenu.ejs %>
+
+  <div class="membercenter-content col-sm-12 col-md-9 mt-25">
+    <div class="under-line">
+      <h4 class="color-primary inline">
+        修改會員資料
+      </h4>
+    </div>
+    <div class="profile-title">
+      <span><i class="material-icons">lock</i></span>
+      <h5>修改密碼</h5>
+    </div>
+
+    <div class="info-form">
+      <div class="mt-45">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label for="profile-email" class="col-sm-2 control-label">電子郵件</label>
+            <div class="col-sm-6">
+              <input type="email" name="email" value="example@email.com" class="form-control" id="profile-email" disabled>
+            </div>
+          </div>
+          <div class="form-group status success">
+            <label for="profile-password" class="col-sm-2 control-label">修改密碼</label>
+            <div class="col-sm-6">
+              <input type="password" name="password" value="" class="form-control" id="profile-password" placeholder="請輸入密碼">
+            </div>
+            <div class="col-sm-4">
+              <span><i class="material-icons">done</i>此組密碼可用</span>
+            </div>
+          </div>
+          <div class="form-group status error">
+            <label for="profile-confirm-pwd" class="col-sm-2 control-label">確認密碼</label>
+            <div class="col-sm-6">
+              <input type="password" name="password-confirm" value="" class="form-control" id="profile-confirm-pwd" placeholder="請再次輸入密碼">
+            </div>
+            <div class="col-sm-4">
+              <span><i class="material-icons">error</i>請重新檢查</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="profile-title">
+      <span><i class="material-icons">info</i></span>
+      <h5>基本資料</h5>
+    </div>
+    <div class="info-form">
+      <div class="mt-45">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label for="profile-name" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-6">
+              <input type="text" name="profile-name" value="Andy" class="form-control" id="profile-name">
+            </div>
+          </div>
+          <div class="form-group status">
+            <label for="profile-confirm-pwd" class="col-sm-2 control-label">性別</label>
+            <div class="col-sm-6 radio-group">
+              <input type="radio" name="sex" id="male">
+              <label for="male">男性</label>
+              <input type="radio" name="sex" id="female">
+              <label for="female">女性</label>
+            </div>
+          </div>
+          <div class="form-group status">
+            <label for="profile-birthday" class="col-sm-2 control-label">生日</label>
+            <div class="col-sm-6">
+              <div class="input-append date" id="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input type="date" name="profile-birthday" value="" class="form-control" id="profile-birthday" placeholder="yyyy/mm/dd">
+                <span class="add-on hidden-xs"><i class="material-icons" id="datepick-icon">date_range</i></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group status">
+            <label for="profile-company-number" class="col-sm-2 control-label">統一編號</label>
+            <div class="col-sm-6">
+              <input type="number" value="" name="profile-company-number" class="form-control" id="profile-company-number" placeholder="請輸入統一編號">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="profile-title">
+      <span><i class="material-icons">perm_contact_calendar</i></span>
+      <h5>聯絡資訊</h5>
+    </div>
+    <div class="info-form">
+      <div class="mt-45">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label for="profile-phone-number" class="col-sm-2 control-label">行動電話</label>
+            <div class="col-sm-6">
+              <input type="tel" name="profile-phone" value="" class="form-control" id="profile-phone-number" placeholder="請輸入行動電話號碼">
+            </div>
+          </div>
+          <div class="form-group status">
+            <label for="profile-fax" class="col-sm-2 control-label">傳真</label>
+            <div class="col-sm-6">
+              <input type="tel" name="profile-fax" class="form-control" id="profile-fax" placeholder="請輸入傳真號碼">
+            </div>
+          </div>
+          <div class="form-group status">
+            <label for="profile-address" class="col-sm-2 control-label">地址</label>
+            <div class="col-sm-6">
+              <input type="text" value="" name="profile-address" class="form-control" id="profile-address" placeholder="請輸入地址">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="profile-title">
+      <span><i class="material-icons">rss_feed</i></span>
+      <h5>其他</h5>
+    </div>
+    <div class="info-form">
+      <div class="mt-45">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label for="profile-phone-number" class="col-sm-2 control-label">訂閱電子報</label>
+            <div class="col-sm-6">
+              <div class="onoffswitch">
+                <input type="checkbox" name="profile-subscription" class="onoffswitch-checkbox" id="subscription-switch">
+                <label class="onoffswitch-label" for="subscription-switch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="under-line mt-45"></div>
+    <div class="form-group text-center mt-25">
+      <div class="col-xs-12">
+        <button type="submit" name="button" class="btn btn-red submit">確認送出</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

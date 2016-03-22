@@ -4,7 +4,7 @@
   </h4>
 </div>
 
-<div class="register">
+<div class="info-form">
   <div class="mt-45">
     <form class="form-horizontal" action="index.html" method="post">
       <div class="form-group mt-25">
@@ -22,7 +22,7 @@
       <div class="form-group status success mt-25">
         <label for="password" class="col-sm-2 control-label">密碼</label>
         <div class="col-sm-6">
-          <input type="password" name="email" value="" class="form-control" id="password" placeholder="請輸入密碼">
+          <input type="password" name="password" value="" class="form-control" id="password" placeholder="請輸入密碼">
         </div>
         <div class="col-sm-4">
           <span><i class="material-icons">done</i>此組密碼可用</span>
@@ -31,7 +31,7 @@
       <div class="form-group status error mt-25">
         <label for="confirm-pwd" class="col-sm-2 control-label">確認密碼</label>
         <div class="col-sm-6">
-          <input type="password" name="email" value="" class="form-control" id="confirm-pwd" placeholder="請再次輸入密碼">
+          <input type="password" name="password" value="" class="form-control" id="confirm-pwd" placeholder="請再次輸入密碼">
         </div>
         <div class="col-sm-4">
           <span><i class="material-icons">error</i>請重新檢查</span>
@@ -47,10 +47,23 @@
       </div>
       <div class="form-group">
         <div class="col-sm-6 col-sm-offset-2">
-          <input type="checkbox" name="name" value="" id="agree-rule">
+          <input type="checkbox" value="" id="agree-rule">
           <label for="agree-rule">同意服務條款</label>
         </div>
       </div>
+      <div class="form-group">
+        <label for="profile-phone-number" class="col-sm-2 control-label">訂閱電子報</label>
+        <div class="col-sm-6">
+          <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="subscription-switch" checked>
+            <label class="onoffswitch-label" for="subscription-switch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="under-line mt-45"></div>
       <div class="form-group text-center  mt-25">
         <button type="submit" name="button" class="btn btn-red submit">確認送出</button>
       </div>

@@ -34,7 +34,7 @@
         left: 16px;
         -webkit-font-smoothing: antialiased;
         font-family: 'Material Icons';
-        content: "card_giftcard";
+        content: "\E8F6";
         -webkit-font-feature-settings: 'liga';
         font-feature-settings: 'liga';
       }
@@ -46,14 +46,14 @@
       position: absolute;
       right: 30px;
       font-family: 'Material Icons';
-      content: "keyboard_arrow_up";
+      content: "\E316";
       -webkit-font-feature-settings: 'liga';
       font-feature-settings: 'liga';
       font-size: 1em;
       line-height: 1.6em;
     }
     &.active:after {
-      content: "keyboard_arrow_down";
+      content: "\E313";
     }
   }
 }

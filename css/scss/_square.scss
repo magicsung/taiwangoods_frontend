@@ -135,7 +135,7 @@
       @include transition(all .3s ease);
       &:after {
         font-family: 'Material Icons';
-        content: "favorite_border";
+        content: "\E87E";
         -webkit-font-feature-settings: 'liga';
         font-feature-settings: 'liga';
       }
@@ -143,7 +143,7 @@
         color: $brand-primary;
         @include animation(heart-beat 2s infinite);
         &:after {
-          content: "favorite";
+          content: "\E87D";
         }
       }
     }

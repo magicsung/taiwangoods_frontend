@@ -53,6 +53,20 @@ app.get('/profile', function(req, res){
     layout: true
   } );
 });
+app.get('/login', function(req, res){
+  res.render( __dirname + '/login', {
+    title: "會員登入",
+    category_bar: false,
+    layout: true
+  } );
+});
+app.get('/forgot_password', function(req, res){
+  res.render( __dirname + '/forgot_password', {
+    title: "忘記密碼",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",

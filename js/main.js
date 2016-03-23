@@ -103,11 +103,11 @@ $( document ).ready(function() {
     $('html').addClass('noscroll');
   }
   var closePopout = function() {
-    $('.popout').children('.content').slideUp();
-    $('.popout').fadeOut('slow');
+    $('.popout-animation').children('.content').slideUp();
+    $('.popout-animation').fadeOut('slow');
     $('html').removeClass('noscroll');
   }
-  
+
   $('.login').click(function(){
     closePopout();
     openPopoutLogin();

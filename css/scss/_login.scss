@@ -1,0 +1,16 @@
+.static-page {
+  display: block;
+  position: relative;
+
+  .content {
+    border: 1px solid $gray-lighter;
+    display: block;
+    @include translate(-50%,0);
+    top: 50px;
+    left: 50%;
+    margin-bottom: 50px;
+    @include bp(sm) {
+      width: 100%;
+    };
+  }
+}

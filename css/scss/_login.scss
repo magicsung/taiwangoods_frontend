@@ -3,10 +3,14 @@
   position: relative;
   z-index: 1;
   .content {
+    overflow-y: hidden;
     border: 1px solid $gray-lighter;
     display: block;
     @include translate(-50%,0);
     top: 50px;
+    @include bp(xs) {
+      top: 0;
+    };
     left: 50%;
     margin-bottom: 50px;
     @include bp(sm) {

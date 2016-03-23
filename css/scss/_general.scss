@@ -82,6 +82,9 @@ a:focus {
     @include box-shadow(inset 0 0 0 $gray, 0 0 8px $gray-light);
   }
 }
+.btn {
+  @include border-radius(1px);
+}
 
 @media screen and (max-width: $xs-width) {
   #filling {

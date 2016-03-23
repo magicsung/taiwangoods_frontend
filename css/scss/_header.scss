@@ -18,11 +18,9 @@ header {
       vertical-align: middle;
     }
     .input-group {
-      input {
-        border-radius: 0;
-      }
       button {
-        border-radius: 0;
+        height: 40px;
+        @include border-radius(0);
       }
     }
   }
@@ -79,6 +77,7 @@ header {
   header {
     height: 50px;
     position: relative;
+    top: 0;
     background-color: $brand-primary;
     text-align: center;
     .brand {

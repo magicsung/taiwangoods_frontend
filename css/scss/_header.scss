@@ -76,7 +76,9 @@ header {
 @media screen and (max-width: $xs-width) {
   header {
     height: 50px;
-    position: relative;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
     top: 0;
     background-color: $brand-primary;
     text-align: center;
@@ -101,6 +103,6 @@ header {
   }
   #filling {
     position: relative;
-    margin-top: 70px;
+    margin-top: 60px;
   }
 }

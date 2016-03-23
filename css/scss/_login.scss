@@ -1,7 +1,7 @@
 .static-page {
   display: block;
   position: relative;
-
+  z-index: 1;
   .content {
     border: 1px solid $gray-lighter;
     display: block;

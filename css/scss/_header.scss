@@ -11,19 +11,6 @@ header {
       background-position: center center;
     }
   }
-  .search {
-    i {
-      position: relative;
-      font-size: 2.2em;
-      vertical-align: middle;
-    }
-    .input-group {
-      button {
-        height: 40px;
-        @include border-radius(0);
-      }
-    }
-  }
   .navigation i {
     font-size: 1.5em;
     vertical-align: middle;
@@ -60,6 +47,19 @@ header {
 
   .category-bar {
     border-bottom: 2px solid $gray-lighter;
+  }
+}
+.search {
+  i {
+    position: relative;
+    font-size: 2.2em;
+    vertical-align: middle;
+  }
+  .input-group {
+    button {
+      height: 40px;
+      @include border-radius(0);
+    }
   }
 }
 

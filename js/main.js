@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+  // scroll page
+  var windowWidth = $(window).width();
+  if (windowWidth < 768) {
+    $('html, body').scrollTop(60);
+  }
+
   // menu collapse
   var openMenuAction = function(event) {
     event.preventDefault();

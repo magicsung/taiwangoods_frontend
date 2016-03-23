@@ -103,9 +103,9 @@ $( document ).ready(function() {
   });
 
   // popout login
-  var openPopoutLogin = function() {
-    $('.popout-login').fadeIn('slow');
-    $('.popout-login .content').slideDown();
+  function openPopout($target) {
+    $($target).fadeIn('slow');
+    $($target + ' .content').slideDown();
     $('html').addClass('noscroll');
   }
   var closePopout = function() {
@@ -116,7 +116,7 @@ $( document ).ready(function() {
 
   $('.login').click(function(){
     closePopout();
-    openPopoutLogin();
+    openPopout('.popout-login');
   });
   var closePopoutClass = document.getElementsByClassName('close-popout')
   for (var i = 0; i < closePopoutClass.length; i++) {
@@ -124,16 +124,15 @@ $( document ).ready(function() {
     closePopoutClass[i].addEventListener('touchstart', closePopout);
   }
   $('.close-popout-area').click(closePopout);
-
-  // popout forgot password
-  var openPopoutForgotPwd = function() {
-    $('.popout-forgot-pwd').fadeIn('slow');
-    $('.popout-forgot-pwd .content').slideDown();
-    $('html').addClass('noscroll');
-  }
   $('.forgot-pwd').click(function(){
     closePopout();
-    openPopoutForgotPwd();
+    openPopout('.popout-forgot-pwd');
+  });
+
+  // popout notice
+  $('.notice').click(function() {
+    closePopout();
+    openPopout('.popout-notice');
   });
 
   // Datepicker

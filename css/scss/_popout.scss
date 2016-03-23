@@ -8,7 +8,7 @@
   background-color: $dark-mask;
   z-index: 500;
   text-align: center;
-  #close-popout-area {
+  .close-popout-area {
     display: block;
     position: absolute;
     top: 0;
@@ -59,32 +59,41 @@
   .body {
     min-height: 300px;
     position: relative;
+    color: $gray;
     clear: both;
     .left, .right {
       padding: 15px 50px 15px 50px;
       text-align: left;
     }
-    .right {
-      color: $gray;
-      .form-group {
-        position: relative;
+    @include bp(xs) {
+      .left {
+        position: relative;;
+        top: 300px;
+        height: 250px;
       }
-      .form-icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-right: 10px;
-        font-size: 1.7em;
-        font-family: 'Material Icons';
-        -webkit-font-feature-settings: 'liga';
-        font-feature-settings: 'liga';
+      .right {
+        position: relative;;
+        top: -250px;
       }
-      .email-icon:after {
-        content: '\E0BE';
-      }
-      .password-icon:after {
-        content: '\E897';
-      }
+    };
+    .form-group {
+      position: relative;
+    }
+    .form-icon {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      padding-right: 10px;
+      font-size: 1.7em;
+      font-family: 'Material Icons';
+      -webkit-font-feature-settings: 'liga';
+      font-feature-settings: 'liga';
+    }
+    .email-icon:after {
+      content: '\E0BE';
+    }
+    .password-icon:after {
+      content: '\E897';
     }
   }
   .foot {
@@ -110,7 +119,7 @@
 }
 
 .btn-login {
-  border-radius: 0;
+  @include border-radius(1px);
   border: 1px;
   padding: 5px;
   color: $white;

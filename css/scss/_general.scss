@@ -73,6 +73,15 @@ a:focus {
   }
 }
 
+.form-control {
+  height: 40px;
+  @include border-radius(1px);
+  &:focus,
+  &:active, {
+    border: 1px solid $gray-lighter;
+    @include box-shadow(inset 0 0 0 $gray, 0 0 8px $gray-light);
+  }
+}
 
 @media screen and (max-width: $xs-width) {
   #filling {

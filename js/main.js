@@ -96,23 +96,39 @@ $( document ).ready(function() {
     $(this).carousel('next');
   });
 
-  // popout toggle
+  // popout login
+  var openPopoutLogin = function() {
+    $('.popout-login').fadeIn('slow');
+    $('.popout-login .content').slideDown();
+    $('html').addClass('noscroll');
+  }
   var closePopout = function() {
     $('.popout').children('.content').slideUp();
     $('.popout').fadeOut('slow');
     $('html').removeClass('noscroll');
   }
-  var openPopout = function() {
-    $('.popout').fadeIn('slow');
-    $('.popout .content').slideDown();
+  
+  $('.login').click(function(){
+    closePopout();
+    openPopoutLogin();
+  });
+  var closePopoutClass = document.getElementsByClassName('close-popout')
+  for (var i = 0; i < closePopoutClass.length; i++) {
+    closePopoutClass[i].addEventListener('click', closePopout);
+    closePopoutClass[i].addEventListener('touchstart', closePopout);
+  }
+  $('.close-popout-area').click(closePopout);
+
+  // popout forgot password
+  var openPopoutForgotPwd = function() {
+    $('.popout-forgot-pwd').fadeIn('slow');
+    $('.popout-forgot-pwd .content').slideDown();
     $('html').addClass('noscroll');
   }
-
-  $('.login').click(openPopout);
-  var closePopoutLogin = document.getElementById('close-popout-login')
-  closePopoutLogin.addEventListener('click', closePopout);
-  closePopoutLogin.addEventListener('touchstart', closePopout);
-  $('#close-popout-area').click(closePopout);
+  $('.forgot-pwd').click(function(){
+    closePopout();
+    openPopoutForgotPwd();
+  });
 
   // Datepicker
   $('#datepicker').datepicker({

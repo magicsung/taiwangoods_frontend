@@ -75,6 +75,12 @@ app.get('/empty', function(req, res){
   } );
 });
 
+app.get('/popout/:name', function(req, res){
+  res.render( __dirname + '/views/popout/' + req.params.name + '.ejs', {
+    layout: false
+  } );
+});
+
 http.listen(8080, function(){
   console.log('listening on *:8080');
 });

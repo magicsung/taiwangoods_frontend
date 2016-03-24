@@ -102,38 +102,61 @@ $( document ).ready(function() {
     $(this).carousel('next');
   });
 
-  // popout login
-  function openPopout($target) {
-    $($target).fadeIn('slow');
-    $($target + ' .content').slideDown();
+  // popout
+  if ( $('head > title').text() == "會員登入") {
+    $('header .login').removeClass('login');
+  } else if ($('head > title').text() == "忘記密碼") {
+    $('header .login').removeClass('login').attr('href', '/login');
+  }
+  function openPopout(target) {
+    $(target).fadeIn('slow');
+    $(target + ' .content').slideDown();
     $('html').addClass('noscroll');
   }
-  var closePopout = function() {
+  function closePopout() {
     $('.popout-animation').children('.content').slideUp();
     $('.popout-animation').fadeOut('slow');
     $('html').removeClass('noscroll');
   }
-
-  $('.login').click(function(){
+  function addClosePopoutEvent() {
+    var closePopoutClass = document.getElementsByClassName('close-popout')
+    for (var i = 0; i < closePopoutClass.length; i++) {
+      closePopoutClass[i].addEventListener('touchstart', closePopout);
+    }
+    $('.close-popout').click(closePopout);
+    $('.close-popout-area').click(closePopout);
+  };
+  function openMemberPopout(target) {
     closePopout();
-    openPopout('.popout-login');
+    $('#popout').load('/popout/' + target, function() {
+      openPopout('.' + target);
+      addClosePopoutEvent();
+    });
+  };
+  function openNoticePopout(target) {
+    $('#popout').load('/popout/' + target, function() {
+      closePopout();
+      openPopout('.popout-notice');
+      addClosePopoutEvent();
+    });
+  };
+
+  $(document).on('click', '.login', function(e){
+    e.preventDefault();
+    openMemberPopout('popout-login');
   });
-  var closePopoutClass = document.getElementsByClassName('close-popout')
-  for (var i = 0; i < closePopoutClass.length; i++) {
-    closePopoutClass[i].addEventListener('click', closePopout);
-    closePopoutClass[i].addEventListener('touchstart', closePopout);
+  $(document).on('click', '.forgot-pwd', function(e){
+    e.preventDefault();
+    openMemberPopout('popout-forgot-password');
+  });
+
+  var noticeArray = ["notice-add-cart-success", "notice-checkout-fail", "notice-register-success", "notice-search-fail"];
+  for (var i = 0; i < noticeArray.length; i++) {
+    $(document).on('click', '.' + noticeArray[i] ,function(e) {
+      e.preventDefault();
+      openNoticePopout( $(this).prop('class') );
+    });
   }
-  $('.close-popout-area').click(closePopout);
-  $('.forgot-pwd').click(function(){
-    closePopout();
-    openPopout('.popout-forgot-pwd');
-  });
-
-  // popout notice
-  $('.notice').click(function() {
-    closePopout();
-    openPopout('.popout-notice');
-  });
 
   // Datepicker
   $('#datepicker').datepicker({

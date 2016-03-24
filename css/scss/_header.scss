@@ -80,11 +80,15 @@ header {
     z-index: 500;
     width: 100%;
     top: 0;
-    background-color: $brand-primary;
+    background: -webkit-linear-gradient(left,$brand-primary,$brand-primary-lighter);
+    background: -o-linear-gradient(right,$brand-primary,$brand-primary-lighter);
+    background: -moz-linear-gradient(right,$brand-primary,$brand-primary-lighter);
+    background: linear-gradient(to right,$brand-primary,$brand-primary-lighter);
     text-align: center;
     .brand {
       .brand-logo {
         background-image: url("../image/taiwangoods_logo_eng.svg");
+        background-color: $opactiy;
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;

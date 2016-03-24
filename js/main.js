@@ -158,4 +158,32 @@ $( document ).ready(function() {
     });
   }
 
+  // popout alert (state, message, durations)
+    // popoutAlert("success", "success!", 3000);
+    // popoutAlert("wrong", "wrong!", 5000);
+  function popoutAlert(state, message, durations) {
+    openAlert(message, durations, state);
+  };
+
+  function openAlert(text, time, state) {
+    text = typeof text !== 'undefined' ? text : "";
+    time = typeof time !== 'undefined' ? time : "";
+    state = typeof state !== 'undefined' ? state : "";
+    $('#popout').load('/popout/popout-alert', function() {
+      closePopout();
+      if (state == "success") {
+        $('.popout .message').html(text).parent().prepend('<i class="material-icons notice-icon icon-with-circle">&#xE876;</i>');
+      } else if (state == "wrong") {
+        $('.popout .message').html(text).parent().prepend('<i class="material-icons notice-icon icon-yellow">&#xE000;</i>');
+      } //endif
+      openPopout('.popout-notice');
+      addClosePopoutEvent();
+      if ( time !== "") {
+        setTimeout(function(){
+          closePopout();
+        }, time);
+      } //end if
+    });
+  };
+
 });

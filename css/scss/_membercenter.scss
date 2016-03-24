@@ -39,6 +39,18 @@
   }
 }
 
+
+.address-select {
+  margin-bottom: 10px;
+  div {
+    display: inline;
+  }
+  .form-control {
+    width: 33.3%;
+    display: inline-block;
+  }
+}
+
 .submit {
   width: 200px;
   @include bp(xs) {

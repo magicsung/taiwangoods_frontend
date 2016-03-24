@@ -113,6 +113,8 @@
           <div class="form-group status">
             <label for="profile-address" class="col-sm-2 control-label">地址</label>
             <div class="col-sm-6">
+              <div class="address-select" id="twzipcode">
+              </div>
               <input type="text" value="" name="profile-address" class="form-control" id="profile-address" placeholder="請輸入地址">
             </div>
           </div>
@@ -153,3 +155,18 @@
   </div>
 
 </div>
+
+<script src="js/vender/jquery.twzipcode.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  $( document ).ready(function() {
+    $('#twzipcode').twzipcode({
+      css: ['form-control', 'form-control', 'form-control'],
+      onZipcodeKeyUp: true
+    });
+    $('#datepicker').datepicker({
+      format: 'yyyy-mm-dd'
+    });
+  });
+
+</script>

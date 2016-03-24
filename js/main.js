@@ -158,9 +158,4 @@ $( document ).ready(function() {
     });
   }
 
-  // Datepicker
-  $('#datepicker').datepicker({
-    format: 'yyyy-mm-dd'
-  });
-
 });

@@ -1,0 +1,39 @@
+<ol class="breadcrumbs">
+  <li><a href="/">首頁</a></li>
+  <li><a href="/">關於我們</a></li>
+  <li class="active">最新消息</li>
+</ol>
+
+<div class="row">
+
+  <% include ./views/_aboutus-sidebar.ejs %>
+
+  <div class="membercenter-content col-sm-12 col-md-9 mt-25">
+    <div class="under-line">
+      <h4 class="color-primary inline">
+        最新消息
+      </h4>
+    </div>
+
+    <div class="news">
+      <% for( var i = 0; i < 3; i++ ) { %>
+      <a href="#" class="news-content">
+        <div class="news-image">
+          <img src="http://dummyimage.com/200x180/eeeeee/" alt="" />
+        </div>
+        <div class="news-info">
+          <div class="title">
+            標題 < 19 中文字元
+          </div>
+          <div class="description">
+            內容文字 < 100 中文字元 <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+
+  </div>
+
+</div>

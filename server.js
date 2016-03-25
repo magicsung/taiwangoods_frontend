@@ -67,6 +67,13 @@ app.get('/forgot_password', function(req, res){
     layout: true
   } );
 });
+app.get('/news', function(req, res){
+  res.render( __dirname + '/news', {
+    title: "最新消息",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",

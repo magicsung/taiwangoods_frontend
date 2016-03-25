@@ -20,7 +20,7 @@ header {
   .nav-icon {
     position: relative;
     height: 30px;
-    background: $opactiy;
+    background: $opacity;
     border: 0 $gray-light solid;
     padding: 3px;
     span.icon-bar {
@@ -88,7 +88,7 @@ header {
     .brand {
       .brand-logo {
         background-image: url("../image/taiwangoods_logo_eng.svg");
-        background-color: $opactiy;
+        background-color: $opacity;
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;

@@ -74,6 +74,13 @@ app.get('/news', function(req, res){
     layout: true
   } );
 });
+app.get('/location', function(req, res){
+  res.render( __dirname + '/location', {
+    title: "哪裡買",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/empty-page', {
     title: "無內容測試",

@@ -14,6 +14,12 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 
 @for $i from 0 to 11 {
+  .pd-#{$i*5} {
+    padding: #{$i*5}px;
+  }
+}
+
+@for $i from 0 to 11 {
   .mt-#{$i*5} {
     margin-top: #{$i*5}px;
   }
@@ -26,6 +32,12 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 
 @for $i from 0 to 11 {
+  .mr-#{$i*5} {
+    margin-right: #{$i*5}px;
+  }
+}
+
+@for $i from 0 to 11 {
   .mb-#{$i*5} {
     margin-bottom: #{$i*5}px;
   }
@@ -34,6 +46,12 @@ h1, h2, h3, h4, h5, h6, p, a{
 @for $i from 2 to 10 {
   .height-#{$i*5} {
     height: #{$i*5}px;
+  }
+}
+
+@for $i from 1 to 10 {
+  .lh-#{$i}em {
+    line-height: #{$i}em;
   }
 }
 

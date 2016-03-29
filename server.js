@@ -12,77 +12,77 @@ app.set('view engine', 'ejs');
 app.use(partials());
 
 app.get('/', function(req, res){
-  res.render( __dirname + '/index', {
+  res.render( __dirname + '/views/index', {
     title: 'Taiwan Goods 台灣禮品館',
     category_bar: true,
     layout: true
   } );
 });
 app.get('/pdlist', function(req, res){
-  res.render( __dirname + '/pdlist', {
+  res.render( __dirname + '/views/pdlist', {
     title: "Taiwan Goods 台灣禮品館 | 商品列表",
     category_bar: true,
     layout: true
   } );
 });
 app.get('/pddetail', function(req, res){
-  res.render( __dirname + '/pddetail', {
+  res.render( __dirname + '/views/pddetail', {
     title: "Taiwan Goods 台灣禮品館 | XXX商品",
     category_bar: true,
     layout: true
   } );
 });
 app.get('/membercenter', function(req, res){
-  res.render( __dirname + '/membercenter', {
+  res.render( __dirname + '/views/membercenter', {
     title: "會員中心",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/register', function(req, res){
-  res.render( __dirname + '/register', {
+  res.render( __dirname + '/views/register', {
     title: "會員註冊",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/profile', function(req, res){
-  res.render( __dirname + '/profile', {
+  res.render( __dirname + '/views/profile', {
     title: "會員中心 | 修改會員資料",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/login', function(req, res){
-  res.render( __dirname + '/login', {
+  res.render( __dirname + '/views/login', {
     title: "會員登入",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/forgot_password', function(req, res){
-  res.render( __dirname + '/forgot_password', {
+  res.render( __dirname + '/views/forgot_password', {
     title: "忘記密碼",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/news', function(req, res){
-  res.render( __dirname + '/news', {
+  res.render( __dirname + '/views/news', {
     title: "最新消息",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/location', function(req, res){
-  res.render( __dirname + '/location', {
+  res.render( __dirname + '/views/location', {
     title: "哪裡買",
     category_bar: false,
     layout: true
   } );
 });
 app.get('/empty', function(req, res){
-  res.render( __dirname + '/empty-page', {
+  res.render( __dirname + '/views/empty-page', {
     title: "無內容測試",
     category_bar: true,
     layout: true
@@ -90,7 +90,7 @@ app.get('/empty', function(req, res){
 });
 
 app.get('/popout/:name', function(req, res){
-  res.render( __dirname + '/views/popout/' + req.params.name + '.ejs', {
+  res.render( __dirname + '/partials/popout/' + req.params.name + '.ejs', {
     layout: false
   } );
 });
@@ -102,5 +102,5 @@ http.listen(8080, function(){
 server = livereload.createServer({
   exts: ['ejs']
 });
-server.watch(__dirname + "/");
-server.watch([__dirname + "/js", __dirname + "/css", __dirname + "/views"]);
+
+server.watch([__dirname + "/views", __dirname + "/js", __dirname + "/css", __dirname + "/partials"]);

@@ -39,6 +39,13 @@ app.get('/membercenter', function(req, res){
     layout: true
   } );
 });
+app.get('/shoppingcart', function(req, res){
+  res.render( __dirname + '/views/shoppingcart', {
+    title: "購物車",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/register', function(req, res){
   res.render( __dirname + '/views/register', {
     title: "會員註冊",

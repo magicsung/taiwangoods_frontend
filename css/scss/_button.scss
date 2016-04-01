@@ -30,8 +30,17 @@ ul.gray-item li a {
 
 .btn-gray {
   background-color: $gray-light;
+  color: $white;
   &:hover {
     background-color: $gray;
+    color: $white;
+  }
+}
+
+.link-gray {
+  color: $gray;
+  &:hover {
+    color: $gray-light;
   }
 }
 

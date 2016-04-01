@@ -72,17 +72,9 @@
   }
   .price {
     display: block;
-    text-align: right;;
+    text-align: right;
     color: $brand-primary;
     font-size: 2em;
-    font-weight: 300;
-    &:before {
-      position: relative;
-      top: -1px;
-      margin-right: 5px;
-      content: "$";
-      font-size: .7em;
-    }
   }
   .btn-red {
     width: 100%;

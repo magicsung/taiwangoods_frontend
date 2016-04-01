@@ -1,0 +1,90 @@
+<ol class="breadcrumbs">
+  <li><a href="/">首頁</a></li>
+  <li><a href="/membercenter">會員中心</a></li>
+  <li class="active">購物車</li>
+</ol>
+
+<div class="row">
+
+  <div class="membercenter-content col-sm-12 mt-25">
+    <div class="under-line">
+      <h4 class="color-primary inline">
+        購物車
+      </h4>
+    </div>
+
+    <div class="border mt-15">
+      <h5 class="title-with-gray-bg">購物明細</h5>
+      <div class="pd-25">
+        <% for(var i = 0; i < 3; i++) { %>
+        <div class="row under-line mb-30">
+          <div class="col-sm-6 mb-25 clearfix">
+            <a href="#" class="square square-small pull-left squar-no-margin">
+              <img src="http://dummyimage.com/85x85/eeeeee/">
+            </a>
+            <p class="w60 product-title pull-left ml-15">
+              商品的名稱最多可以有兩行字數單行有16字
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-xs-6">
+                數量：
+                <input type="number" name="name" value="1" class="w50">
+              </div>
+              <div class="col-xs-6">
+                單價：
+                <span class="price pull-right">999,999</span>
+              </div>
+            </div>
+            <div class="row mt-25 mb-15">
+              <div class="col-xs-6">
+                <a href="#" class="link-gray">
+                  <i class="material-icons fix-icon">&#xE872;</i>
+                  刪除商品
+                </a>
+              </div>
+              <div class="col-xs-6 lh-2em">
+                <span>小計：</span>
+                <span class="price fz-2em color-primary pull-right">999,999</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+        <div class="row shopping-cart-bottom flex xs-flex-column">
+          <div class="col-sm-6 xs-order-2">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                <button type="button" name="button" class="btn btn-gray height-40 w100">繼續購物</button>
+                <button type="button" name="button" class="btn btn-red height-40 w100 mt-15">前往結帳</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 xs-order-1">
+            <div class="row">
+              <div class="col-sm-6 mb-15">
+                共 <spam class="total-quantity">3</span> 項商品
+              </div>
+              <div class="col-sm-6">
+                <div class="clearfix">
+                  價格小計
+                  <span class="price pull-right">999,999</span>
+                </div>
+                <div class="mt-15 clearfix">
+                  運費
+                  <span class="price pull-right">999</span>
+                </div>
+                <div class="mt-15 lh-2em clearfix">
+                  <span>總計金額</span>
+                  <span class="price color-primary fz-2em pull-right">999,999</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

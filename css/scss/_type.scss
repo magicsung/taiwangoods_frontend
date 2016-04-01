@@ -67,6 +67,12 @@ h1, h2, h3, h4, h5, h6, p, a{
   }
 }
 
+@for $i from 1 to 11 {
+  .w#{$i*10} {
+    width: #{$i*10%};
+  }
+}
+
 .fw-400 {
   font-weight: 400;
 }
@@ -76,10 +82,6 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 .vertical-center {
   vertical-align: middle;;
-}
-
-.w100 {
-  width: 100%;
 }
 
 .row-m7 {
@@ -102,6 +104,14 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 .block {
   display: block;
+}
+.flex {
+  @include flexbox();
+}
+.xs-flex-column {
+  @include bp(xs) {
+    flex-direction: column;
+  }
 }
 
 .color-white {

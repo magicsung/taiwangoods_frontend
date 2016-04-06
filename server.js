@@ -2,11 +2,13 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var partials = require('express-partials');
+var favicon = require('serve-favicon');
 livereload = require('livereload');
 
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/image', express.static(__dirname + '/image'));
+app.use(favicon(__dirname + '/image/favicon.ico'));
 
 app.set('view engine', 'ejs');
 app.use(partials());

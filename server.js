@@ -46,6 +46,13 @@ app.get('/shoppingcart', function(req, res){
     layout: true
   } );
 });
+app.get('/shipping', function(req, res){
+  res.render( __dirname + '/views/shipping', {
+    title: "付款及運送",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/register', function(req, res){
   res.render( __dirname + '/views/register', {
     title: "會員註冊",

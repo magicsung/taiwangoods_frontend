@@ -1,0 +1,151 @@
+<ol class="breadcrumbs">
+  <li><a href="/">首頁</a></li>
+  <li><a href="/membercenter">會員中心</a></li>
+  <li class="active">購物車</li>
+</ol>
+
+<div class="row">
+
+  <div class="membercenter-content col-sm-12 mt-25">
+    <div class="under-line">
+      <h4 class="color-primary inline">
+        購物車
+      </h4>
+    </div>
+
+    <div class="border mt-15">
+      <h5 class="title-with-gray-bg">付款及運送</h5>
+      <div class="pd-25">
+        <form class="form-horizontal" action="index.html" method="post">
+
+          <div class="payment under-line">
+            <div class="form-group">
+              <span class="fw-600 fz-1p2em col-sm-2 text-right"><span class="color-primary mr-5">*</span>付款方式</span>
+              <div class="col-sm-10 xs-mt-15 flex xs-flex-column">
+                <span class="">
+                  <input type="radio" name="payment" value="" id="atm">
+                  <label for="atm" class="fw-300 ml-5">ATM轉帳</label>
+                </span>
+                <span class="ml-25 xs-margin-0">
+                  <input type="radio" name="payment" value="" id="credit">
+                  <label for="credit"class="fw-300 ml-5">線上刷卡</label>
+                </span>
+                <span class="ml-25 xs-margin-0">
+                  <input type="radio" name="payment" value="" id="delivery">
+                  <label for="delivery"class="fw-300 ml-5">貨到付款</label>
+                </span>
+                <span class="ml-25 xs-margin-0">
+                  <input type="radio" name="payment" value="" id="alipay">
+                  <label for="alipay"class="fw-300 ml-5">支付寶</label>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="delivery-info under-line mt-20">
+            <div class="form-group">
+              <span class="fw-600 fz-1p2em col-sm-2 text-right"><span class="color-primary mr-5">*</span>寄送資料</span>
+              <div class="col-sm-4 xs-mt-15">
+                <input type="checkbox" name="same" value="" id="same-as-member-info">
+                <label for="same-as-member-info" class="fw-300 ml-5">與會員資料相同</label>
+              </div>
+            </div>
+            <div class="form-group mt-25">
+              <label for="receive-name" class="col-sm-2 control-label">收件人</label>
+              <div class="col-sm-4">
+                <input type="text" name="receive-name" value="" id="receive-name" class="form-control" placeholder="請輸入收件人姓名">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="receive-tel" class="col-sm-2 control-label">聯絡電話</label>
+              <div class="col-sm-4">
+                <input type="tel" name="receive-tel" value="" id="receive-tel" class="form-control" placeholder="請輸入您的聯絡電話">
+              </div>
+              <div class="col-sm-6">
+                <div class="row xs-mt-15">
+                  <label for="receive-tel2" class="col-sm-4 control-label">（選填）備用電話</label>
+                  <div class="col-sm-8">
+                    <input type="tel" name="receive-tel2" value="" id="receive-tel2" class="form-control" placeholder="請輸入另一隻聯絡電話（選填）">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="receive-address" class="col-sm-2 control-label">寄送地址</label>
+              <div class="col-sm-4">
+                <div class="address-select twzipcode"></div>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" name="receive-address" value="" id="receive-address" class="form-control" placeholder="請輸入完整地址">
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice mt-15">
+            <div class="form-group">
+              <span class="fw-600 fz-1p2em col-sm-2 text-right"><span class="color-primary mr-5">*</span>發票資料</span>
+              <div class="col-sm-10 xs-mt-15">
+                <span class="">
+                  <input type="radio" name="payment" value="" id="duplex">
+                  <label for="invoice-duplex" class="fw-300 ml-5">二聯式發票</label>
+                </span>
+                <span class="ml-25">
+                  <input type="radio" name="payment" value="" id="triples">
+                  <label for="invoice-triples"class="fw-300 ml-5">三聯式發票</label>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="invoice-name" class="col-sm-2 control-label">受買人</label>
+              <div class="col-sm-4">
+                <input type="text" name="invoice-name" value="" id="invoice-name" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                <div class="row xs-mt-15">
+                  <label for="invoice-id" class="col-sm-4 control-label">統一編號</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="invoice-id" value="" id="invoice-id" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <input type="checkbox" name="name" value="" id="other-invoice-address">
+                <label for="other-invoice-address">發票另寄至不同地址</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <div class="address-select twzipcode"></div>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" name="invoice-address" value="" id="invoice-address" class="form-control" placeholder="請輸入完整地址">
+              </div>
+            </div>
+            <div class="form-group mt-25">
+              <div class="col-md-3 col-md-offset-9">
+                <button type="submit" name="button" class="btn btn-red w100">下一步</button>
+              </div>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/vender/jquery.twzipcode.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  $( document ).ready(function() {
+    $('.twzipcode').twzipcode({
+      css: ['form-control', 'form-control', 'form-control'],
+      onZipcodeKeyUp: true
+    });
+  });
+
+</script>

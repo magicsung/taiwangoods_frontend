@@ -79,8 +79,21 @@ h1, h2, h3, h4, h5, h6, p, a{
   }
 }
 
-.fw-400 {
-  font-weight: 400;
+@for $i from 1 to 8 {
+  .fw-#{$i*100} {
+    font-weight: #{$i*100};
+  }
+}
+
+.xs-margin-0 {
+  @include bp(xs) {
+    margin: 0;
+  };
+}
+.xs-mt-15 {
+  @include bp(xs) {
+    margin-top: 15px;
+  };
 }
 
 .vertical-bottom {

@@ -1,7 +1,7 @@
 footer {
   background-color: $bg-light;
   width: 100%;
-  min-height: 225px;
+  min-height: 240px;
   margin-top: 50px;
 
   ul.gray-item li a {
@@ -49,11 +49,6 @@ footer {
         margin-right: 10px;
         font-size: 1.1em;
       }
-    }
-    .copyright {
-      position: absolute;
-      bottom: 0;
-      right: 0;
     }
   }
 }

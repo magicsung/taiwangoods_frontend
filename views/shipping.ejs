@@ -45,37 +45,43 @@
           <div class="delivery-info under-line mt-20">
             <div class="form-group">
               <span class="fw-600 fz-1p2em col-sm-2 text-right"><span class="color-primary mr-5">*</span>寄送資料</span>
-              <div class="col-sm-4 xs-mt-15">
+              <div class="col-sm-6 xs-mt-15">
                 <input type="checkbox" name="same" value="" id="same-as-member-info">
                 <label for="same-as-member-info" class="fw-300 ml-5">與會員資料相同</label>
               </div>
             </div>
-            <div class="form-group mt-25">
+            <div class="form-group mt-25 status error">
               <label for="receive-name" class="col-sm-2 control-label">收件人</label>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <input type="text" name="receive-name" value="" id="receive-name" class="form-control" placeholder="請輸入收件人姓名">
               </div>
-            </div>
-            <div class="form-group">
-              <label for="receive-tel" class="col-sm-2 control-label">聯絡電話</label>
               <div class="col-sm-4">
+                <span><i class="material-icons">&#xE000;</i>請重新檢查</span>
+              </div>
+            </div>
+            <div class="form-group status success">
+              <label for="receive-tel" class="col-sm-2 control-label">聯絡電話</label>
+              <div class="col-sm-6">
                 <input type="tel" name="receive-tel" value="" id="receive-tel" class="form-control" placeholder="請輸入您的聯絡電話">
               </div>
-              <div class="col-sm-6">
-                <div class="row xs-mt-15">
-                  <label for="receive-tel2" class="col-sm-4 control-label">（選填）備用電話</label>
-                  <div class="col-sm-8">
-                    <input type="tel" name="receive-tel2" value="" id="receive-tel2" class="form-control" placeholder="請輸入另一隻聯絡電話（選填）">
-                  </div>
-                </div>
+              <div class="col-sm-4">
+                <span><i class="material-icons">&#xE876;</i></span>
               </div>
             </div>
             <div class="form-group">
+              <label for="receive-tel2" class="col-sm-2 control-label">（選填）備用電話</label>
+              <div class="col-sm-6">
+                <input type="tel" name="receive-tel2" value="" id="receive-tel2" class="form-control" placeholder="請輸入另一隻聯絡電話（選填）">
+              </div>
+            </div>
+            <div class="form-group mb-0">
               <label for="receive-address" class="col-sm-2 control-label">寄送地址</label>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="address-select twzipcode"></div>
               </div>
-              <div class="col-sm-6">
+            </div>
+            <div class="form-group">
+              <div class="col-sm-6 col-sm-offset-2">
                 <input type="text" name="receive-address" value="" id="receive-address" class="form-control" placeholder="請輸入完整地址">
               </div>
             </div>
@@ -86,27 +92,25 @@
               <span class="fw-600 fz-1p2em col-sm-2 text-right"><span class="color-primary mr-5">*</span>發票資料</span>
               <div class="col-sm-10 xs-mt-15">
                 <span class="">
-                  <input type="radio" name="payment" value="" id="duplex">
+                  <input type="radio" name="invoice" value="" id="invoice-duplex">
                   <label for="invoice-duplex" class="fw-300 ml-5">二聯式發票</label>
                 </span>
                 <span class="ml-25">
-                  <input type="radio" name="payment" value="" id="triples">
+                  <input type="radio" name="invoice" value="" id="invoice-triples">
                   <label for="invoice-triples"class="fw-300 ml-5">三聯式發票</label>
                 </span>
               </div>
             </div>
             <div class="form-group">
               <label for="invoice-name" class="col-sm-2 control-label">受買人</label>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <input type="text" name="invoice-name" value="" id="invoice-name" class="form-control">
               </div>
+            </div>
+            <div class="form-group">
+              <label for="invoice-id" class="col-sm-2 control-label">統一編號</label>
               <div class="col-sm-6">
-                <div class="row xs-mt-15">
-                  <label for="invoice-id" class="col-sm-4 control-label">統一編號</label>
-                  <div class="col-sm-8">
-                    <input type="text" name="invoice-id" value="" id="invoice-id" class="form-control">
-                  </div>
-                </div>
+                <input type="text" name="invoice-id" value="" id="invoice-id" class="form-control">
               </div>
             </div>
             <div class="form-group">
@@ -115,16 +119,18 @@
                 <label for="other-invoice-address">發票另寄至不同地址</label>
               </div>
             </div>
-            <div class="form-group">
-              <div class="col-sm-4 col-sm-offset-2">
+            <div class="form-group mb-0">
+              <div class="col-sm-6 col-sm-offset-2">
                 <div class="address-select twzipcode"></div>
               </div>
-              <div class="col-sm-6">
+            </div>
+            <div class="form-group">
+              <div class="col-sm-6 col-sm-offset-2">
                 <input type="text" name="invoice-address" value="" id="invoice-address" class="form-control" placeholder="請輸入完整地址">
               </div>
             </div>
             <div class="form-group mt-25">
-              <div class="col-md-3 col-md-offset-9">
+              <div class="col-md-6 col-md-offset-2">
                 <button type="submit" name="button" class="btn btn-red w100">下一步</button>
               </div>
             </div>

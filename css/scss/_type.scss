@@ -145,3 +145,11 @@ h1, h2, h3, h4, h5, h6, p, a{
 .color-gray-light {
   color: $gray-light;
 }
+
+.scroll-x {
+  overflow-x: scroll;
+  white-space: nowrap
+}
+.scroll-y {
+  overflow-y: scroll;
+}

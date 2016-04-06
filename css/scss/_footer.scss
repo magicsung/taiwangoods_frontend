@@ -1,7 +1,8 @@
 footer {
+  position: relative;
   background-color: $bg-light;
   width: 100%;
-  min-height: 240px;
+  min-height: 225px;
   margin-top: 50px;
 
   ul.gray-item li a {
@@ -12,9 +13,15 @@ footer {
   }
 
   .go-top {
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: -40px;
     display: block;
     text-align: right;
+    @include bp(xs) {
+      left: 50%;
+      @include translate(-50%, 0);
+    };
     a {
       color: $gray-light;
       &:hover {

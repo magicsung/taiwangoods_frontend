@@ -53,21 +53,12 @@
       </div>
     </div>
     <% if (category_bar) { %>
-      <div class="category-bar mt-25 clearfix hidden-xs">
-        <div class="sub-title pull-left mb-10">
-          <h4 class="color-primary inline">
-            台灣嚴選
-            <small class="inline">好物購物商城</small>
-          </h4>
-        </div>
-        <div class="category pull-right hidden-xs">
+      <div class="category-bar mt-25 hidden-xs">
+        <div class="category hidden-xs scroll-x">
           <ul class="inline-block gray-item hover-red">
-            <li><a href="/pdlist">生日/新居禮物</a></li>
-            <li><a href="#">情人禮</a></li>
-            <li><a href="#" class="notice-add-cart-success">公司送禮</a></li>
-            <li><a href="#" class="notice-checkout-fail">台灣特色伴手禮</a></li>
-            <li><a href="#" class="notice-register-success">量身定做商品</a></li>
-            <li><a href="#" class="notice-search-fail">結婚囍事禮品</a></li>
+            <% for( var i = 0; i < 17; i++ ) { %>
+              <li><a href="/pdlist">分類項目</a></li>
+            <% } %>
           </ul>
         </div>
       </div>
@@ -123,6 +114,15 @@
           <li class="menu-sub-item"><a href="/pdlist" class="menu-link">pdlist</a></li>
           <li class="menu-sub-item"><a href="#" class="menu-link">sub title</a></li>
           <li class="menu-sub-item"><a href="#" class="menu-link">sub title</a></li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link menu-collapse collapse-open">Language</a>
+        <ul class="menu-sub-items">
+          <li class="menu-sub-item"><a href="#" class="menu-link">繁體中文</a></li>
+          <li class="menu-sub-item"><a href="#" class="menu-link">簡體中文</a></li>
+          <li class="menu-sub-item"><a href="#" class="menu-link">English</a></li>
+          <li class="menu-sub-item"><a href="#" class="menu-link">Japanese</a></li>
         </ul>
       </li>
     </ul>

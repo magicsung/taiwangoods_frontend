@@ -53,6 +53,13 @@ app.get('/shipping', function(req, res){
     layout: true
   } );
 });
+app.get('/checkout', function(req, res){
+  res.render( __dirname + '/views/checkout', {
+    title: "訂單確認",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/register', function(req, res){
   res.render( __dirname + '/views/register', {
     title: "會員註冊",

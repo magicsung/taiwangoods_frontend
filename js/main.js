@@ -186,4 +186,22 @@ $( document ).ready(function() {
     });
   };
 
+  // category bar hover scroll
+  var categoryItem = $('.category > ul');
+  $('.arrow-left')
+  .mouseenter(function() {
+    categoryItem.animate({scrollLeft: 0}, 1000);
+  })
+  .mouseleave(function(){
+    categoryItem.stop()
+  });
+
+  $('.arrow-right')
+  .mouseenter(function() {
+    categoryItem.animate({scrollLeft: 1000}, 1000);
+  })
+  .mouseleave(function() {
+    categoryItem.stop();
+  });
+
 });

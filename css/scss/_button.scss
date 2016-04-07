@@ -12,8 +12,8 @@ ul.gray-item li a {
     padding-bottom: 10px;
     border-bottom: 4px $white solid;
     &:hover {
-      a {
-        color: $gray-light;
+      a,a:hover {
+        color: $brand-primary;
       }
       border-bottom: 4px $brand-primary solid;
     }

@@ -128,6 +128,7 @@ $( document ).ready(function() {
     e.preventDefault();
     openMemberPopout('popout-login');
   });
+  openMemberPopout('popout-login');
   $(document).on('click', '.forgot-pwd', function(e){
     e.preventDefault();
     openMemberPopout('popout-forgot-password');

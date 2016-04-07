@@ -144,7 +144,6 @@ a:focus {
 @include bp(xs) {
   .xs-order-1 {
     @include order(1);
-    margin-bottom: 15px;
   }
   .xs-order-2 {
     @include order(2)

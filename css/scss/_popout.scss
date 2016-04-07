@@ -30,7 +30,7 @@
       overflow-y: scroll;
     };
     @include translate(-50%, -50%);
-    border-radius: 5px;
+    @include border-radius(5px);
     .close {
       position: absolute;
       top: 5px;
@@ -72,17 +72,6 @@
       padding: 15px 50px 15px 50px;
       text-align: left;
     }
-    @include bp(xs) {
-      .left {
-        position: relative;;
-        top: 300px;
-        height: 250px;
-      }
-      .right {
-        position: relative;;
-        top: -250px;
-      }
-    };
     .form-group {
       position: relative;
     }
@@ -187,6 +176,22 @@
     }
   }
 }
+
+@include bp(xs) {
+  .social-login {
+    @include flexbox();
+    justify-content: space-around;
+  }
+  .btn-social-login {
+    // width: 43px;
+    position: relative;
+    display: inline-block;
+    svg {
+      margin-left: 4px;
+    }
+  }
+}
+
 .btn-fb-login {
   background-color: $fb-blue;
   &:hover {
@@ -224,7 +229,8 @@
 @media screen and (max-width: $xs-width) {
   .popout {
     .content {
-      width: 95%;
+      width: 100%;
+      @include border-radius(0);
     }
     .body {
       .left, .right {

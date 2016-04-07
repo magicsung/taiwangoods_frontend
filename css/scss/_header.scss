@@ -124,3 +124,20 @@ header {
     margin-top: 60px;
   }
 }
+
+.icon-badge {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: $brand-primary;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: $gray-lighter;
+  border-radius: 10px
+}

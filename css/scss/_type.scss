@@ -145,10 +145,19 @@ h1, h2, h3, h4, h5, h6, p, a{
 .color-gray-light {
   color: $gray-light;
 }
+.bg-red {
+  background-color: $brand-primary;
+}
+.bg-gray {
+  background-color: $gray;
+}
+.bg-gray-light {
+  background-color: $gray-light;
+}
 
 .scroll-x {
   overflow-x: scroll;
-  white-space: nowrap
+  white-space: nowrap;
 }
 .scroll-y {
   overflow-y: scroll;

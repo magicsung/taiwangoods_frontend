@@ -23,14 +23,14 @@ app.get('/', function(req, res){
 app.get('/pdlist', function(req, res){
   res.render( __dirname + '/views/pdlist', {
     title: "Taiwan Goods 台灣禮品館 | 商品列表",
-    category_bar: true,
+    category_bar: false,
     layout: true
   } );
 });
 app.get('/pddetail', function(req, res){
   res.render( __dirname + '/views/pddetail', {
     title: "Taiwan Goods 台灣禮品館 | XXX商品",
-    category_bar: true,
+    category_bar: false,
     layout: true
   } );
 });
@@ -107,7 +107,7 @@ app.get('/location', function(req, res){
 app.get('/empty', function(req, res){
   res.render( __dirname + '/views/empty-page', {
     title: "無內容測試",
-    category_bar: true,
+    category_bar: false,
     layout: true
   } );
 });

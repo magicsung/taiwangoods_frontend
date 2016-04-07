@@ -7,15 +7,15 @@ $( document ).ready(function() {
   }
 
   // menu collapse
-  var openMenuAction = function(event) {
-    event.preventDefault();
+  function openMenuAction(event) {
+    // event.preventDefault();
     $('#menu-toggle').css("display", "block");
     $('#menu-content').animate({
       left: "0"
     }, 300);
     $('html').addClass('noscroll');
   };
-  var closeMenuAction = function(event){
+  function closeMenuAction(event){
     event.preventDefault();
     $('#menu-content').animate({
       left: "-75%"

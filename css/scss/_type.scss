@@ -115,7 +115,10 @@ h1, h2, h3, h4, h5, h6, p, a{
 .relative {
   position: relative;
 }
-.inline-block li{
+.inline-block {
+  display: inline-block;
+}
+ul.inline-block li{
   display: inline-block;
 }
 .inline {

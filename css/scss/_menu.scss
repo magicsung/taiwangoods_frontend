@@ -7,6 +7,12 @@
   height: 100%;
   background-color: $mask;
   display: none;
+  .menu-header {
+    height: 60px;
+    padding: 10px;
+    color: $white;
+    background-color: $brand-primary;
+  }
   #close-menu {
     position: fixed;
     top: 0;

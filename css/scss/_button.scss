@@ -44,6 +44,10 @@ ul.gray-item li a {
   }
 }
 
+.hover-white:hover {
+  color: $white;
+}
+
 .link-gray-light > a {
   color: $gray-light;
   &:hover {

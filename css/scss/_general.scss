@@ -119,12 +119,6 @@ a:focus {
   @include border-radius(1px);
 }
 
-@media screen and (max-width: $xs-width) {
-  #filling {
-    margin-top: 15px;
-  }
-}
-
 @media screen and (max-width: $md-width) {
   #ad-carousel {
     position: relative;

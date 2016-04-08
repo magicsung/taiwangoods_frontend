@@ -3,7 +3,7 @@ $( document ).ready(function() {
   // scroll page
   var windowWidth = $(window).width();
   if (windowWidth < 768) {
-    $('html, body').scrollTop(60);
+    $('html, body').scrollTop(50);
   }
 
   // menu collapse

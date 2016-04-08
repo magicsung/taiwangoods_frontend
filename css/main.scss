@@ -1,8 +1,20 @@
+// basic
+@import "scss/normalize";
 @import "scss/variables";
 @import "scss/mixins";
+@import "scss/scaffolding";
 
-@import "scss/type";
-@import "scss/general";
+// bootstrap
+@import "scss/grid";
+@import "scss/forms";
+@import "scss/tables";
+@import "scss/badges";
+@import "scss/carousel";
+@import "scss/button-groups";
+@import "scss/input-groups";
+@import "scss/dropdowns";
+@import "scss/utilities";
+@import "scss/responsive-utilities";
 
 // component
 @import "scss/datepicker";
@@ -23,3 +35,7 @@
 @import "scss/pddetail";
 @import "scss/membercenter";
 @import "scss/login";
+
+// custom
+@import "scss/type";
+@import "scss/general";

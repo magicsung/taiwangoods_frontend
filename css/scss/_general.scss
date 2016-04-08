@@ -192,3 +192,7 @@ a:focus {
   border: 25px solid $gray-light;
   border-color: transparent  transparent transparent $gray-light;
 }
+
+.browser-message {
+  display: none;
+}

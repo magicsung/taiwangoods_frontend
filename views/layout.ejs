@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
     <link rel="stylesheet" href="css/main.css" charset="utf-8">
     <script src="js/vender/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie678.css" charset="utf-8"><![endif]-->
   </head>
   <body>
     <div id="main-content">
@@ -28,5 +29,12 @@
     <div id="popout"></div>
     <% include ../partials/_footer.ejs %>
     <% include ../partials/_js.ejs %>
+    <div class="browser-message">
+      我們偵測到您的瀏覽器版本過舊<br>
+      瀏覽器版本過舊將產生安全性問題！<br>
+      請立即更新您的瀏覽器版本！<br>
+      或建議您使用 <a href="https://www.google.com.tw/intl/zh-TW/chrome/browser/desktop/index.html">Chrome</a>
+      或 <a href="https://www.mozilla.org/zh-TW/firefox/new/">FireFox</a>瀏覽器
+    </div>
   </body>
 </html>

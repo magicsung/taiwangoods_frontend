@@ -1,0 +1,13 @@
+#main-content, #footer {
+  display: none;
+}
+.browser-message {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  color: red;
+}
+.browser-message a {
+  color: blue;
+}

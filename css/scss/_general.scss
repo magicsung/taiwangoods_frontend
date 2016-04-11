@@ -190,3 +190,9 @@ a:focus {
 .browser-message {
   display: none;
 }
+
+.single-line-text-wrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

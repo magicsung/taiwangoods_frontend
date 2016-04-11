@@ -4,6 +4,10 @@
 @import "scss/mixins";
 @import "scss/scaffolding";
 
+// custom
+@import "scss/type";
+@import "scss/general";
+
 // bootstrap
 @import "scss/grid";
 @import "scss/forms";
@@ -35,7 +39,3 @@
 @import "scss/pddetail";
 @import "scss/membercenter";
 @import "scss/login";
-
-// custom
-@import "scss/type";
-@import "scss/general";

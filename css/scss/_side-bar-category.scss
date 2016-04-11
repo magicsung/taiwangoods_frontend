@@ -28,6 +28,7 @@
     padding: 3px 0 3px 20px;
     font-size: 1.1em;
     clear: both;
+    @extend .single-line-text-wrap;
     &:hover {
       &:before {
         position: absolute;
@@ -44,7 +45,7 @@
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       position: absolute;
-      right: 30px;
+      right: 20px;
       font-family: 'Material Icons';
       content: "\E316";
       -webkit-font-feature-settings: 'liga';

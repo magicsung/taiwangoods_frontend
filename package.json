@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node server.js",
-    "sass": "sass --watch ./css/main.scss:./css/main.css --style compressed",
-    "start": "parallelshell 'npm run server' 'npm run sass'"
+    "build:css": "node-sass ./css/main.scss ./css/main.css --output-style compressed",
+    "build:js": "uglifyjs js/src/*.js -m -o js/app.js",
+    "watch:css": "onchange 'css/scss/**' -- npm run build:css",
+    "watch:js": "onchange 'js/src/*.js' -- npm run build:js",
+    "start": "parallelshell 'npm run server' 'npm run watch:css' 'npm run watch:js'"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +22,9 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "parallelshell": "^2.0.0"
+    "node-sass": "^3.4.2",
+    "onchange": "^2.2.0",
+    "parallelshell": "^2.0.0",
+    "uglify-js": "^2.6.2"
   }
 }

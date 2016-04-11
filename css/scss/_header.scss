@@ -59,6 +59,12 @@ header {
       top: 0;
       display: none;
       color: $gray-light;
+      font-size: 2em;
+      &:hover {
+        color: $brand-primary;
+        @include scale(1.5);
+        @include transition(all, .5s);
+      }
     }
     .arrow-left {
       left: -5px;

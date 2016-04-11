@@ -186,6 +186,15 @@ $( document ).ready(function() {
   };
 
   // category bar hover scroll
+  var categoryWidth = 0;
+  var scrollWidth = 0;
+  var categoryNumbers = $('#header-category-bar > li').length;
+
+  for (var i = 0; i < categoryNumbers; i++) {
+    categoryWidth += $('#header-category-bar > li' + ':nth-child(' + i + ')').width();
+  }
+  scrollWidth = categoryWidth - $('#header-category-bar').width();
+
   var categoryItem = $('.category > ul');
   $('.arrow-left')
   .mouseenter(function() {
@@ -197,7 +206,7 @@ $( document ).ready(function() {
 
   $('.arrow-right')
   .mouseenter(function() {
-    categoryItem.animate({scrollLeft: 1000}, 1000);
+    categoryItem.animate({scrollLeft: scrollWidth+300}, 1000);
   })
   .mouseleave(function() {
     categoryItem.stop();

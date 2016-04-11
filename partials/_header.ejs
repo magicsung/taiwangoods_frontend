@@ -57,9 +57,9 @@
     <% if (category_bar) { %>
       <div class="category-bar mt-25 hidden-xs">
         <div class="category hidden-xs w100">
-          <ul class="inline-block gray-item hover-red w100 scroll-x">
-            <% for( var i = 0; i < 17; i++ ) { %>
-              <li><a href="/pdlist">分類項目</a></li>
+          <ul class="inline-block gray-item hover-red w100 scroll-x" id="header-category-bar">
+            <% for( var i = 0; i < 20; i++ ) { %>
+              <li><a href="/pdlist">分類項目<%= i %></a></li>
             <% } %>
           </ul>
           <i class="material-icons arrow arrow-left">&#xE314;</i>

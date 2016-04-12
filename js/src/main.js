@@ -212,4 +212,44 @@ $( document ).ready(function() {
     categoryItem.stop();
   });
 
+  // product quantity
+  var quantity = 1;
+  var price = 0;
+  $('.quantity-minus > button').click(function(){
+    $(this).parent().siblings('input').val(function(){
+      if ( $(this).val() <= 0 ) {
+        quantity = 0;
+        return 0;
+      } else {
+        quantity = Number($(this).val() ) - 1;
+        return quantity;
+      }
+    });
+    $(this).parents('.quantity-step').parent()
+    .siblings('.pricing').children('.price').text(function(){
+      return quantity * $(this).data('price');
+    });
+  });
+  $('.quantity-plus > button').click(function(){
+    $(this).parent().siblings('input').val(function(){
+      quantity = Number($(this).val() ) + 1;
+      return quantity;
+    });
+    $(this).parents('.quantity-step').parent()
+    .siblings('.pricing').children('.price').text(function(){
+      return quantity * $(this).data('price');
+    });
+  });
+  $('.quantity-step > input').keyup(function(){
+    if ( $(this).val() <= 0 ) {
+      quantity = 0;
+    } else {
+      quantity = $(this).val();
+    }
+    $(this).parents('.quantity-step').parent()
+    .siblings('.pricing').children('.price').text(function(){
+      return quantity * $(this).data('price');
+    });
+  });
+
 });

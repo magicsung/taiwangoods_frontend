@@ -111,6 +111,16 @@ ul.gray-item li a {
   }
 }
 
+.btn-white {
+  background-color: $white;
+  color: $gray;
+  border: 1px solid $gray-lighter;
+  &:hover {
+    background-color: $white;
+    color: $gray;
+  }
+}
+
 .link-gray {
   color: $gray;
   &:hover {

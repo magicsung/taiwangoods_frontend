@@ -29,36 +29,40 @@
       <h5 class="title-with-gray-bg">購物明細</h5>
       <div class="pd-25">
         <% for(var i = 0; i < 3; i++) { %>
-        <div class="row under-line mb-30">
-          <div class="col-sm-6 mb-25 clearfix">
+        <div class="row under-line mb-30 flex">
+          <div class="col-md-4 mb-25 xs-mb-0 clearfix">
             <a href="#" class="square square-small pull-left squar-no-margin">
               <img src="http://dummyimage.com/85x85/eeeeee/">
             </a>
-            <p class="w60 product-title pull-left ml-15">
+            <p class="w60 product-title pull-left ml-15 xs-mt-0">
               商品的名稱最多可以有兩行字數單行有16字
             </p>
           </div>
-          <div class="col-sm-6">
-            <div class="row">
-              <div class="col-xs-6">
-                數量：
-                <input type="number" name="name" value="1" class="width-50">
-              </div>
-              <div class="col-xs-6">
-                單價：
+          <div class="col-md-8 col-xs-12">
+            <div class="row mt-15">
+              <div class="col-sm-3 col-xs-10 lh-3em">
+                <span>單價：</span>
                 <span class="price pull-right">999,999</span>
               </div>
-            </div>
-            <div class="row mt-15">
-              <div class="col-xs-6">
-                <a href="#" class="link-gray">
-                  <i class="material-icons fix-icon">&#xE872;</i>
-                  刪除商品
-                </a>
+              <div class="col-sm-4 col-xs-10 lh-3em">
+                <div class="input-group quantity-step width-150 xs-w100">
+                  <span class="input-group-btn quantity-minus">
+                    <button class="btn btn-white height-40 material-icons" type="button">&#xE15B;</button>
+                  </span>
+                  <input type="text" class="form-control" name="quantity" value="1">
+                  <span class="input-group-btn quantity-plus">
+                    <button class="btn btn-white height-40 material-icons" type="button">&#xE145;</button>
+                  </span>
+                </div>
               </div>
-              <div class="col-xs-6 lh-2em">
+              <div class="col-sm-4 col-xs-10 lh-3em pricing">
                 <span>小計：</span>
-                <span class="price fz-1p5em color-primary pull-right">999,999</span>
+                <span class="price fz-1p5em color-primary pull-right"  data-price="999999">999,999</span>
+              </div>
+              <div class="col-sm-1 col-xs-2 lh-3em xs-order-3">
+                <a href="#" class="link-gray pull-right">
+                  <i class="material-icons fix-icon">&#xE872;</i>
+                </a>
               </div>
             </div>
           </div>

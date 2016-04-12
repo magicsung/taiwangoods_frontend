@@ -92,26 +92,28 @@ h1, h2, h3, h4, h5, h6, p, a{
   }
 }
 
-.xs-margin-0 {
-  @include bp(xs) {
+
+@include bp(xs) {
+  .xs-margin-0 {
     margin: 0;
-  };
-}
-.xs-mt-15 {
-  @include bp(xs) {
+  }
+  .xs-mt-15 {
     margin-top: 15px;
-  };
-}
-.xs-mb-15 {
-  @include bp(xs) {
+  }
+  .xs-mb-15 {
     margin-bottom: 15px;
-  };
-}
-.xs-w100 {
-  @include bp(xs) {
+  }
+  .xs-mt-0 {
+    margin-top: 0;
+  }
+  .xs-mb-0 {
+    margin-bottom: 0;
+  }
+  .xs-w100 {
     width: 100%;
-  };
-}
+  }
+};
+
 
 .vertical-bottom {
   vertical-align: bottom;

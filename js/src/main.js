@@ -218,6 +218,10 @@ $( document ).ready(function() {
   var price = 0;
   var thisButton = {};
 
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+  };
   function removeConfirm() {
     // if ( $('#shoppingCart') ) {
     //   console.log("in shopping cart!");
@@ -239,13 +243,14 @@ $( document ).ready(function() {
       subTotalPrice += Number( $(eachPrice[i]).attr('data-total-price') );
     }
     $('#sub-total-price').text(function() {
-      return subTotalPrice;
+      return subTotalPrice.format();
     });
     $('#sub-total-price').attr('data-sub-total-price', function() {
       return subTotalPrice;
     });
     $('#total-price').text(function() {
-      return subTotalPrice + $('#shipping-cost').data('shipping-cost');
+      n = subTotalPrice + $('#shipping-cost').data('shipping-cost');
+      return n.format();
     });
   };
   function quantityCounting(operating) {
@@ -267,7 +272,8 @@ $( document ).ready(function() {
   function priceCounting() {
     target = thisButton.parents('.quantity-step').parent().siblings('.pricing').children('.price');
     target.text(function(){
-      return quantity * $(this).data('price');
+      n = quantity * $(this).data('price')
+      return n.format(0);
     });
     target.attr('data-total-price', function() {
       return quantity * $(this).data('price');

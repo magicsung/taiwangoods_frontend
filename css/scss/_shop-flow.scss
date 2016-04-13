@@ -1,0 +1,49 @@
+.shopping-flow {
+  text-align: center;
+  .active {
+    background-color: $brand-primary;
+    &::after {
+      border-color: transparent  transparent transparent $brand-primary;
+    }
+  }
+}
+.shop-flow {
+  width: 26%;
+  height: 50px;
+  color: $white;
+  background-color: $gray-light;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 5px;
+  padding-left: 25px;
+  font-size: 1.1em;
+  line-height: 3.3em;
+  text-align: center;
+  &:first-child {
+    margin-left: -25px;
+  }
+  > span {
+    display: inline-block;
+    width: 95%;
+    margin-left: 2.5%;
+    overflow: hidden;
+  }
+}
+.shop-flow::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 0;
+  border: 25px solid $white;
+  border-color: transparent  transparent transparent $white;
+}
+.shop-flow::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 100%;
+  border: 25px solid $gray-light;
+  border-color: transparent  transparent transparent $gray-light;
+}

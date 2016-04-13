@@ -152,3 +152,24 @@ a:focus {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.search-result {
+  // @include flexbox();
+  display: table;
+  clear: both;
+  > a:first-child {
+    float: left;
+    // @include flex(1);
+  }
+  > a:last-child {
+    // @include flex(2);
+    float: left;
+    width: calc(100% - 100px);
+    > p {
+      margin: 7px 7px 10px 7px;
+      height: 55px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

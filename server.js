@@ -104,6 +104,13 @@ app.get('/location', function(req, res){
     layout: true
   } );
 });
+app.get('/search', function(req, res){
+  res.render( __dirname + '/views/search', {
+    title: "搜尋結果：xxx",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/custom', function(req, res){
   res.render( __dirname + '/views/custom', {
     title: "自訂內容頁面",

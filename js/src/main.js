@@ -16,12 +16,6 @@ $( document ).ready(function() {
     }
   };
 
-  // scroll page
-  var windowWidth = $(window).width();
-  if (windowWidth < 768) {
-    $('html, body').scrollTop(50);
-  }
-
   // menu collapse
   function openMenuAction(event) {
     // event.preventDefault();

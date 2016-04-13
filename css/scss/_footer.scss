@@ -18,10 +18,6 @@ footer {
     top: -40px;
     display: block;
     text-align: right;
-    @include bp(xs) {
-      left: 50%;
-      @include translate(-50%, 0);
-    };
     a {
       color: $gray-light;
       &:hover {

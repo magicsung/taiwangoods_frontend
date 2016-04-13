@@ -104,6 +104,13 @@ app.get('/location', function(req, res){
     layout: true
   } );
 });
+app.get('/custom', function(req, res){
+  res.render( __dirname + '/views/custom', {
+    title: "自訂內容頁面",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/views/empty-page', {
     title: "無內容測試",

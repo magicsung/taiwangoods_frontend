@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" id="shoppingCart">
 
   <div class="col-sm-12 mt-25">
     <div class="under-line">
@@ -29,7 +29,7 @@
       <h5 class="title-with-gray-bg">購物明細</h5>
       <div class="pd-25">
         <% for(var i = 0; i < 3; i++) { %>
-        <div class="row under-line mb-30 flex">
+        <div class="row under-line mb-30">
           <div class="col-md-4 mb-25 xs-mb-0 clearfix">
             <a href="#" class="square square-small pull-left squar-no-margin">
               <img src="http://dummyimage.com/85x85/eeeeee/">
@@ -39,12 +39,12 @@
             </p>
           </div>
           <div class="col-md-8 col-xs-12">
-            <div class="row mt-15">
-              <div class="col-sm-3 col-xs-10 lh-3em">
+            <div class="row mt-15 flex xs-flex-column">
+              <div class="col-sm-4 col-xs-12 lh-3em">
                 <span>單價：</span>
                 <span class="price pull-right">999,999</span>
               </div>
-              <div class="col-sm-4 col-xs-10 lh-3em">
+              <div class="col-sm-4 col-xs-12 lh-3em">
                 <div class="input-group quantity-step width-150 xs-w100">
                   <span class="input-group-btn quantity-minus">
                     <button class="btn btn-white height-40 material-icons" type="button">&#xE15B;</button>
@@ -55,14 +55,9 @@
                   </span>
                 </div>
               </div>
-              <div class="col-sm-4 col-xs-10 lh-3em pricing">
+              <div class="col-sm-4 col-xs-12 lh-3em pricing">
                 <span>小計：</span>
-                <span class="price fz-1p5em color-primary pull-right"  data-price="999999">999,999</span>
-              </div>
-              <div class="col-sm-1 col-xs-2 lh-3em xs-order-3">
-                <a href="#" class="link-gray pull-right">
-                  <i class="material-icons fix-icon">&#xE872;</i>
-                </a>
+                <span class="price fz-1p5em color-primary pull-right" data-price="999999" data-total-price="999999">999,999</span>
               </div>
             </div>
           </div>
@@ -85,15 +80,15 @@
               <div class="col-sm-6">
                 <div class="clearfix">
                   價格小計
-                  <span class="price pull-right">999,999</span>
+                  <span class="price pull-right" id="sub-total-price" data-sub-total-price="999999">999,999</span>
                 </div>
                 <div class="mt-15 clearfix">
                   運費
-                  <span class="price pull-right">999</span>
+                  <span class="price pull-right" id="shipping-cost" data-shipping-cost="999">999</span>
                 </div>
                 <div class="mt-15 lh-2em clearfix">
                   <span>總計金額</span>
-                  <span class="price color-primary fz-2em pull-right">999,999</span>
+                  <span class="price color-primary fz-2em pull-right" id="total-price">999,999</span>
                 </div>
               </div>
             </div>

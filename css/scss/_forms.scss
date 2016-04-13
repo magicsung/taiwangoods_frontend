@@ -617,10 +617,15 @@ input[type="checkbox"] {
 
 
 .quantity-step {
+  margin: 1px;
   > input {
+    margin: 1px;
     border: 1px solid $gray-lighter;
     @include box-shadow(none);
     @include transition(none);
+  }
+  .btn {
+    margin: 1px;
   }
   .input-group-btn:first-child .btn {
     margin-right: -2px;

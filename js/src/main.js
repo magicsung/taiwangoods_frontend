@@ -213,43 +213,87 @@ $( document ).ready(function() {
   });
 
   // product quantity
+  var target = {};
   var quantity = 1;
   var price = 0;
-  $('.quantity-minus > button').click(function(){
-    $(this).parent().siblings('input').val(function(){
-      if ( $(this).val() <= 0 ) {
-        quantity = 0;
-        return 0;
+  var thisButton = {};
+
+  function removeConfirm() {
+    // if ( $('#shoppingCart') ) {
+    //   console.log("in shopping cart!");
+    // }
+    var retVal = confirm("確定要從購物車移除?");
+    if( retVal == true ){
+      //do remove item
+      quantity = 0;
+    }
+    else{
+      quantity = 1;
+    }
+  };
+  function totalPriceCounting() {
+    var eachPrice = [];
+    var subTotalPrice = 0;
+    eachPrice = $('.pricing > .price');
+    for (var i = 0; i < eachPrice.length; i++) {
+      subTotalPrice += Number( $(eachPrice[i]).attr('data-total-price') );
+    }
+    $('#sub-total-price').text(function() {
+      return subTotalPrice;
+    });
+    $('#sub-total-price').attr('data-sub-total-price', function() {
+      return subTotalPrice;
+    });
+    $('#total-price').text(function() {
+      return subTotalPrice + $('#shipping-cost').data('shipping-cost');
+    });
+  };
+  function quantityCounting(operating) {
+    thisButton.parent().siblings('input').val(function(){
+      if (operating == "-") {
+        if ( $(this).val() <= 1 ) {
+          removeConfirm();
+          return quantity;
+        } else {
+          quantity = Number($(this).val()) - 1;
+          return quantity;
+        }
       } else {
-        quantity = Number($(this).val() ) - 1;
+        quantity = Number($(this).val()) + 1;
         return quantity;
       }
     });
-    $(this).parents('.quantity-step').parent()
-    .siblings('.pricing').children('.price').text(function(){
+  };
+  function priceCounting() {
+    target = thisButton.parents('.quantity-step').parent().siblings('.pricing').children('.price');
+    target.text(function(){
       return quantity * $(this).data('price');
     });
+    target.attr('data-total-price', function() {
+      return quantity * $(this).data('price');
+    });
+    totalPriceCounting();
+  };
+  $('.quantity-minus > button').click(function(){
+    thisButton = $(this);
+    quantityCounting("-");
+    priceCounting();
   });
   $('.quantity-plus > button').click(function(){
-    $(this).parent().siblings('input').val(function(){
-      quantity = Number($(this).val() ) + 1;
-      return quantity;
-    });
-    $(this).parents('.quantity-step').parent()
-    .siblings('.pricing').children('.price').text(function(){
-      return quantity * $(this).data('price');
-    });
+    thisButton = $(this);
+    quantityCounting("+");
+    priceCounting();
   });
   $('.quantity-step > input').keyup(function(){
-    if ( $(this).val() <= 0 ) {
+    console.log( );
+    if ( Number($(this).val()) <= 0 || isNaN($(this).val() / 1) ) {
       quantity = 0;
     } else {
       quantity = $(this).val();
     }
-    $(this).parents('.quantity-step').parent()
-    .siblings('.pricing').children('.price').text(function(){
-      return quantity * $(this).data('price');
-    });
+    thisButton = $(this);
+    priceCounting();
   });
+  totalPriceCounting();
 
 });

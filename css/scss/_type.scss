@@ -92,6 +92,9 @@ h1, h2, h3, h4, h5, h6, p, a{
   }
 }
 
+.mt-1px {
+  margin-top: 1px;
+}
 
 @include bp(xs) {
   .xs-margin-0 {

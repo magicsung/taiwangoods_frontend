@@ -128,8 +128,8 @@ $( document ).ready(function() {
     });
   };
   function openNoticePopout(target) {
+    closePopout();
     $('#popout').load('/popout/' + target, function() {
-      closePopout();
       openPopout('.popout-notice');
       addClosePopoutEvent();
     });
@@ -157,7 +157,6 @@ $( document ).ready(function() {
     e.preventDefault();
     var videoPath = $(this).data('video');
     popoutAlert("none", videoPath);
-    // popoutAlert("wrong", "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet");
   });
 
   // popout alert (state, message, durations)
@@ -171,8 +170,8 @@ $( document ).ready(function() {
     text = typeof text !== 'undefined' ? text : "";
     time = typeof time !== 'undefined' ? time : "";
     state = typeof state !== 'undefined' ? state : "";
+    closePopout();
     $('#popout').load('/popout/popout-alert', function() {
-      closePopout();
       if (state == "success") {
         $('.popout .message').html(text).parent().prepend('<i class="material-icons notice-icon icon-with-circle">&#xE876;</i>');
       } else if (state == "wrong") {
@@ -192,6 +191,15 @@ $( document ).ready(function() {
       } //end if
     });
   };
+
+  $(document).on('click', '.popout-alert-success' ,function(e) {
+    e.preventDefault();
+    popoutAlert("success", "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet");
+  });
+  $(document).on('click', '.popout-alert-wrong' ,function(e) {
+    e.preventDefault();
+    popoutAlert("wrong", "錯誤提示<br>三秒後自動關閉", 3000);
+  });
 
   // category bar hover scroll
   var categoryWidth = 0;

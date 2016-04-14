@@ -122,6 +122,11 @@ h1, h2, h3, h4, h5, h6, p, a{
 .ml-m10 {
   margin-left: -10px;
 }
+.new-badge {
+  position: absolute;
+  right: -15px;
+  top: -3px;
+}
 
 @include bp(xs) {
   .xs-margin-0 {

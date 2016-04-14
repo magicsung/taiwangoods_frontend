@@ -64,8 +64,10 @@
       <div class="category-bar mt-25 hidden-xs">
         <div class="category hidden-xs w100">
           <ul class="inline-block gray-item hover-red w100 scroll-x" id="header-category-bar">
-            <li><a href="/video">影音專區</a></li>
-            <i class="material-icons color-primary ml-m10">&#xE05E;</i>
+            <li class="relative mr-15">
+              <a href="/video">影音專區</a>
+              <i class="material-icons color-primary new-badge">&#xE05E;</i>
+            </li>
             <% for( var i = 0; i < 20; i++ ) { %>
               <li><a href="/pdlist">分類項目<%= i %></a></li>
             <% } %>

@@ -112,6 +112,7 @@ $( document ).ready(function() {
   function closePopout() {
     $('.popout-animation').children('.content').slideUp();
     $('.popout-animation').fadeOut('slow');
+    $('.popout-animation .body').html('');
     $('html').removeClass('noscroll');
   }
   function addClosePopoutEvent() {
@@ -151,6 +152,14 @@ $( document ).ready(function() {
     });
   }
 
+  // popout video
+  $(document).on('click', '.popout-video' ,function(e) {
+    e.preventDefault();
+    var videoPath = $(this).data('video');
+    popoutAlert("none", videoPath);
+    // popoutAlert("wrong", "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet");
+  });
+
   // popout alert (state, message, durations)
     // popoutAlert("success", "success!", 3000);
     // popoutAlert("wrong", "wrong!", 5000);
@@ -168,7 +177,12 @@ $( document ).ready(function() {
         $('.popout .message').html(text).parent().prepend('<i class="material-icons notice-icon icon-with-circle">&#xE876;</i>');
       } else if (state == "wrong") {
         $('.popout .message').html(text).parent().prepend('<i class="material-icons notice-icon icon-yellow">&#xE000;</i>');
-      } //endif
+      } else {
+        $('.popout .body').html(text).prepend('<img class="ratio" src="/image/16x9.png"/>');
+        $('.popout .close-popout').hide();
+        $('.popout .head').hide();
+        $('.popout .content').css("max-width", '90%');
+      }//endif
       openPopout('.popout-notice');
       addClosePopoutEvent();
       if ( time !== "") {

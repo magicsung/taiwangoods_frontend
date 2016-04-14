@@ -119,6 +119,9 @@ h1, h2, h3, h4, h5, h6, p, a{
 .mt-1px {
   margin-top: 1px;
 }
+.ml-m10 {
+  margin-left: -10px;
+}
 
 @include bp(xs) {
   .xs-margin-0 {
@@ -232,3 +235,31 @@ ul.inline-block li{
 .text-center         { text-align: center; }
 .text-justify        { text-align: justify; }
 .text-nowrap         { white-space: nowrap; }
+
+
+@include bp(xs) {
+  .xs-order-1 {
+    @include order(1);
+  }
+  .xs-order-2 {
+    @include order(2);
+  }
+  .xs-order-3 {
+    @include order(3);
+  }
+  .xs-order-4 {
+    @include order(4);
+  }
+}
+.order-1 {
+  @include order(1);
+}
+.order-2 {
+  @include order(2);
+}
+.order-3 {
+  @include order(3);
+}
+.order-4 {
+  @include order(4);
+}

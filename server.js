@@ -118,6 +118,13 @@ app.get('/custom', function(req, res){
     layout: true
   } );
 });
+app.get('/video', function(req, res){
+  res.render( __dirname + '/views/video', {
+    title: "影音專區",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/empty', function(req, res){
   res.render( __dirname + '/views/empty-page', {
     title: "無內容測試",

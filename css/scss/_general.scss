@@ -128,21 +128,6 @@ a:focus {
   }
 }
 
-
-@include bp(xs) {
-  .xs-order-1 {
-    @include order(1);
-  }
-  .xs-order-2 {
-    @include order(2);
-  }
-  .xs-order-3 {
-    @include order(3);
-  }
-  .xs-order-4 {
-    @include order(4);
-  }
-}
 .browser-message {
   display: none;
 }

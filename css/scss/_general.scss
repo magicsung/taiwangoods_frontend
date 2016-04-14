@@ -154,22 +154,35 @@ a:focus {
 }
 
 .search-result {
-  // @include flexbox();
   display: table;
   clear: both;
+  width: 100%;
+  .product-name {
+    font-size: 1.1em;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .description {
+    height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
   > a:first-child {
     float: left;
-    // @include flex(1);
   }
   > a:last-child {
-    // @include flex(2);
     float: left;
     width: calc(100% - 100px);
-    > p {
-      margin: 7px 7px 10px 7px;
-      height: 55px;
-      text-overflow: ellipsis;
-      overflow: hidden;
+    > p{
+      margin: 7px 7px 3px 7px;
+      @include bp(xs) {
+        margin-bottom: 25px;
+      };
     }
   }
 }

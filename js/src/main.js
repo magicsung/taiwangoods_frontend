@@ -231,7 +231,6 @@ $( document ).ready(function() {
   // product quantity
   var target = {};
   var quantity = 1;
-  var price = 0;
   var thisButton = {};
 
   Number.prototype.format = function(n, x) {
@@ -239,9 +238,6 @@ $( document ).ready(function() {
     return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
   };
   function removeConfirm() {
-    // if ( $('#shoppingCart') ) {
-    //   console.log("in shopping cart!");
-    // }
     var retVal = confirm("確定要從購物車移除?");
     if( retVal == true ){
       //do remove item
@@ -250,24 +246,6 @@ $( document ).ready(function() {
     else{
       quantity = 1;
     }
-  };
-  function totalPriceCounting() {
-    var eachPrice = [];
-    var subTotalPrice = 0;
-    eachPrice = $('.pricing > .price');
-    for (var i = 0; i < eachPrice.length; i++) {
-      subTotalPrice += Number( $(eachPrice[i]).attr('data-total-price') );
-    }
-    $('#sub-total-price').text(function() {
-      return subTotalPrice.format();
-    });
-    $('#sub-total-price').attr('data-sub-total-price', function() {
-      return subTotalPrice;
-    });
-    $('#total-price').text(function() {
-      n = subTotalPrice + $('#shipping-cost').data('shipping-cost');
-      return n.format();
-    });
   };
   function quantityCounting(operating) {
     thisButton.parent().siblings('input').val(function(){
@@ -285,26 +263,13 @@ $( document ).ready(function() {
       }
     });
   };
-  function priceCounting() {
-    target = thisButton.parents('.quantity-step').parent().siblings('.pricing').children('.price');
-    target.text(function(){
-      n = quantity * $(this).data('price')
-      return n.format(0);
-    });
-    target.attr('data-total-price', function() {
-      return quantity * $(this).data('price');
-    });
-    totalPriceCounting();
-  };
   $('.quantity-minus > button').click(function(){
     thisButton = $(this);
     quantityCounting("-");
-    priceCounting();
   });
   $('.quantity-plus > button').click(function(){
     thisButton = $(this);
     quantityCounting("+");
-    priceCounting();
   });
   $('.quantity-step > input').keyup(function(){
     console.log( );
@@ -314,8 +279,6 @@ $( document ).ready(function() {
       quantity = $(this).val();
     }
     thisButton = $(this);
-    priceCounting();
   });
-  totalPriceCounting();
 
 });

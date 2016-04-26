@@ -36,10 +36,8 @@ function closeMenuAction(event){
   $('html').removeClass('noscroll');
 };
 $( document ).ready(function() {
-  var openMenu = document.getElementById('open-menu');
-  openMenu.addEventListener('click', openMenuAction);
-  var closeMenu = document.getElementById('close-menu');
-  closeMenu.addEventListener('click', closeMenuAction);
+  $('#open-menu').click(openMenuAction);
+  $('#close-menu').click(closeMenuAction);
 });
 
 

@@ -47,13 +47,17 @@
 }
 
 .address-select {
+  position: relative;
   margin-bottom: 10px;
-  div {
-    display: inline;
-  }
+  width: 100%;
+
   .form-control {
-    width: 33.3%;
+    width: 33%;
+    position: relative;
     display: inline-block;
+  }
+  .zipcode {
+    top: 1px;
   }
 }
 

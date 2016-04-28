@@ -48,43 +48,52 @@
     }
   }
   &:hover {
-    .hover {
-      height: auto;
-      padding: 4px;
-      bottom: 0;
-    }
+    @include bp(sm) {
+      .hover {
+        height: auto;
+        padding: 4px;
+        bottom: 0;
+      }
+    };
     .like-button {
       opacity: 1;
     }
   }
 
   // Hover effect
+
   .hover {
-    position: absolute;
-    left: 0;
-    bottom: -46px;
-    max-height: 46px;
-    width: 100%;
-    padding: 0 4px 0 4px;
-    background-color: $mask;
-    text-align: center;
-    @include transition(all .5s ease);
+    max-height: 40px;
     overflow: hidden;
-    a {
-      text-align: center;
-      color: $gray-lighter;
-      overflow: hidden;
-      text-decoration: none;
+    display: block;
+    @include bp(sm) {
+      position: absolute;
+      left: 0;
+      bottom: -46px;
       width: 100%;
-      &:hover {
-        color: $white;
-      }
-      span {
+      max-height: 45px;
+      padding: 0 4px 0 4px;
+      background-color: $mask;
+      text-align: center;
+      @include transition(all .5s ease);
+      overflow: hidden;
+      a {
+        text-align: center;
+        color: $gray-lighter;
         overflow: hidden;
-        vertical-align: top;
+        text-decoration: none;
+        width: 100%;
+        &:hover {
+          color: $white;
+        }
+        span {
+          overflow: hidden;
+          vertical-align: top;
+        }
       }
-    }
+    };
   }
+
 
   // follow description
   .follow {
@@ -171,7 +180,7 @@
 
 
 @media screen and (max-width: $xs-width) {
-  .hover, .like-button {
+  .like-button {
     display: none;
   }
   .row-m7 {

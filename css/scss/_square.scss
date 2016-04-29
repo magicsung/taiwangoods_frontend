@@ -63,9 +63,14 @@
   // Hover effect
 
   .hover {
-    max-height: 40px;
-    overflow: hidden;
-    display: block;
+    @include bp(xs) {
+      height: 20px;
+      overflow: hidden;
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    };
     @include bp(sm) {
       position: absolute;
       left: 0;

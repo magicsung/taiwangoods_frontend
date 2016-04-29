@@ -6,7 +6,6 @@
   margin-top: 30px;
 }
 .product-detail {
-  // border-bottom: 5px solid $gray-lighter;
   padding-bottom: 25px;
   table {
     color: $gray;
@@ -16,6 +15,10 @@
     th, td {
       border: 0 !important;
     }
+  }
+  .product-thumbnail {
+    max-height: $square-small-size * 4 + $square-padding * 8;
+    overflow-y: scroll;
   }
   .square-extra-large:hover:before {
     position: absolute;

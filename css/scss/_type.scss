@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6, p, a{
     max-width: 100% !important;
     height: auto !important;
   }
+  iframe {
+    max-width: 100% !important;
+  }
 }
 
 @for $i from 0 to 11 {

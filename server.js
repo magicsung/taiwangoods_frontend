@@ -23,14 +23,14 @@ app.get('/', function(req, res){
 app.get('/pdlist', function(req, res){
   res.render( __dirname + '/views/pdlist', {
     title: "Taiwan Goods 台灣禮品館 | 商品列表",
-    category_bar: false,
+    category_bar: true,
     layout: true
   } );
 });
 app.get('/pddetail', function(req, res){
   res.render( __dirname + '/views/pddetail', {
     title: "Taiwan Goods 台灣禮品館 | XXX商品",
-    category_bar: false,
+    category_bar: true,
     layout: true
   } );
 });

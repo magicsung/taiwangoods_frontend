@@ -4,7 +4,9 @@ $opacity:                rgba(0,0,0,0);
 $light-mask:             rgba(0,0,0,.3);
 $mask:                   rgba(0,0,0,.5);
 $dark-mask:              rgba(0,0,0,.8);
+$white-mask:             rgba(255,255,255,.95);
 
+$black:                  #000;
 $white:                  #ffffff;
 $green:                  #7ed321;
 $green-light:            lighten($green, 10%);
@@ -21,11 +23,13 @@ $gray-dark:              #555555 !default;
 $bg-light:               rgba(117, 117, 117, .1) !default;
 $bg-light-solid:         #f1f1f1 !default;
 $bg-dark:                rgba(117, 117, 117, .7) !default;
+$bg-black-dark:          #2D2D2D !default;
 
 $brand-primary:          #e22300 !default;
 $brand-primary-light:    lighten($brand-primary, 10%);
 $brand-primary-lighter:  #ff4711;
 $brand-primary-dark:     darken($brand-primary, 10%) !default; //#b11900
+$brand-primary-darker:     darken($brand-primary, 20%) !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;

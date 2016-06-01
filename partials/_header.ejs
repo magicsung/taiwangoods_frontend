@@ -62,25 +62,86 @@
     </div>
     <% if (category_bar) { %>
       <div class="category-bar mt-25 hidden-xs">
-        <div class="category hidden-xs w100">
-          <ul class="inline-block gray-item hover-red w100 scroll-x" id="header-category-bar">
-            <li class="relative mr-15">
-              <a href="/video">影音專區</a>
-              <i class="material-icons color-primary new-badge">&#xE05E;</i>
-            </li>
-            <li><a href="#" class="popout-video" data-video='<iframe width="560" height="315" src="https://www.youtube.com/embed/c6rP-YP4c5I" frameborder="0" allowfullscreen></iframe>'>彈出式影音</a></li>
-            <li><a href="#" class="notice-add-cart-success">加入購物車成功</a></li>
-            <li><a href="#" class="notice-checkout-fail">購物車沒東西</a></li>
-            <li><a href="#" class="notice-register-success">註冊成功</a></li>
-            <li><a href="#" class="notice-search-fail">搜尋失敗</a></li>
-            <li><a href="#" class="popout-alert-success">成功提示</a></li>
-            <li><a href="#" class="popout-alert-wrong">錯誤提示</a></li>
-            <% for( var i = 0; i < 20; i++ ) { %>
-              <li><a href="/pdlist">分類項目<%= i %></a></li>
+        <div class="category hidden-xs w100 clearfix under-line relative text-center" style="padding-bottom: 0;">
+          <ul class="inline-block gray-item hover-red">
+            <% for( var i = 0; i < 7; i++ ) { %>
+              <li class="menu-item">
+                <a href="/pdlist">
+                  頂層分類<%= i %>
+                  <i class="material-icons fix-icon hidden-sm hover-rotate-180">&#xE5C5;</i>
+                </a>
+                <div class="sub-menu">
+                  <ul class="clearfix text-left lh-2em">
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類主分類主分類主分類主分類主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類次分類次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-4</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-5</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-6</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-7</a></li>
+                          <div class="show-more"><a href="#">more...</a></div>
+                        </ul>
+                      </li>
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                        </ul>
+                      </li>
+                      <li class="item-4 primary-category-wrap">
+                        <div class="primary-category">
+                          <a href="/pdlist" class="">主分類<%= i %>-1</a>
+                        </div>
+                        <ul class="pd-10 inline-block">
+                          <li><a href="/pdlist">次分類<%= i %>-1-1</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-2</a></li>
+                          <li><a href="/pdlist">次分類<%= i %>-1-3</a></li>
+                        </ul>
+                      </li>
+                  </ul>
+                </div>
+              </li>
             <% } %>
           </ul>
-          <i class="material-icons arrow arrow-left">&#xE314;</i>
-          <i class="material-icons arrow arrow-right">&#xE315;</i>
         </div>
       </div>
     <% } %>
@@ -117,16 +178,36 @@
         </ul>
       </li>
       <li class="menu-item"><a href="#" class="menu-link">購物車</a></li>
-      <% for( var i = 0; i < 10; i++ ) { %>
-      <li class="menu-item">
-        <a href="#" class="menu-link menu-collapse collapse-open">商品分類</a>
-        <ul class="menu-sub-items">
-          <li class="menu-sub-item"><a href="/pdlist" class="menu-link">pdlist</a></li>
-          <li class="menu-sub-item"><a href="#" class="menu-link">sub title</a></li>
-          <li class="menu-sub-item"><a href="#" class="menu-link">sub title</a></li>
-        </ul>
-      </li>
+
+      <% for( var i = 0; i < 6; i++ ) { %>
+        <li class="menu-item bg-gray-light"><a class="menu-link link-white">頂層分類</a></li>
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
+          <ul class="menu-sub-items">
+            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
+          <ul class="menu-sub-items">
+            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
+          <ul class="menu-sub-items">
+            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+          </ul>
+        </li>
       <% } %>
+      <li class="menu-item bg-gray-light"><a class="menu-link link-white">頂層分類</a></li>
+
       <li class="menu-item">
         <a href="#" class="menu-link menu-collapse collapse-open">熱門排行</a>
         <ul class="menu-sub-items">

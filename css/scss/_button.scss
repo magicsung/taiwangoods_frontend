@@ -72,7 +72,7 @@ a.btn {
 
 
 
-ul.gray-item li a {
+ul.gray-item > li > a {
   color: $gray;
   text-decoration: none;
   padding: 5px 10px 5px 10px;
@@ -82,11 +82,12 @@ ul.gray-item li a {
 }
 
 .hover-red {
-  li {
+  > li {
     padding-bottom: 10px;
     border-bottom: 4px $white solid;
     &:hover {
-      a,a:hover {
+      > a,
+      > a:hover {
         color: $brand-primary;
       }
       border-bottom: 4px $brand-primary solid;
@@ -125,6 +126,21 @@ ul.gray-item li a {
   color: $gray;
   &:hover {
     color: $gray-light;
+  }
+}
+
+ul.link-white {
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.link-white {
+  color: $white;
+  &:hover {
+    color: $white;
   }
 }
 

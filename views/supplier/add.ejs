@@ -1,0 +1,213 @@
+<ol class="breadcrumbs">
+  <li><a href="/">首頁</a></li>
+  <li><a href="#">廠商專區</a></li>
+  <li class="active">商品上架</li>
+</ol>
+
+
+
+<div class="row">
+
+  <% include ../../partials/_membercenter-sidemenu.ejs %>
+
+  <div class="membercenter-content col-sm-8 col-md-9 mt-25">
+    <div class="under-line">
+      <h4 class="color-primary inline">
+        商品上架
+      </h4>
+    </div>
+
+    <div class="mt-25 supplier-add relative lh-2em">
+      <form class="form-horizontal" action="index.html" method="post">
+
+          <div class="form-group status">
+            <label for="id_start_date" class="control-label col-sm-4 col-md-2">販售起始日</label>
+            <div class="input-append date datepicker col-sm-8 col-md-8" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input type="date" name="id_start_date" value="" class="form-control" id="id_start_date" placeholder="yyyy-mm-dd">
+              <span class="add-on hidden-xs"><i class="material-icons datepick-icon">&#xE916;</i></span>
+            </div>
+          </div>
+
+          <div class="form-group status">
+            <label for="id_end_date" class="control-label col-sm-4 col-md-2">販售結束日</label>
+            <div class="input-append date datepicker col-sm-8 col-md-8" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input type="date" name="id_end_date" value="" class="form-control" id="id_end_date" placeholder="yyyy-mm-dd">
+              <span class="add-on hidden-xs"><i class="material-icons datepick-icon">&#xE916;</i></span>
+            </div>
+          </div>
+
+          <div class="form-group status">
+            <label for="id_categorymain" class="control-label col-sm-4 col-md-2">主分類</label>
+            <div class="input-append date col-sm-8 col-md-8">
+              <select name="id_categorymain" id="id_categorymain" class="form-control">
+                <option value="">選一個主分類</option>
+              </select>
+              <span class="add-on hidden-xs"><i class="material-icons datepick-icon">&#xE313;</i></span>
+            </div>
+          </div>
+
+          <div class="form-group status">
+            <label for="id_categorysub" class="control-label col-sm-4 col-md-2">次分類</label>
+            <div class="input-append date col-sm-8 col-md-8">
+              <select name="id_categorysub" id="id_categorysub" class="form-control">
+                <option value="">選一個次分類</option>
+              </select>
+              <span class="add-on hidden-xs"><i class="material-icons datepick-icon">&#xE313;</i></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_item_id" class="control-label col-sm-4 col-md-2">商品編碼</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="text" name="id_item_id" id="id_item_id" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_title" class="control-label col-sm-4 col-md-2">商品名稱</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="text" name="id_title" id="id_title" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_img" class="control-label col-sm-4 col-md-2">商品主圖</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="file" name="id_img" id="id_img" class="form-control">
+              <button class="btn btn-white mt-5">刪除</button>
+              <button class="btn btn-red mt-5">選擇檔案</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_ori_price" class="control-label col-sm-4 col-md-2">商品原價</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="number" name="id_ori_price" id="id_ori_price" class="form-control" value="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_web_price" class="control-label col-sm-4 col-md-2">平台售價</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="number" name="id_web_price" id="id_web_price" class="form-control" value="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_inventory" class="control-label col-sm-4 col-md-2">可銷售數量</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="number" name="id_inventory" id="id_inventory" class="form-control" value="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_min_buy" class="control-label col-sm-4 col-md-2">最小購買量</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="number" name="id_min_buy" id="id_min_buy" class="form-control" value="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_max_buy" class="control-label col-sm-4 col-md-2">最大購買量</label>
+            <div class="col-sm-8 col-md-8">
+              <input type="number" name="id_max_buy" id="id_max_buy" class="form-control" value="0">
+            </div>
+          </div>
+
+          <div class="form-group status">
+            <label for="id_free_fee" class="control-label col-sm-4 col-md-2">免運條件</label>
+            <div class="input-append date col-sm-8 col-md-8">
+              <select name="id_free_fee" id="id_free_fee" class="form-control">
+                <option value="">免運費</option>
+                <option value="">滿額免運費</option>
+              </select>
+              <span class="add-on hidden-xs"><i class="material-icons datepick-icon">&#xE313;</i></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_pre_order" class="control-label col-sm-4 col-md-2">商品預購</label>
+            <div class="col-sm-8 col-md-8 lh-3em">
+              <input id="id_pre_order" name="pre_order" type="checkbox">
+              <label for="id_pre_order" class="ml-15">若可以在販售起始日前開始賣，請勾選。</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_public_list" class="control-label col-sm-4 col-md-2">公開列表顯示</label>
+            <div class="col-sm-8 col-md-8 lh-3em">
+              <input id="id_public_list" name="public_list" type="checkbox">
+              <label for="id_public_list" class="ml-15">若要於公開列表中顯示請勾選</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_introduction" class="control-label col-sm-4 col-md-2">商品簡介</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_introduction" id="id_introduction" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_specification" class="control-label col-sm-4 col-md-2">商品規格</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_specification" id="id_specification" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_description" class="control-label col-sm-4 col-md-2">商品描述</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_description" id="id_description" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_remark" class="control-label col-sm-4 col-md-2">商品備註</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_remark" id="id_remark" rows="8" cols="80"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_seo_keyword" class="control-label col-sm-4 col-md-2">SEO用關鍵字</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_seo_keyword" id="id_seo_keyword" rows="3" cols="80" class="w100"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="id_seo_description" class="control-label col-sm-4 col-md-2">SEO用描述</label>
+            <div class="col-sm-8 col-md-8">
+              <textarea name="id_seo_description" id="id_seo_description" rows="3" cols="80" class="w100"></textarea>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button class="btn btn-gray">儲存後回到列表</button>
+            <button class="btn btn-red">儲存並繼續新增下一筆</button>
+          </div>
+
+      </form>
+    </div>
+
+
+  </div>
+
+</div>
+
+<script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+<script>
+  $( document ).ready(function() {
+
+    $('.datepicker').datepicker({
+      format: 'yyyy-mm-dd'
+    });
+
+    CKEDITOR.replace( 'id_introduction' );
+    CKEDITOR.replace( 'id_specification' );
+    CKEDITOR.replace( 'id_description' );
+    CKEDITOR.replace( 'id_remark' );
+
+  });
+</script>

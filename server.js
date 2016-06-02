@@ -41,6 +41,13 @@ app.get('/membercenter', function(req, res){
     layout: true
   } );
 });
+app.get('/supplier/add', function(req, res){
+  res.render( __dirname + '/views/supplier/add', {
+    title: "供應商後台 | 新增商品",
+    category_bar: false,
+    layout: true
+  } );
+});
 app.get('/shoppingcart', function(req, res){
   res.render( __dirname + '/views/shoppingcart', {
     title: "購物車",

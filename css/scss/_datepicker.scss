@@ -9,7 +9,7 @@
 .datepicker {
   top: 0;
   left: 0;
-  padding: 4px;
+  // padding: 4px;
   margin-top: 1px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -20,7 +20,7 @@
 
 }
 .datepicker:before {
-  content: '';
+  // content: "";
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;

@@ -81,11 +81,6 @@ a:focus {
   }
 }
 
-.carousel-indicators {
-  bottom: 0;
-}
-
-
 .social {
   a {
     margin-left: 15px;
@@ -121,9 +116,8 @@ a:focus {
     text-align: center;
     .item img{
       position: relative;
-      max-width: 150%;
-      width: 150%;
-      left: -25%;
+      max-width: 135%;
+      width: 135%;
     }
   }
 }

@@ -16,20 +16,11 @@
   text-align: center;
 }
 
-
-@media screen and (min-width: $xs-width) and (max-width: $lg-width) {
-  #promo-goods > .main-product-show > .row-m7 > .square-large:nth-child(4) {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: $lg-width) {
-  #promo-goods > .main-product-show > .row-m7 > .square-middle:nth-child(5) {
-    display: none !important;
-  }
-}
-
 @media screen and (min-width: $md-width) and (max-width: $lg-width) {
+  #promo-goods > .row-m7 > .square-middle:nth-child(9),
+  #promo-goods > .row-m7 > .square-middle:nth-child(10) {
+    display: none !important;
+  }
   .new-arrive-goods > .row-m7 > .square-middle:nth-child(9),
   .new-arrive-goods > .row-m7 > .square-middle:nth-child(10) {
     display: none !important;

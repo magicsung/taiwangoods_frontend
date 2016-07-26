@@ -17,12 +17,12 @@
 }
 
 @media screen and (min-width: $md-width) and (max-width: $lg-width) {
-  #promo-goods > .row-m7 > .square-middle:nth-child(9),
-  #promo-goods > .row-m7 > .square-middle:nth-child(10) {
+  #promo-goods > .square-middle:nth-child(9),
+  #promo-goods > .square-middle:nth-child(10) {
     display: none !important;
   }
-  .new-arrive-goods > .row-m7 > .square-middle:nth-child(9),
-  .new-arrive-goods > .row-m7 > .square-middle:nth-child(10) {
+  .new-arrive-goods > .square-middle:nth-child(9),
+  .new-arrive-goods > .square-middle:nth-child(10) {
     display: none !important;
   }
 }

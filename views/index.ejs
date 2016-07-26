@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content row">
 
   <div id="ad-carousel" class="carousel slide mt-25" data-ride="carousel">
     <ol class="carousel-indicators hidden-xs">
@@ -19,24 +19,22 @@
     </div>
   </div>
 
-  <div id="promo-goods" class="row mt-10 clearfix text-center">
-    <div class="row-m7">
-      <% for( var i = 0; i < 12; i++ ) { %>
-      <div class="square square-middle">
-        <a href="#">
-          <img src="http://dummyimage.com/159x159/eeeeee/">
-        </a>
-        <div class="like-button">
-          <a href="#like"></a>
-        </div>
-        <span class="hover">
-          <a href="#">
-            <span class="name">Product name Product name</span>
-          </a>
-        </span>
+  <div id="promo-goods" class="mt-10 clearfix text-center">
+    <% for( var i = 0; i < 12; i++ ) { %>
+    <div class="square square-middle">
+      <a href="#">
+        <img src="http://dummyimage.com/159x159/eeeeee/">
+      </a>
+      <div class="like-button">
+        <a href="#like"></a>
       </div>
-      <% } %>
+      <span class="hover">
+        <a href="#">
+          <span class="name">Product name Product name</span>
+        </a>
+      </span>
     </div>
+    <% } %>
   </div>
 
   <div class="new-arrive-title under-line mt-45">
@@ -44,26 +42,24 @@
       新品推薦
     </h4>
   </div>
-  <div class="row mt-15 new-arrive">
+  <div class="mt-15 new-arrive">
     <div class="col-md-12">
-      <div class="new-arrive-goods">
-        <div class="row-m7">
-          <% for( var i = 0; i < 12; i++ ) { %>
-          <div class="square square-middle">
-            <a href="#">
-              <img src="http://dummyimage.com/159x159/eeeeee/">
-            </a>
-            <div class="like-button">
-              <a href="#like"></a>
-            </div>
-            <span class="hover">
-              <a href="#">
-                <span class="name">Product name Product name</span>
-              </a>
-            </span>
+      <div class="row new-arrive-goods">
+        <% for( var i = 0; i < 12; i++ ) { %>
+        <div class="square square-middle">
+          <a href="#">
+            <img src="http://dummyimage.com/159x159/eeeeee/">
+          </a>
+          <div class="like-button">
+            <a href="#like"></a>
           </div>
-          <% } %>
+          <span class="hover">
+            <a href="#">
+              <span class="name">Product name Product name</span>
+            </a>
+          </span>
         </div>
+        <% } %>
       </div>
     </div>
   </div>

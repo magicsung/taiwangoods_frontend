@@ -1,9 +1,10 @@
+li.sub-category-item.active > a {
+  color: $brand-primary;
+}
 .side-bar-category {
   position: relative;
   a {
     color: $gray;
-  }
-  .main-category {
   }
   .main-category-item {
     display: block;

@@ -4,6 +4,7 @@
   overflow: hidden;
   position: relative;
   text-align: center;
+  border: 1px solid $lighter-mask;
   > a {
     display: block;
   }

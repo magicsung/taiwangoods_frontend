@@ -48,6 +48,7 @@
 }
 
 a.btn {
+  line-height: 1.9em;
   &.disabled,
   fieldset[disabled] & {
     pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
@@ -97,7 +98,8 @@ ul.gray-item > li > a {
 
 .red-link {
   color: $brand-primary;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $brand-primary-dark;
   }
 }
@@ -106,7 +108,8 @@ ul.gray-item > li > a {
 .btn-gray {
   background-color: $gray-light;
   color: $white;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $gray;
     color: $white;
   }
@@ -116,7 +119,8 @@ ul.gray-item > li > a {
   background-color: $white;
   color: $gray;
   border: 1px solid $gray-lighter;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $white;
     color: $gray;
   }
@@ -124,7 +128,8 @@ ul.gray-item > li > a {
 
 .link-gray {
   color: $gray;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $gray-light;
   }
 }
@@ -132,14 +137,16 @@ ul.gray-item > li > a {
 ul.link-white {
   a {
     color: $white;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
     }
   }
 }
 .link-white {
   color: $white;
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
   }
 }
@@ -150,7 +157,8 @@ ul.link-white {
 
 .link-gray-light > a {
   color: $gray-light;
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: $gray;
   }
@@ -161,7 +169,8 @@ ul.link-white {
   vertical-align: middle;
   background-color: $brand-primary;
   color: $white;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $brand-primary-dark;
     color: $white;
   }

@@ -81,7 +81,7 @@
       padding: 0 4px 0 4px;
       background-color: $mask;
       text-align: center;
-      @include transition(all .5s ease);
+      @include transition(all .3s ease);
       overflow: hidden;
       a {
         text-align: center;

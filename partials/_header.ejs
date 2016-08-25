@@ -62,14 +62,16 @@
         </div>
       </div>
     </div>
+
+    <% var topCategory = ["台灣好工藝", "台灣好文創", "台灣好禮送", "台灣好生活", "台灣好滋味", "松園別館", "巧克力夢公園", "國際藝術特展"] %>
     <% if (category_bar) { %>
       <div class="category-bar mt-25 hidden-xs">
         <div class="category hidden-xs w100 clearfix under-line relative text-center" style="padding-bottom: 0;">
           <ul class="inline-block gray-item hover-red">
-            <% for( var i = 0; i < 9; i++ ) { %>
+            <% for( i in topCategory ) { %>
               <li class="menu-item">
                 <a href="/pdlist">
-                  頂層分類<%= i %>
+                  <%= topCategory[i] %>
                   <i class="material-icons fix-icon hidden-sm hover-rotate-180">&#xE5C5;</i>
                 </a>
                 <div class="sub-menu">

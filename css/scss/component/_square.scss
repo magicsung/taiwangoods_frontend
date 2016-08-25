@@ -66,13 +66,20 @@
   // Hover effect
 
   .hover {
+    overflow: hidden;
+
     @include bp(xs) {
       height: 20px;
-      overflow: hidden;
       display: block;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
+      > a > span {
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        height: 20px; width: 100%;
+      }
     };
     @include bp(sm) {
       position: absolute;
@@ -84,8 +91,7 @@
       background-color: $mask;
       text-align: center;
       @include transition(all .3s ease);
-      overflow: hidden;
-      a {
+      > a {
         text-align: center;
         color: $gray-lighter;
         overflow: hidden;
@@ -94,7 +100,7 @@
         &:hover {
           color: $white;
         }
-        span {
+        > span {
           overflow: hidden;
           vertical-align: top;
         }

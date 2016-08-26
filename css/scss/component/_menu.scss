@@ -1,4 +1,5 @@
 .menu-left {
+  font-size: 1.1em;
   position: fixed;
   top: 0;
   right: 0;
@@ -8,10 +9,12 @@
   background-color: $mask;
   display: none;
   .menu-header {
-    height: 60px;
+    height: 50px;
     padding: 10px;
-    color: $white;
-    background-color: $brand-primary;
+    color: $black;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    font-weight: 700;
   }
   #close-menu {
     position: fixed;
@@ -26,14 +29,20 @@
     display: block;
     position: relative;
   }
+  .menu-collapse.active,
+  .menu-collapse.active:after {
+    color: rgba($brand-primary, .5);
+  }
   .menu-collapse:after {
     position: relative;
     top: 2px;
     font-size: 1.5em;
+    line-height: 2em;
     font-family: 'Material Icons';
-    content: "\E313";
+    content: "\E315";
     -webkit-font-feature-settings: 'liga';
     font-feature-settings: 'liga';
+    color: $gray-lighter;
     position: absolute;
     right: 20px;
   }
@@ -41,29 +50,36 @@
     position: fixed;
     left: -75%;
     z-index: 200;
-    background-color: $bg-light-solid;
+    background-color: $white;
     width: 75%;
     height: 100%;
     overflow-y: scroll;
     .menu-items {
       text-align: left;
     }
-    .menu-item {
-      display: block;
+    .top-class {
+      > a.active,
+      > a.active:after {
+        color: $white;
+        background-color: lighten($brand-primary, 40%);
+      }
     }
     .menu-link {
       display: block;
       min-height: 46px;
-      border-top: 1px $gray-light solid;
-      padding: 10px 20px 10px 20px;
-      // color: $gray;
-      font-size: 1.3em;
+      padding: 15px 20px 15px 20px;
       clear: both;
       &.active {
-        color: $brand-primary;
+        font-weight: 700;
         &:after {
-          content: "\E316";
+          content: "\E313";
         }
+      }
+    }
+    .menu-item {
+      display: block;
+      > .menu-sub-items {
+        padding-left: 20px;
       }
     }
     .arrow {
@@ -72,11 +88,15 @@
     }
     .menu-sub-items {
       display: none;
+      position: relative;
+    }
+    .menu-sub-item {
+      margin-left: 20px;
+      border-left: 2px solid $gray-lighter;
     }
     .menu-sub-item > .menu-link {
       display: block;
       background-color: $white;
-      padding-left: 40px;
       &.load {
         background-image: url('../image/loading.gif');
         background-repeat: no-repeat;

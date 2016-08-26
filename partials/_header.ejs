@@ -154,17 +154,12 @@
 
 <nav class="menu-left" id="menu-toggle">
   <div class="content" id="menu-content">
-    <div class="menu-header text-center">
-      <a href="#" class="color-white hover-white mr-45 login fz-1p5em lh-2em">登入</a>
-      <a href="/register" class="color-white hover-white fz-1p5em lh-2em">註冊</a>
-      <!-- <div class="fz-1em lh-3em">
-        <span class="fz-1p1em mr-5 inline-block w10">Hi!</span>
-        <span class="username inline-block w80">magicsung@gmail.com</span>
-      </div> -->
-    </div>
     <ul class="menu-items">
       <li class="menu-item">
-        <a href="#" class="menu-link menu-collapse collapse-open">會員中心</a>
+        <a href="#" class="menu-link menu-collapse login fw-700">登入/註冊</a>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link menu-collapse">會員中心</a>
         <ul class="menu-sub-items">
           <li class="menu-sub-item"><a href="/membercenter" class="menu-link">查詢訂單</a></li>
           <li class="menu-sub-item"><a href="#" class="menu-link">退貨/取消訂單</a></li>
@@ -174,46 +169,50 @@
         </ul>
       </li>
       <li class="menu-item">
-        <a href="#" class="menu-link menu-collapse collapse-open">關於我們</a>
+        <a href="#" class="menu-link menu-collapse">關於我們</a>
         <ul class="menu-sub-items">
           <li class="menu-sub-item"><a href="#" class="menu-link">認識台灣禮品館</a></li>
           <li class="menu-sub-item"><a href="/news" class="menu-link">最新消息</a></li>
           <li class="menu-sub-item"><a href="/location" class="menu-link">哪裡買</a></li>
         </ul>
       </li>
-      <li class="menu-item"><a href="#" class="menu-link">購物車</a></li>
+      <li class="menu-item"><a href="#" class="menu-link menu-collapse">購物車</a></li>
+
 
       <% for( var i = 0; i < 6; i++ ) { %>
-        <li class="menu-item bg-gray-light"><a class="menu-link link-white">頂層分類</a></li>
-        <li class="menu-item">
-          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
+        <li class="menu-item top-class">
+          <a class="menu-link menu-collapse">頂層分類</a>
           <ul class="menu-sub-items">
-            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
-          <ul class="menu-sub-items">
-            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link menu-collapse collapse-open">主分類</a>
-          <ul class="menu-sub-items">
-            <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
-            <li class="menu-sub-item"><a href="#" class="menu-link">次分類</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-link menu-collapse main-category">主分類</a>
+              <ul class="menu-sub-items">
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link menu-collapse main-category">主分類</a>
+              <ul class="menu-sub-items">
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link menu-collapse main-category">主分類</a>
+              <ul class="menu-sub-items">
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類</a></li>
+                <li class="menu-sub-item"><a href="/pdlist" class="menu-link">次分類次分類次分類次分類</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       <% } %>
-      <li class="menu-item bg-gray-light"><a class="menu-link link-white">頂層分類</a></li>
 
       <li class="menu-item">
-        <a href="#" class="menu-link menu-collapse collapse-open">熱門排行</a>
+        <a href="#" class="menu-link menu-collapse">熱門排行</a>
         <ul class="menu-sub-items">
           <li class="menu-sub-item"><a href="/pdlist" class="menu-link">pdlist</a></li>
           <li class="menu-sub-item"><a href="#" class="menu-link">sub title</a></li>
@@ -221,7 +220,7 @@
         </ul>
       </li>
       <li class="menu-item">
-        <a href="#" class="menu-link menu-collapse collapse-open">Language</a>
+        <a href="#" class="menu-link menu-collapse">Language</a>
         <ul class="menu-sub-items">
           <li class="menu-sub-item"><a href="#" class="menu-link">繁體中文</a></li>
           <li class="menu-sub-item"><a href="#" class="menu-link">簡體中文</a></li>

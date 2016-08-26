@@ -271,16 +271,21 @@ function removeConfirm() {
 };
 function quantityCounting(operating) {
   thisButton.parent().siblings('input').val(function(){
+    var currentQuantity =  Number($(this).val());
     if (operating == "-") {
       if ( $(this).val() <= 1 ) {
         removeConfirm();
         return quantity;
       } else {
-        quantity = Number($(this).val()) - 1;
+        thisButton.addClass('active'); //set active class to btn
+        quantity = currentQuantity - 1;
+        thisButton.removeClass('active');
         return quantity;
       }
     } else {
-      quantity = Number($(this).val()) + 1;
+      thisButton.addClass('active');
+      quantity = currentQuantity + 1;
+      thisButton.removeClass('active');
       return quantity;
     }
   });
@@ -288,11 +293,13 @@ function quantityCounting(operating) {
 
 $( document ).ready(function() {
 
-  $('.quantity-minus > button').click(function(){
+  $('.quantity-minus > button').click(function(event){
+    event.preventDefault();
     thisButton = $(this);
     quantityCounting("-");
   });
-  $('.quantity-plus > button').click(function(){
+  $('.quantity-plus > button').click(function(event){
+    event.preventDefault();
     thisButton = $(this);
     quantityCounting("+");
   });

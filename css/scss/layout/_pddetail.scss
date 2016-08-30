@@ -20,6 +20,9 @@
     max-height: $square-small-size * 4 + $square-padding * 8;
     overflow-y: scroll;
   }
+  .thumbnail-image.active {
+    border: 1px dashed $brand-primary;
+  }
   .square-extra-large:hover:before {
     position: absolute;
     width: 100%;

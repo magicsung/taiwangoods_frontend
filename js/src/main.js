@@ -69,12 +69,13 @@ $( document ).ready(function() {
 // product detail image switch
 var switchImage = function(event) {
   event.preventDefault();
+  $(this).addClass('active').siblings('.thumbnail-image').removeClass('active');
   var lg = $(this).children('img').data('lg');
   var xl = $(this).children('img').data('xl');
   $('#image-view').children('img').attr('src', lg).data('url', xl);
 }
 $( document ).ready(function() {
-  $('.thumbnail-image').click(switchImage).hover(switchImage);
+  $('.thumbnail-image').click(switchImage);
 });
 
 

@@ -4,7 +4,8 @@ Download from https://nodejs.org/en/
 
 		$ cd TaiwanGoodsFrontEnd
 		$ npm install
-		$ node server.js
+		$ npm start
+		# open browser http://localhost:8080
 
 ##彈出式視窗 example
 
